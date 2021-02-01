@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 class SignupForm extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       email: '',
       handle: '',
@@ -17,13 +16,13 @@ class SignupForm extends React.Component {
     
   }
 
-//   componentWillReceiveProps(nextProps) {
-//     if (nextProps.signedIn === true) {
-//       this.props.history.push('/login');
-//     }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.signedIn === true) {
+      this.props.history.push('/login');
+    }
 
-//     this.setState({errors: nextProps.errors})
-//   }
+    this.setState({errors: nextProps.errors})
+  }
 
   update(field) {
     return e => this.setState({[field]: e.currentTarget.value});
@@ -35,7 +34,7 @@ class SignupForm extends React.Component {
         handle: this.state.handle,
         password: this.state.password,
         password2: this.state.password2};
-    this.props.signup(user); 
+    this.props.signup(user, this.props.history); 
   }
 
   renderErrors() {
