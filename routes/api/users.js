@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const passport = require('passport');
 const validateRegistrationInput = require('../../validation/registration');
 const validateLoginInput = require('../../validation/login');
-const { session } = require("passport");
+const keys = require('../../config/keys')
 
 router.get('/test', (req, res) => {
     res.json({msg: "This is the user route!"})
@@ -29,15 +29,18 @@ router.post('/register',
               if (user){
                   return res.status(400).json({email: "Email is already registered."})
               } else {
+                  
                   const newUser = new User({
                       firstName: req.body.firstName,
                       lastName: req.body.lastName,
                       email: req.body.email,
-                      pasword: req.body.password
+                      password: req.body.password
+                      
                     })
+                    
                     bcrypt.genSalt(10, (err, salt) => {
-                        bcrypt.hash(newUser.password, salt,
-                            (err, hash) => {
+                       
+                        bcrypt.hash(newUser.password, salt, (err, hash) => {
                                 if(err) throw err;
                                 newUser.password = hash;
                                 newUser.save()
@@ -45,6 +48,7 @@ router.post('/register',
                                 .catch(err => console.log(err))
                             })
                     })
+                    
                 }
             })
 

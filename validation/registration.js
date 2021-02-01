@@ -5,10 +5,10 @@ module.exports = function validateRegistrationInput(data){
     let errors = {};
 
     data.firstName = validText(data.firstName) ? data.firstName : ""
-    data.firstName = validText(data.lastName) ? data.lastName : ""
-    data.firstName = validText(data.email) ? data.email : ""
-    data.firstName = validText(data.password) ? data.password : ""
-    data.firstName = validText(data.confirm) ? data.confirm : ""
+    data.lastName = validText(data.lastName) ? data.lastName : ""
+    data.email = validText(data.email) ? data.email : ""
+    data.password = validText(data.password) ? data.password : ""
+    data.confirm = validText(data.confirm) ? data.confirm : ""
 
     if (Validator.isEmpty(data.firstName)) {
         errors.firstName = "name field cannot be empty."
