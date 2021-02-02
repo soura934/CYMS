@@ -2,7 +2,7 @@ import {
     RECEIVE_ALL_PRODUCTS,
     RECEIVE_PRODUCT,
     REMOVE_PRODUCT,
-} from '../actions/board_actions';
+} from '../actions/product_actions';
 
 const productsReducer = (state = {}, action) => {
     Object.freeze(state);
