@@ -1,0 +1,51 @@
+html, body, section, article, header
+h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: inherit;
+  font: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+  background: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.signup-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-form-container h1{
+   font-weight: 600;
+   color: rgb(80, 80, 80);
+}
+
+.signup-form-container .signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 404px;
+    height: 540px;
+    border: 2px solid rgb(222, 222, 222);
+    border-radius: 12px;
+}
+
+.signup-form-container .signup-form input{
+    border-radius: 6px;
+    border: 1px solid #afafaf;
+    height: 38px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.signup-form-container .signup-form .signup-button {
+    background-color: rgb(246, 192, 43);
+    border: 1px solid #957400;
+    height: 39px;
+}
