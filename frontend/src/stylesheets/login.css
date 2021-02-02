@@ -1,0 +1,65 @@
+.sign-in-div{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto';
+    justify-content: center;
+    align-items: center;
+}
+
+.Sign-in-Container{
+    height: 500px;
+    width: 500px;
+    border: 1px solid lightgrey;
+    display: block;
+    flex-direction: column;
+    margin-top: 100px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.Sign-text-container{
+    display: flex;
+    flex-direction: column;
+     justify-content: center;
+    height: 80px;   
+    width:370px ;
+    margin-top: 100px;
+}
+.Sign-in-header{
+    margin: auto;
+    font-size: 30px;
+    margin: 20px;
+    margin-left: 10px;
+    font-family: Arial,sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.input-section{
+    display: block;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    font-weight: 700;
+    margin-left: 30px;
+}
+.email-text{
+    font-size: 15px;
+    line-height: 19px;
+    color: #111;
+    font-family: Arial,sans-serif;
+    margin-bottom: 0px;
+}
+.input{
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: block;
+    align-items: center;
+    margin-top: 0px;
+    height: 31px;
+    width: 336px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 16px;
+    margin: 1px 1px 0 1px;
+    padding: 13px 15px;
+}
