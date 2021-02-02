@@ -21,6 +21,12 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     background-color: #f4f9ff;
 }
 
+.signup-form-container h1{
+   font-weight: 600;
+   color: rgb(47, 47, 47);
+   font-size: 35px;
+   padding-bottom: 6px;
+}
 .signup-form-container h2{
    font-weight: 600;
    color: rgb(80, 80, 80);
@@ -54,9 +60,9 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
 
 .signup-form-container .signup-form input:focus{
     /* border: 2px solid #ffd30e;   */
-    background-color: rgb(204, 245, 255);
+    background-color: rgb(240, 244, 255);
 }
-
+ 
 .signup-form-container .signup-form .signup-button {
     background-color: rgb(245 208 106);
     border: 1px solid #957400;
