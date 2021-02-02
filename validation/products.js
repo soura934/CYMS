@@ -8,7 +8,7 @@ module.exports = function validateProductInput(data) {
   data.description = validText(data.description) ? data.description : '';
   data.price = validText(data.price) ? data.price : '';
 
-  if (!Validator.isLength(data.title, { min: 0, max: 100 })) {
+  if (!Validator.isLength(data.title, { min: 1, max: 100 })) {
     errors.title = 'Product Title must be less than 100 characters';
   }
 
