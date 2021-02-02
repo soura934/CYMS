@@ -1,0 +1,32 @@
+.footer {
+    width: 100%;
+    height: 160px;
+    background-color: rgb(151, 153, 155);
+    color: rgb(245, 223, 77);
+    bottom: 0;
+}
+
+.footer-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-contact > h1 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.footer-contact > li {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.footer-link > h1 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.footer-link > a {
+    text-decoration: none;
+    color: rgb(245, 223, 77);
+}

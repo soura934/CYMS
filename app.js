@@ -16,13 +16,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-  const user = new User({
-    handle: "jim",
-    email: "jim@jim.jim",
-    password: "jimisgreat123"
-  })
-  user.save()
-  res.send("Hello world");
+  
+  res.send("Hello");
 });
 
 app.use("/api/users", users);
