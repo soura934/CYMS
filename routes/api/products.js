@@ -1,10 +1,15 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 const mongoose = require('mongoose');
-const passport = require*('passport');
+const passport = require('passport');
 
 const Product = require('../../models/Product');
-const validateProductInput = require('../../validation/products')
+const validateProductInput = require('../../validation/products');
+
+
+router.get('/test', (req, res) => {
+    res.json({msg: "This is the product route!"})
+});
 
 router.get('/', (req, res) => {
     Product.find()
@@ -26,19 +31,21 @@ router.get('/:id', (req, res) => {
         .catch(err => res.status(404).json({ noproductsfound: 'No products found with that ID'}))
 });
 
-router.post('/', 
-    passport.authenticate('jwt', { session: false }), (req, res) => {
+router.post('/',  (req, res) => {
         const { errors, isValid } = validateProductInput(req.body);
-
+        
         if (!isValid) {
             return res.status(400).json(errors);
         }
 
         const newProduct = new Product({
-            text: req.body.text,
-            user: req.user.id
-        })
-        newProduct.save().then(product => res.json(product))
+            title: req.body.title,
+            description: req.body.description,
+            price: req.body.price 
+        });
+
+        newProduct.save().then(product => res.json(product));
+            
 });
 
 module.exports = router;
