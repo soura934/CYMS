@@ -1,0 +1,38 @@
+.header {
+    background-color: rgb(151, 153, 155);
+    display: flex;
+    justify-content: space-between;
+    min-height: 10vh;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    margin-top: 0;
+    align-items: center;
+    margin-right: 100px;
+    left: 0;
+    color: rgb(245, 223, 77);
+}
+
+.brand-name {
+    margin-left: 50px;
+}
+
+.authentication {
+    margin-right: 50px;
+    display: flex;
+    justify-self: space-around;
+    align-items: center;
+    width: 10%;
+    color: rgb(245, 223, 77);
+}
+.authentication :first-child {
+    border-right: 1px;
+    padding-right: 9px;
+    color: rgb(245, 223, 77);
+}
+.authentication :last-child {
+    border-right: 1px ;
+    padding-left: 9px;
+    color: rgb(245, 223, 77);
+}
