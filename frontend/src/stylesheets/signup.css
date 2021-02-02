@@ -18,6 +18,7 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #f4f9ff;
 }
 
 .signup-form-container h2{
@@ -28,6 +29,7 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
 }
 
 .signup-form-container .signup-form {
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
