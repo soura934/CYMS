@@ -6,7 +6,7 @@
     overflow: hidden;
     top: 0;
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
     margin-top: 0;
     align-items: center;
     margin-right: 100px;
@@ -35,4 +35,9 @@
     border-right: 1px ;
     padding-left: 9px;
     color: rgb(245, 223, 77);
+}
+
+.splash {
+    background-color: rgb(245, 223, 77);
+    height: 1000px;
 }

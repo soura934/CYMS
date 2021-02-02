@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../stylesheets/splash-page.css'
 import { Link } from 'react-router-dom';
+
 class MainPage extends React.Component {
 
     render () {
