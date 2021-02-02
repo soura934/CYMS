@@ -31,9 +31,10 @@ class SignupForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let user = {email: this.state.email,
-        handle: this.state.handle,
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
         password: this.state.password,
-        password2: this.state.password2};
+        confirm: this.state.confirm};
     this.props.signup(user, this.props.history); 
   }
 
@@ -62,9 +63,15 @@ class SignupForm extends React.Component {
               />
             <br/>
             <input type="text"
-                value={this.state.handle}
-                onChange={this.update('handle')}
-                placeholder="Handle"
+                value={this.state.firstName}
+                onChange={this.update('firstName')}
+                placeholder="FirstName"
+              />
+            <br/>
+            <input type="text"
+                value={this.state.lastName}
+                onChange={this.update('lastName')}
+                placeholder="LastName"
               />
             <br/>
               <input type="password"
@@ -74,8 +81,8 @@ class SignupForm extends React.Component {
               />
             <br/>
             <input type="password"
-                value={this.state.password2}
-                onChange={this.update('password2')}
+                value={this.state.confirm}
+                onChange={this.update('confirm')}
                 placeholder="Confirm Password"
               />
             <br/>
