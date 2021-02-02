@@ -20,9 +20,11 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     align-items: center;
 }
 
-.signup-form-container h1{
+.signup-form-container h2{
    font-weight: 600;
    color: rgb(80, 80, 80);
+   font-size: 25px;
+   padding-bottom: 16px;
 }
 
 .signup-form-container .signup-form {
@@ -32,20 +34,31 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     align-items: center;
     width: 404px;
     height: 540px;
-    border: 2px solid rgb(222, 222, 222);
+    border: 2px solid rgb(232, 232, 232);
     border-radius: 12px;
+    margin-bottom: 54px
 }
 
 .signup-form-container .signup-form input{
     border-radius: 6px;
     border: 1px solid #afafaf;
     height: 38px;
-    padding: 5px;
+    padding: 5px 5px 5px 15px;
     box-sizing: border-box;
+    width: 295px;
+    margin: 16px;
+
+}
+
+.signup-form-container .signup-form input:focus{
+    /* border: 2px solid #ffd30e;   */
+    background-color: rgb(204, 245, 255);
 }
 
 .signup-form-container .signup-form .signup-button {
-    background-color: rgb(246, 192, 43);
+    background-color: rgb(245 208 106);
     border: 1px solid #957400;
     height: 39px;
+    font-size: 15px;
+    color: #4c4c4c;
 }
