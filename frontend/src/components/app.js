@@ -2,7 +2,7 @@ import React from 'react';
 import { AuthRoute } from '../util/route_util';
 import { Switch } from 'react-router-dom';
 
-import MainPage from './main/main_page';
+import MainPageContainer from './main/main_page_container';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import Footer from './footer/footer';
@@ -11,7 +11,7 @@ import Splash from './splash/splash';
 
 const App = () => (
   <div>
-    <MainPage />
+    <MainPageContainer />
     
     <Switch>
       <AuthRoute exact path="/" component={ Splash } />

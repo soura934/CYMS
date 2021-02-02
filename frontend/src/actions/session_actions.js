@@ -51,3 +51,15 @@ export const logout = () => dispatch => {
     dispatch(logoutUser())
 };
 
+export const demologin = user => dispatch => (
+    APIUtil.login(user).then(res => {
+        const { token } = res.data;
+        localStorage.setItem('jwtToken', token);
+        APIUtil.setAuthToken(token);
+        const decoded = jwt_decode(token);
+        dispatch(receiveCurrentUser(decoded))
+    })
+    .catch(err => {
+        dispatch(receiveErrors(err.response.data));
+    })
+)
