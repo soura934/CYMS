@@ -1,26 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ProductIndexItem from './product_index_item'
 
-class BoardIndex extends React.Component {
+class ProductIndex extends React.Component {
 
     componentDidMount() {
-        this.props.fetchBoards();
+        this.props.fetchProducts();
     }
 
     render() {
 
-        let boards = this.props.boards.map(board => {
-            return <li key={`${board.id}`}><Link to={`/boards/${board.id}`}>{board.title}</Link></li>
+        let products = this.props.products.map(product => {
+            return <ProductIndexItem product={product}/>
         })
         
         return (
-            
-                <ul className='board-index'>
-                        {boards}
-                </ul>  
-    
-        )
+                <ul>{products}</ul>  
+        );
     }
 }
 
-export default BoardIndex;
+export default ProductIndex;
