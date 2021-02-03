@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 import ProductIndexItem from './product_index_item'
 import '../../stylesheets/product-index.css';
+import img from './web-cam.jpg'
 
 class ProductIndex extends React.Component {
 
@@ -19,9 +20,9 @@ class ProductIndex extends React.Component {
                         <li>
                             <Link to={`/${product._id}`}>{product.title}</Link>
                         </li>
-                        {/* <img src="/assets/adjustable desktop.png" alt=""/> */}
+                        <img src={img} alt=""/>
                         <li>${product.price}</li>
-                        {/* <li>{product.description}</li> */}
+                        {/* frontend/assets/computer-screen.jpg */}
                     </ul>
             )
         })
