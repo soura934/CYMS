@@ -27,4 +27,5 @@
 
 .product-index .product-item img {
     width: 243px;
+    /* max-height: 100px; */
 }
