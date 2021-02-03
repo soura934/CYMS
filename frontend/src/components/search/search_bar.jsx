@@ -4,11 +4,17 @@ class SearchBar extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { keyword: ""};
+        this.state = { 
+            keyword: "",
+            products: []
+        };
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
     }
+
+    
+
 
     handleSubmit(e) {
         e.preventDefault();
@@ -22,6 +28,7 @@ class SearchBar extends React.Component {
     }
 
     render() {
+        
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
@@ -32,6 +39,8 @@ class SearchBar extends React.Component {
                     />
                 <button>Search</button>
                 </form>
+            
+              
             </div>
         )
     }
