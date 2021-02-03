@@ -6,17 +6,16 @@ import {
 
 const productsReducer = (state = {}, action) => {
     Object.freeze(state);
+    let nextState = Object.assign({}, state);
 
     switch (action.type) {
         case RECEIVE_ALL_PRODUCTS:
-            // debugger
             return action.products;
         case RECEIVE_PRODUCT:
-            return Object.assign({}, state, { [action.product.id]: action.product });
+            return nextState[action.product.id] = action.product;
         case REMOVE_PRODUCT:
-            let newState = Object.assign({}, state);
-            delete newState[action.productId];
-            return newState;
+            delete nextState[action.productId];
+            return nextState;
         default:
             return state;
     }

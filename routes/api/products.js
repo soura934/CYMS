@@ -50,7 +50,6 @@ router.post('/',  (req, res) => {
 
 router.get("/find/:query", (req, res) => {
     const query = req.params.query;
-    debugger
     Product.find({ 
         $text: {
             $search: query

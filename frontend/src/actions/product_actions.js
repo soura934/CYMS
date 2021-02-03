@@ -66,7 +66,6 @@ export const deleteProduct = (productId) => {
 }
 
 export const fetchSearchProducts = (keyword) => dispatch => {
-    debugger
     return (
         ProductApiUtil.fetchSearchProducts(keyword)
             .then(products => dispatch(receiveProduct(products)))
