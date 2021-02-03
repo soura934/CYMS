@@ -8,12 +8,12 @@ class Splash extends React.Component {
     render () {
         return (
             <div>
-            <MainPageContainer />
+           
             <div className="splash">
                 Splash Page ( Product List )
                 <ProductIndexContainer />
             </div>
-            <Footer />
+       
             </div>
         )
     }
