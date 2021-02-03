@@ -8,16 +8,16 @@ module.exports = function validateProductInput(data) {
   data.description = validText(data.description) ? data.description : '';
   data.price = validText(data.price) ? data.price : '';
 
-  if (!Validator.isLength(data.title, { min: 1, max: 100 })) {
-    errors.title = 'Product Title must be less than 100 characters';
+  if (!Validator.isLength(data.title, { min: 1, max: 200 })) {
+    errors.title = 'Product Title must be less than 200 characters';
   }
 
   if (Validator.isEmpty(data.title)) {
     errors.title = 'Title field is required';
   }
 
-  if (!Validator.isLength(data.description, { min: 0, max: 255 })) {
-    errors.description = 'Product Description must be less than 255 characters';
+  if (!Validator.isLength(data.description, { min: 0, max: 1000 })) {
+    errors.description = 'Product Description must be less than 1000 characters';
   }
 
   if (Validator.isEmpty(data.description)) {

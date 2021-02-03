@@ -5,7 +5,6 @@ export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 export const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
 
 export const receiveProducts = (products) => {
-    // debugger
     return {
         type: RECEIVE_ALL_PRODUCTS,
         products
@@ -64,4 +63,12 @@ export const deleteProduct = (productId) => {
             dispatch(removeProduct(productId))
         })
     }
+}
+
+export const fetchSearchProducts = (keyword) => dispatch => {
+    debugger
+    return (
+        ProductApiUtil.fetchSearchProducts(keyword)
+            .then(products => dispatch(receiveProduct(products)))
+    )
 }
