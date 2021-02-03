@@ -42,7 +42,7 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     align-items: center;
     width: 404px;
     height: 540px;
-    border: 2px solid rgb(232, 232, 232);
+    border: 2px solid rgb(225, 225, 225);
     border-radius: 12px;
     margin-bottom: 54px
 }
