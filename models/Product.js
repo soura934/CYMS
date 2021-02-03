@@ -12,12 +12,22 @@ const ProductSchema = new Schema({
   },
   price: {
     type: Number,
-    required: true
+    default: 0
   },
   image: {
     type: String
   }
 });
+
+ProductSchema.index({
+  title: 'text',
+  description: 'text'
+}, {
+  weights: {
+    title: 5,
+    description: 1
+  }
+})
 
 const Product = mongoose.model('product', ProductSchema);
 

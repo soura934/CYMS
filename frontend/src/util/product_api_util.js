@@ -19,3 +19,9 @@ export const updateProduct = (product) => {
 export const deleteProduct = (productId) => {
   return axios.delete(`/api/products/${productId}`, productId);
 };
+
+export const fetchSearchProducts = (keyword) => {
+  debugger
+  return axios.get(`/api/products/find/${keyword}`)
+  
+}
