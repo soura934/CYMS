@@ -18,7 +18,7 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f4f9ff;
+    background-color: #ebeef3;
 }
 
 .signup-form-container h1{
