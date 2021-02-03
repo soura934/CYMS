@@ -15,7 +15,7 @@ class ProductIndex extends React.Component {
 
         let products = this.props.products.map((product) => {
             return (
-                    <ul className="product-item">
+                    <ul className="product-item" key={product._id}>
                         <li>
                             <Link to={`/${product._id}`}>{product.title}</Link>
                         </li>
