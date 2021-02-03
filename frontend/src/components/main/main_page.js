@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import '../../stylesheets/splash-page.css'
+import { Link } from 'react-router-dom';
+import '../../stylesheets/splash-page.css';
+import SearchBarContainer from '../search/search_bar_container';
 
 
 class MainPage extends React.Component {
@@ -38,6 +39,7 @@ class MainPage extends React.Component {
       return (
         <div className='header'>
             <Link to={'/'} className="brand-name" >CYMS</Link>
+            <SearchBarContainer />
             { this.getLinks() }
         </div>
       );
