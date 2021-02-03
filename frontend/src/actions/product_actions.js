@@ -5,6 +5,7 @@ export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 export const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
 
 export const receiveProducts = (products) => {
+    // debugger
     return {
         type: RECEIVE_ALL_PRODUCTS,
         products

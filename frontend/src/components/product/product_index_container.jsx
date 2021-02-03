@@ -3,8 +3,9 @@ import ProductIndex from './product_index';
 import { fetchProducts } from '../../actions/product_actions';
 
 const msp = (state, ownProps) => {
+    // debugger
     return { 
-        products: Object.values(state.entities.products)
+        products: state.entities.products.data
     }
 }
 

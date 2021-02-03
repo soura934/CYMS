@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 import jwt_decode from 'jwt-decode';
+import axios from 'axios';
+// import { fetchProducts } from './util/product_api_util'
+// import { fetchProducts } from './actions/product_actions'
 
 import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
@@ -27,6 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore({});
   }
+
+  window.axios = axios;
+  window.store = store;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  // window.fetchProducts = fetchProducts;
+  
+
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
 });
