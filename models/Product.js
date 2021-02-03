@@ -14,6 +14,9 @@ const ProductSchema = new Schema({
     type: Number,
     default: 0
   },
+  image: {
+    type: String
+  }
 });
 
 ProductSchema.index({
