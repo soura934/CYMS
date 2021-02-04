@@ -21,6 +21,7 @@ class MainPage extends React.Component {
         return (
             <div>
                 <Link to={'/profile'}>Profile</Link>
+                <Link to={'/ShoppingCart'}>Cart</Link>
                 <button onClick={this.logoutUser}>Logout</button>
             </div>
         );
