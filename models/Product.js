@@ -16,6 +16,10 @@ const ProductSchema = new Schema({
   },
   image: {
     type: String
+  },
+  id: {
+    type: Integer,
+    required: true
   }
 });
 
