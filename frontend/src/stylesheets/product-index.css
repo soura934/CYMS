@@ -1,8 +1,13 @@
 .product-index {
+    box-sizing: border-box;
     display: flex;
     background-color: #ebeef3;
     flex-wrap: wrap;
     height: 100%;
+    padding-bottom: 53px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .product-index .product-item {
@@ -13,7 +18,8 @@
     justify-content: space-around;
     background-color: rgb(255, 255, 255);
     list-style: none;
-    height: 300px;
+    max-height: 300px;
+    flex-grow: 1;
     width: 275px;
     margin: 10px 5px;
     border: 2px solid rgb(225, 225, 225);

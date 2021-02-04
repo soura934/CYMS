@@ -5,8 +5,9 @@ class Footer extends React.Component {
     render () {
         return (
             <div className="footer">
+                <p>0</p>
                 <div className="footer-list">
-                    <div className="footer-img">Image</div>
+                    {/* <div className="footer-img">Image</div> */}
                     <div className="footer-contact">
                         <h1>Developers</h1>
                         <li>Christopher Thorne</li>

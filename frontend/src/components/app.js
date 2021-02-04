@@ -10,17 +10,20 @@ import MainPageContainer from './main/main_page_container';
 
 
 const App = () => (
-  <div>
-   <MainPageContainer /> 
-    
-    <Switch>
-      <Route exact path="/" component={ Splash } />
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <AuthRoute exact path="/signup" component={SignupFormContainer} />
-     
-    </Switch>
-    
-  <Footer />
+  <div className='full-page-container'>
+    <header>
+      <MainPageContainer /> 
+    </header>
+    <main>
+      <Switch>
+        <Route exact path="/" component={ Splash } />
+        <AuthRoute exact path="/login" component={LoginFormContainer} />
+        <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      </Switch>
+    </main>
+    <footer>
+      <Footer />
+    </footer>
   </div>
 );
 
