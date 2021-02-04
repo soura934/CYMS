@@ -5,7 +5,7 @@ export const fetchProducts = () => {
 };
 
 export const fetchProduct = (productId) => {
-  return axios.get(`/api/products/${productId}`, productId);
+  return axios.get(`/api/products/${productId}`);
 };
 
 export const createProduct = (product) => {

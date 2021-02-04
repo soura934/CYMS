@@ -6,8 +6,7 @@ import { fetchProduct } from '../../actions/product_actions';
 
 const msp = (state, ownProps) => {
     return {
-        product: state.entities.products.data[ownProps.match.params.id]
-        // currentUser: state.entities.users[state.session.id]
+        product: state.entities.products.data
     }
 }
 const mdp = (dispatch, ownProps) => {
