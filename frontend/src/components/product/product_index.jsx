@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-import ProductIndexItem from './product_index_item'
+
 import '../../stylesheets/product-index.css';
 
 class ProductIndex extends React.Component {
@@ -17,10 +17,11 @@ class ProductIndex extends React.Component {
             return (
                     <ul className="product-item" key={product._id}>
                         <li>
-                            <Link to={`/${product._id}`}>{product.title}</Link>
+                            <Link to={`product/${product._id}`}>{product.title}</Link>
                         </li>
                         <li><img src={product.image} alt=""/></li>
                         <li>${product.price}</li>
+                        
                     </ul>
             )
         })
