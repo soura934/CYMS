@@ -4,7 +4,7 @@ import Root from './components/root';
 import configureStore from './store/store';
 import jwt_decode from 'jwt-decode';
 import axios from 'axios';
-// import { fetchProducts } from './util/product_api_util'
+import { fetchProduct } from './util/product_api_util'
 // import { fetchProducts } from './actions/product_actions'
 
 import {fetchCart} from './util/cart_api_util';
@@ -36,8 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
   window.store = store;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+
   // window.fetchProducts = fetchProducts;
   window.fetchCart = fetchCart;
+
+  window.fetchProduct = fetchProduct;
+  
+
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);

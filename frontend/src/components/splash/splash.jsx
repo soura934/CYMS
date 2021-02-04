@@ -9,10 +9,14 @@ import MainPageContainer from '../main/main_page_container';
 class Splash extends React.Component {
     render () {
         return (
+
             <div>
              <MainPageContainer /> 
+
+            <div className='splash-container'>
+              <p>0</p>
+
             <div className="splash">
-                Splash Page ( Product List )
                 <ProductIndexContainer />
             </div>
             <Footer />

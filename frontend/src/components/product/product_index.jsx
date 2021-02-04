@@ -20,7 +20,10 @@ class ProductIndex extends React.Component {
                     <ul className="product-item" key={product._id}>
                         
                         <li>
-                            <Link to={`product/${product._id}`}>{product.title}</Link>
+
+
+                            <Link to={`/product/${product.id}/${product._id}`}>{product.title}</Link>
+
                         </li>
                         <li><img src={product.image} alt=""/></li>
                         <li>${product.price}</li>

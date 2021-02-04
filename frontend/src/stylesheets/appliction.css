@@ -1,4 +1,4 @@
-html, body, section, article, header
+html, body, section, article, header, main, footer,
 h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
   margin: 0;
   border: 0;
@@ -10,5 +10,31 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
   text-align: inherit;
   color: inherit;
   background: transparent;
-  display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.full-page-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+ 
+.full-page-container header {
+  order: 1;
+}
+.full-page-container main {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.full-page-container footer {
+  position: absolute;
+  /* order: 3;   */
 }
