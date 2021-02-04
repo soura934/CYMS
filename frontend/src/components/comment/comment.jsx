@@ -12,7 +12,6 @@ class Comment extends React.Component {
     }
 
     componentDidMount() {
-        debugger
         this.props.fetchComments()
     }
 
@@ -35,8 +34,8 @@ class Comment extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                         <textarea 
                             style={{width: '50%', borderRadius: '5px'}}
-                            onChange
-                            value
+                            onChange={this.update('content')}
+                            value={this.state.content}
                             placeholder="leave comment">
                         </textarea>
                     <button>comment</button>
