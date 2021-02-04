@@ -94,8 +94,6 @@ router.post('/login', (req, res) => {
                         })
                     }
                 })
-        },
-        (err => console.log(err)));
-        
+        })
 })
 module.exports  = router;

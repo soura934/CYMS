@@ -39,7 +39,6 @@ router.post('/',  (req, res) => {
         }
 
         const newProduct = new Product({
-            
             title: req.body.title,
             description: req.body.description,
             price: req.body.price 
