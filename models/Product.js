@@ -18,7 +18,7 @@ const ProductSchema = new Schema({
     type: String
   },
   id: {
-    type: Integer,
+    type: Number,
     required: true
   }
 });
@@ -33,6 +33,6 @@ ProductSchema.index({
   }
 })
 
-const Product = mongoose.model('product', ProductSchema);
+const Product = mongoose.model('products', ProductSchema);
 
 module.exports = Product;

@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const users = require("./routes/api/users");
 const User = require('./models/User');
 const products = require('./routes/api/products');
+const comments = require('./routes/api/comments')
 const path = require('path');
 
 
@@ -29,6 +30,7 @@ app.get("/", (req, res) => {res.send("Hello");});
 
 app.use("/api/users", users);
 app.use("/api/products", products)
+app.user('/api/comments', comments)
 
 const port = process.env.PORT || 5000;
 
