@@ -4,8 +4,16 @@ class Comment extends React.Component {
     constructor(props){
         super(props);
         
-        this.state = this.props.comment;
+        this.state = {
+            comment: []
+        };
+
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount() {
+        debugger
+        this.props.fetchComments()
     }
 
     update(field) {
@@ -26,6 +34,7 @@ class Comment extends React.Component {
             <div> Comment
                 <form onSubmit={this.handleSubmit}>
                         <textarea 
+                            style={{width: '50%', borderRadius: '5px'}}
                             onChange
                             value
                             placeholder="leave comment">

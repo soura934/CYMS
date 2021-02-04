@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-
+import CommentContainer from '../comment/comment_container';
 
 class ProductShow extends React.Component{
 
@@ -19,6 +19,7 @@ componentDidMount(){
                     <h1>{this.props.product.title}</h1>
                     <img src={this.props.product.image} alt=""/>
                     <p>{this.props.product.description}</p>
+                    <CommentContainer />
                 </div>
             )
 
