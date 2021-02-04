@@ -1,0 +1,17 @@
+html, body, section, article, header, main, footer,
+h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: inherit;
+  font: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+.product-show .product-image {
+  width: 100px;
+}

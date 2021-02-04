@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-import ProductIndexItem from './product_index_item'
+// import ProductIndexItem from './product_index_item'
 import '../../stylesheets/product-index.css';
 
 class ProductIndex extends React.Component {
@@ -12,6 +12,7 @@ class ProductIndex extends React.Component {
 
     render() {
         if (!this.props.products) return null;
+        if (!Array.isArray(this.props.products)) return null;
 
         let products = this.props.products.map((product) => {
             return (
