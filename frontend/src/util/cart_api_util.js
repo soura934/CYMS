@@ -1,5 +1,5 @@
 import axios from 'axios';
 
-export const fetchCart = () => {
-    return axios.get('/api/carts')
+export const fetchCart = (cart) => {
+    return axios.post('/api/carts', cart)
 }

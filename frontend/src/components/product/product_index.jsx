@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 import '../../stylesheets/product-index.css';
+import ShoppingCart from '../cart/cart';
 
 class ProductIndex extends React.Component {
 
@@ -15,7 +16,9 @@ class ProductIndex extends React.Component {
 
         let products = this.props.products.map((product) => {
             return (
+               
                     <ul className="product-item" key={product._id}>
+                        
                         <li>
                             <Link to={`product/${product._id}`}>{product.title}</Link>
                         </li>
@@ -25,10 +28,10 @@ class ProductIndex extends React.Component {
                     </ul>
             )
         })
-        
+        debugger
         return (
             <div className='product-index'>
-                {products}
+                {products }
             </div>
         );
     }

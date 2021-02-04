@@ -1,0 +1,20 @@
+.cart-index {
+    display: flex;
+    background-color: #ebeef3;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cart-item{
+    height: 180px;
+    width: 1507px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.cart-item img{
+    height: 180px;
+    width: 180px;
+}

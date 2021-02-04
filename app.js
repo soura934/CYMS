@@ -12,7 +12,7 @@ const path = require('path');
 
 
 
-mongoose.set('bufferCommands', false);
+// mongoose.set('bufferCommands', false);
 
 mongoose
   .connect(db, { useNewUrlParser: true })

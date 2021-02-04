@@ -7,6 +7,7 @@ import axios from 'axios';
 // import { fetchProducts } from './util/product_api_util'
 // import { fetchProducts } from './actions/product_actions'
 
+import {fetchCart} from './util/cart_api_util';
 import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   // window.fetchProducts = fetchProducts;
-  
+  window.fetchCart = fetchCart;
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);
