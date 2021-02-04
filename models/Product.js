@@ -18,7 +18,7 @@ const ProductSchema = new Schema({
     type: String
   },
   id: {
-    type: Integer,
+    type: Number,
     required: true
   }
 });
