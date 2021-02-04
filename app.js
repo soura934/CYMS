@@ -30,7 +30,7 @@ app.get("/", (req, res) => {res.send("Hello");});
 
 app.use("/api/users", users);
 app.use("/api/products", products)
-app.user('/api/comments', comments)
+app.use('/api/comments', comments)
 
 const port = process.env.PORT || 5000;
 

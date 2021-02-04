@@ -5,13 +5,9 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import Footer from './footer/footer';
 import Splash from './splash/splash';
-// newbranch
 import ProductShowContainer from './product/product_show_container'
-import ShoppingCartContainer from './cart/cart_container';
-//
 import MainPageContainer from './main/main_page_container';
-import ProductShowContainer from './product/product_show_container'
-// main
+
 
 
 const App = () => (
