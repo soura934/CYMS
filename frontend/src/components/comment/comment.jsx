@@ -33,11 +33,12 @@ class Comment extends React.Component {
             <div> Comment
                 <form onSubmit={this.handleSubmit}>
                         <textarea 
-                            style={{width: '50%', borderRadius: '5px'}}
+                            style={{resize: 'none', height: '100px', width: '50%', borderRadius: '5px'}}
                             onChange={this.update('content')}
                             value={this.state.content}
                             placeholder="leave comment">
                         </textarea>
+                        <br/>
                     <button>comment</button>
                 </form>
             </div>
