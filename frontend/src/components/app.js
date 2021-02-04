@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import Splash from './splash/splash';
-
+import ProductShowContainer from './product/product_show_container'
 import ShoppingCartContainer from './cart/cart_container';
 
 
