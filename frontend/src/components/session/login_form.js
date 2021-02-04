@@ -55,43 +55,34 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className='sign-in-div'>
-          <div className='Sign-in-Container'>
-              <div className='Sign-in-text-container'>
-                <h1 className='Sign-in-header'> Sign In</h1>
-              </div>
-              <form onSubmit={this.handleSubmit}>
-           
-            <br/>
-            <div className='input-section'>
-              <p className='email-text'> Email</p>
-              <input className='input' type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                placeholder="Email"
-              />
-            <br/>
-              <p className='email-text'> Password</p>
-              <input className='input' type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                placeholder="Password"
-              />
-              </div>
-            <br/>
-            {this.renderErrors()}
-            <div className='button-container'>
-            <input className='button' type="submit" value="Sign In" />
-           <br/>
-        
-        <button className='button' onClick={this.handleDemoSubmit}>Demo Login</button>
+      <div className='log-in-form-container'>
+          <h1>CYMS</h1>
+          <div className='log-in-form'>
+            <h2>Log In</h2>
+            <form onSubmit={this.handleSubmit}>
+                <input className='input' type="text"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                  placeholder="Email"
+                />
+              <br/>
+                <input className='input' type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  placeholder="Password"
+                />
+              <br/>
+                  {this.renderErrors()}
+                  <button>Log In</button>
+              <br/>
+                  <button onClick={this.handleDemoSubmit}>Demo Log In</button>
+              </form>
+          </div>
+
+        <div className='Register-Link-container'>
+          <p className='register-link-text'> New to CYMS? </p>
+          <Link className='register-link' to={'/signup'}> Create a new Account </Link>
         </div>
-        </form>
-      </div>
-      <div className='Register-Link-container'>
-      <p className='register-link-text'> New to CYMS? </p>
-      <Link className='register-link' to={'/signup'}> Create a new Account </Link>
-      </div>
       </div>
     );
   }

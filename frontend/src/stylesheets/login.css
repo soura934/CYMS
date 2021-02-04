@@ -1,119 +1,77 @@
-.sign-in-div{
+html, body, section, article, header
+h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: inherit;
+  font: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+  background: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.log-in-form-container{
     display: flex;
     flex-direction: column;
-    font-family: 'Roboto';
-    
-    align-items: center;
-    height: 1000px;
-    
-    width: 1887px;
-    
-}
-
-.Sign-in-Container{
-    
-    height: 600px;
-    width: 450px;
-
-    border: 1px solid lightgrey;
-    display: block;
-    flex-direction: column;
-    margin-top: 100px;
-    margin-left: 30px;
-    margin-right: 30px;
-    border-radius: 5px;
-    box-sizing: border-box;
-    
-
-}
-.Sign-text-container{
-    display: flex;
-    flex-direction: column;
-     justify-content: center;
-    height: 80px;   
-    width:370px ;
-    margin-top: 100px;
-}
-.Sign-in-header{
-    margin: auto;
-    font-size: 30px;
-    margin: 20px;
-    margin-left: 10px;
-    font-family: Arial,sans-serif;
-    font-weight: 500;
-    text-align: center;
-    margin-top: 100px;
-}
-
-.input-section{
-    display: block;
-    padding-left: 2px;
-    padding-bottom: 2px;
-    font-weight: 700;
-    margin-left: 30px;
-}
-.email-text{
-    font-size: 15px;
-    line-height: 19px;
-    color: #111;
-    font-family: Arial,sans-serif;
-    margin-bottom: 0px;
-    margin-left: 5px;
-}
-.input{
-    border: 1px solid gray;
-    border-radius: 5px;
-    display: block;
-    align-items: center;
-    margin-top: 0px;
-    
-    width: 336px;
-    margin-left: 50px;
-    margin-right: 50px;
-   
-    margin: 1px 1px 0 1px;
-    padding: 13px 15px;
-}
-
-.button-container{
-    display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: #ebeef3;
+}
+
+.log-in-form{ 
+   display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    margin-left: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
 }
 
-.button{
-    width: 368px;
-    height: 27px;
-    background: cornflowerblue;
-    
-    border: none;
+.log-in-form-container h1{
+   font-weight: 600;
+   color: rgb(47, 47, 47);
+   font-size: 35px;
+   padding-bottom: 6px;
 }
-
-.Register-Link-container{
-    width: 450px;
+.log-in-form-container h2{
+   font-weight: 600;
+   color: rgb(80, 80, 80);
+   font-size: 25px;
+   padding-bottom: 16px;
+}
+.log-in-form-container .log-in-form {
+    background-color: white;
     display: flex;
     flex-direction: column;
-    
+    justify-content: center;
     align-items: center;
+    width: 404px;
+    height: 326px;
+    border: 2px solid rgb(225, 225, 225);
+    border-radius: 12px;
+    margin-bottom: 54px
+}
+.log-in-form-container .log-in-form input{
+    border-radius: 6px;
+    border: 1px solid #afafaf;
+    height: 38px;
+    padding: 5px 5px 5px 15px;
+    box-sizing: border-box;
+    width: 295px;
+    margin: 16px;
 }
 
-.register-link-text{
-    width: 440px;
-    text-align: center;
-    font-size: 14px;
+.log-in-form-container .log-in-form input:focus{
+    /* border: 2px solid #ffd30e;   */
+    background-color: rgb(240, 244, 255);
 }
-.register-link{
-    width: 440px;
-   height: 30px;
-    background-color: rgb(206, 208, 211);
-    color:black;
-    /* border: lightgray 1px solid; */
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    padding-top: 10px;
-
-    
+ 
+.log-in-form-container .log-in-form button {
+    background-color: rgb(245 208 106);
+    border: 1px solid #957400;
+    height: 39px;
+    font-size: 15px;
+    color: #4c4c4c;
 }
