@@ -28,15 +28,15 @@ class Comment extends React.Component {
     render () {
         // const { comment } = this.props;
 
-        if (!this.props.comments) return null;
+        // if (!this.props.comments) return null;
 
-        let comments = this.props.comments.map((comment) => {
-            return (
-                    <ul className="product-item" key={comment._id}>
-                        <li>${comment.content}</li>
-                    </ul>
-            )
-        })
+        // let comments = this.props.comments.map((comment) => {
+        //     return (
+        //             <ul className="product-item" key={comment._id}>
+        //                 <li>${comment.content}</li>
+        //             </ul>
+        //     )
+        // })
         return (
             <div className='comment-container'>
                 <div className='comment' > 
