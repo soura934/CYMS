@@ -28,17 +28,6 @@ class Comment extends React.Component {
     render () {
         const { comment } = this.props;
 
-<<<<<<< HEAD
-        // if (!this.props.comments) return null;
-
-        // let comments = this.props.comments.map((comment) => {
-        //     return (
-        //             <ul className="product-item" key={comment._id}>
-        //                 <li>${comment.content}</li>
-        //             </ul>
-        //     )
-        // })
-=======
         if (!this.props.comments) return null;
 
         let comments = this.props.comments.map((comment) => {
@@ -48,7 +37,6 @@ class Comment extends React.Component {
                     </ul>
             )
         })
->>>>>>> main
         return (
             <div className='comment-container'>
                 <div className='comment' > 
