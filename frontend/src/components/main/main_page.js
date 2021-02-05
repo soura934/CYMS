@@ -19,8 +19,8 @@ class MainPage extends React.Component {
   getLinks() {
       if (this.props.loggedIn) {
         return (
-            <div>
-                <Link to={'/profile'}>Profile</Link>
+            <div className='nav-bar'>
+                <Link className='profile-ink' to={'/profile'}>Profile</Link>
                 <button onClick={this.logoutUser}>Logout</button>
             </div>
         );
@@ -37,10 +37,13 @@ class MainPage extends React.Component {
 
   render() {
       return (
-        <div className='header'>
-            <Link to={'/'} className="brand-name" >CYMS</Link>
-            <SearchBarContainer />
-            { this.getLinks() }
+        <div className='header-container'>
+          <div className='header'>
+              <Link to={'/'} className="brand-name" >CYMS</Link>
+              <SearchBarContainer />
+              { this.getLinks() }
+          </div>
+          <p>0</p>
         </div>
       );
   }

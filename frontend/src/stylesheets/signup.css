@@ -19,13 +19,14 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     justify-content: center;
     align-items: center;
     background-color: #ebeef3;
+    padding-top: 30px;
 }
 
 .signup-form-container h1{
    font-weight: 600;
    color: rgb(47, 47, 47);
    font-size: 35px;
-   padding-bottom: 6px;
+   padding-bottom: 10px;
 }
 .signup-form-container h2{
    font-weight: 600;
@@ -58,15 +59,26 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
 
 }
 
-.signup-form-container .signup-form input:focus{
+.signup-form-container .signup-form .input input:focus{
     /* border: 2px solid #ffd30e;   */
     background-color: rgb(240, 244, 255);
 }
  
 .signup-form-container .signup-form .signup-button {
-    background-color: rgb(245 208 106);
+    background-color: rgb(245, 208, 106);
     border: 1px solid #957400;
     height: 39px;
     font-size: 15px;
     color: #4c4c4c;
 }
+
+.signup-form-container .errors{
+    list-style: none;
+    color: rgb(204, 2, 2);
+    font-size: 13px;
+    text-align: center;
+}
+.signup-form-container .signup-button:hover{
+    background-color: rgb(240, 188, 45);
+}
+
