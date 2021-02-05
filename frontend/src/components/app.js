@@ -8,8 +8,6 @@ import Splash from './splash/splash';
 import ProductShowContainer from './product/product_show_container'
 import MainPageContainer from './main/main_page_container';
 
-
-
 const App = () => (
   <div className='full-page-container'>
     <header>

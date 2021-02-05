@@ -1,17 +1,21 @@
 import { connect } from 'react-redux';
 import Comment from './comment';
-import { fetchComment } from '../../actions/comment_actions';
+import { fetchComments, fetchComment, deleteComment, createComment } from '../../actions/comment_actions';
 
 const msp = (state, ownProps) => {
+    debugger
     return { 
         // productId: ownProps.match,
-        comments: state.entities.comments
+        comments: state.entities.comments.data
     }
 }
 
 const mdp = (dispatch, ownProps) => {
     return {
-        fetchComment: () => dispatch(fetchComment())
+        fetchComments: () => dispatch(fetchComments()),
+        fetchComment: (productId) => dispatch(fetchComment(productId)),
+        createComment: (product) => dispatch(createComment(product)),        
+        deleteComment: (productId) => dispatch(deleteComment(productId))
     }
 }
 

@@ -4,8 +4,15 @@ class Comment extends React.Component {
     constructor(props){
         super(props);
         
-        this.state = this.props.comment;
+        this.state = {
+            comment: []
+        };
+
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount() {
+        this.props.fetchComments()
     }
 
     update(field) {
@@ -20,16 +27,26 @@ class Comment extends React.Component {
     render () {
         // const { comment } = this.props;
 
-        // if (!comment) return null;
+        if (!this.props.comments) return null;
 
+        let comments = this.props.comments.map((comment) => {
+            return (
+                    <ul className="product-item" key={comment._id}>
+                        <li>${comment.content}</li>
+                    </ul>
+            )
+        })
         return (
-            <div> Comment
+            <div className='comment' > 
+            <h1>Comment</h1>
                 <form onSubmit={this.handleSubmit}>
                         <textarea 
-                            onChange
-                            value
+                            style={{resize: 'none', height: '100px', width: '50%', borderRadius: '5px'}}
+                            onChange={this.update('content')}
+                            value={this.state.content}
                             placeholder="leave comment">
                         </textarea>
+                        <br/>
                     <button>comment</button>
                 </form>
             </div>

@@ -45,9 +45,9 @@ class LoginForm extends React.Component {
     return(
       <ul>
         {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`}>
+          <p key={`error-${i}`}>
             {this.state.errors[error]}
-          </li>
+          </p>
         ))}
       </ul>
     );
@@ -60,29 +60,42 @@ class LoginForm extends React.Component {
           <div className='log-in-form'>
             <h2>Log In</h2>
             <form onSubmit={this.handleSubmit}>
-                <input className='input' type="text"
+              <div >
+                <input  
+                  className='input'
+                  type="text"
                   value={this.state.email}
                   onChange={this.update('email')}
                   placeholder="Email"
                 />
-              <br/>
                 <input className='input' type="password"
                   value={this.state.password}
                   onChange={this.update('password')}
                   placeholder="Password"
                 />
-              <br/>
+              </div>
+              {/* <br/> */}
+              <div className='errors'>
                   {this.renderErrors()}
-                  <button>Log In</button>
-              <br/>
-                  <button onClick={this.handleDemoSubmit}>Demo Log In</button>
+              </div>
+  
+                  <div className='button-container'>
+                    <input className='log-in-button' type="submit" value="Log In" />
+                {/* <br/> */}
+
+                    <input onClick={this.handleDemoSubmit} className='demo-log-in-button' type="submit" value="Demo Log In" />
+                    {/* <button onClick={this.handleDemoSubmit}>Demo Log In</button> */}
+
+                  </div>
+                  {/* <button>Log In</button> */}
               </form>
           </div>
 
-        <div className='Register-Link-container'>
-          <p className='register-link-text'> New to CYMS? </p>
-          <Link className='register-link' to={'/signup'}> Create a new Account </Link>
+        <div className='register-Link-container'>
+          <p className='text'> New to CYMS? </p>
+          <Link className='link' to={'/signup'}> Create a new Account </Link>
         </div>
+
       </div>
     );
   }
