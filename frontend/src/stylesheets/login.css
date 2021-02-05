@@ -19,9 +19,11 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     justify-content: center;
     align-items: center;
     background-color: #ebeef3;
+    padding-top: 30px;
 }
 
 .log-in-form{ 
+    box-sizing: border-box;
    display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,7 +35,7 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
    font-weight: 600;
    color: rgb(47, 47, 47);
    font-size: 35px;
-   padding-bottom: 6px;
+   padding-bottom: 10px;
 }
 .log-in-form-container h2{
    font-weight: 600;
@@ -48,30 +50,88 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     justify-content: center;
     align-items: center;
     width: 404px;
-    height: 326px;
+    height: 442px;
     border: 2px solid rgb(225, 225, 225);
     border-radius: 12px;
-    margin-bottom: 54px
+    margin-bottom: 9px;
+    text-align: center;
 }
 .log-in-form-container .log-in-form input{
     border-radius: 6px;
     border: 1px solid #afafaf;
-    height: 38px;
+    height: 39px;
     padding: 5px 5px 5px 15px;
     box-sizing: border-box;
     width: 295px;
     margin: 16px;
+    text-align: center;
 }
 
-.log-in-form-container .log-in-form input:focus{
+.log-in-form-container .log-in-form .input:focus{
     /* border: 2px solid #ffd30e;   */
     background-color: rgb(240, 244, 255);
 }
  
-.log-in-form-container .log-in-form button {
-    background-color: rgb(245 208 106);
+.log-in-form-container .log-in-form .log-in-button {
+    background-color: rgb(245, 181, 106);;
     border: 1px solid #957400;
     height: 39px;
     font-size: 15px;
     color: #4c4c4c;
+    width: 295px;
+}
+.log-in-form-container .log-in-form .demo-log-in-button {
+    background-color: rgb(245, 208, 106);
+    border: 1px solid #956600;
+    height: 39px;
+    font-size: 15px;
+    color: #4c4c4c;
+    width: 295px;
+}
+.log-in-form-container .button-container {
+    margin-top: 25px;
+}
+.log-in-form-container .errors {
+    list-style: none;
+    color: rgb(204, 2, 2);
+    font-size: 13px;
+}
+
+.log-in-form-container .register-Link-container{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    height: 100px;
+    width: 295px;
+    margin-bottom: 20px;
+    padding-top: 14px;
+}
+
+.log-in-form-container .register-Link-container .link{
+    width: 100%;
+    height: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 6px;
+    border: 1px solid #d2cb8c;
+    font-size: 13px;
+    background-color: #fffcc1;
+    color: #615f52;
+}
+.log-in-form-container .register-Link-container .link:hover{  
+    background-color: #dfda84;
+}
+.log-in-form-container .register-Link-container .text{
+    font-size: 13px;
+    color: #6f6f6f;
+    margin-bottom: 5px;
+}
+
+.log-in-form-container .demo-log-in-button:hover{
+    background-color: rgb(240, 188, 45);
+}
+.log-in-form-container .log-in-button:hover{
+    background-color: rgb(230, 155, 70);;
 }
