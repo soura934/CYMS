@@ -4,8 +4,15 @@ class Comment extends React.Component {
     constructor(props){
         super(props);
         
-        this.state = this.props.comment;
+        this.state = {
+            comment: []
+        };
+
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount() {
+        this.props.fetchComments()
     }
 
     update(field) {
@@ -26,10 +33,12 @@ class Comment extends React.Component {
             <div> Comment
                 <form onSubmit={this.handleSubmit}>
                         <textarea 
-                            onChange
-                            value
+                            style={{resize: 'none', height: '100px', width: '50%', borderRadius: '5px'}}
+                            onChange={this.update('content')}
+                            value={this.state.content}
                             placeholder="leave comment">
                         </textarea>
+                        <br/>
                     <button>comment</button>
                 </form>
             </div>
