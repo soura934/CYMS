@@ -1,10 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-<<<<<<< HEAD
 import '../../stylesheets/product-show.css';
-=======
-import CommentContainer from '../comment/comment_container';
->>>>>>> main
 
 class ProductShow extends React.Component{
 
@@ -18,7 +14,6 @@ class ProductShow extends React.Component{
         } 
     
         return (
-<<<<<<< HEAD
                 <div className='product-show'>
                     <div className='image-container'>
                         <img src={this.props.product.image} />
@@ -43,14 +38,6 @@ class ProductShow extends React.Component{
                             </div>
                         </div>
                     </div>
-=======
-                <div>
-                    <h1>product show</h1>
-                    <h1>{this.props.product.title}</h1>
-                    <img src={this.props.product.image} alt=""/>
-                    <p>{this.props.product.description}</p>
-                    <CommentContainer />
->>>>>>> main
                 </div>
             )
 
