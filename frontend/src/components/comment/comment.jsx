@@ -26,14 +26,14 @@ class Comment extends React.Component {
     }
 
     render () {
-        // const { comment } = this.props;
+        const { comment } = this.props;
 
         if (!this.props.comments) return null;
 
         let comments = this.props.comments.map((comment) => {
             return (
                     <ul className="product-item" key={comment._id}>
-                        <li>${comment.content}</li>
+                        <li>{comment.content}</li>
                     </ul>
             )
         })
@@ -41,6 +41,7 @@ class Comment extends React.Component {
             <div className='comment-container'>
                 <div className='comment' > 
                 <h1>Leave a Comment</h1>
+                {comments}
                     <form onSubmit={this.handleSubmit}>
                             <textarea 
                                 style={{resize: 'none', height: '100px', width: '50%', borderRadius: '5px'}}
