@@ -114,14 +114,14 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 6px;
-    border: 1px solid #d2cb8c;
-    font-size: 13px;
-    background-color: #fffcc1;
+    /* border-radiu */
+    font-size: 17px;
+    /* background-color: #fffcc1; */
     color: #615f52;
 }
 .log-in-form-container .register-Link-container .link:hover{  
-    background-color: #dfda84;
+    /* background-color: #dfda84; */
+    color: black;
 }
 .log-in-form-container .register-Link-container .text{
     font-size: 13px;

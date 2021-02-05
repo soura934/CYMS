@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import '../../stylesheets/product-show.css';
+import CommentContainer from '../comment/comment_container';
 
 class ProductShow extends React.Component{
 
@@ -22,6 +23,7 @@ class ProductShow extends React.Component{
                         <h1>{this.props.product.title}</h1>
                         <h2>About this item:</h2>
                         <p>{this.props.product.description}</p>
+                        <CommentContainer/>
                     </div>
                     <div className='price-container'>
                         <div className='inner'>

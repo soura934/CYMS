@@ -30,7 +30,8 @@ class Comment extends React.Component {
         // if (!comment) return null;
 
         return (
-            <div> Comment
+            <div className='comment' > 
+            <h1>Comment</h1>
                 <form onSubmit={this.handleSubmit}>
                         <textarea 
                             style={{resize: 'none', height: '100px', width: '50%', borderRadius: '5px'}}
