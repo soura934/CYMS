@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const fetchComments = () => {
-  return axios.get(`/api/comments`);
+  return axios.get(`/api/comments/`);
 };
 
 export const fetchComment = (commentId) => {
@@ -9,7 +9,7 @@ export const fetchComment = (commentId) => {
 };
 
 export const createComment = (comment) => {
-  return axios.post(`/api/comments`, comment);
+  return axios.post(`/api/comments/saveComment`, comment);
 };
 
 export const deleteComment = (commentId) => {

@@ -5,6 +5,7 @@ import {
 } from '../actions/comment_actions';
 
 const commentsReducer = (state = {}, action) => {
+    debugger
     Object.freeze(state);
     let nextState = Object.assign({}, state);
 
