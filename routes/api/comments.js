@@ -33,5 +33,12 @@ router.post("/getComments", (req,res)=>{
         })
 })
 
+router.get('/', (req, res) => {
+    Comment.find()
+        .sort({ date: -1 })
+        .then(comments => res.json(comments))
+        .catch(err => res.status(404).json({ noComments: 'No comment yet' }));
+});
+
 
 module.exports = router;
