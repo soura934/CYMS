@@ -8,7 +8,6 @@ class Splash extends React.Component {
     render () {
         return (
             <div className='splash-container'>
-                <p>0</p>
             <div className="splash">
                 <ProductIndexContainer />
             </div>

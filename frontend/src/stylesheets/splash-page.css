@@ -17,6 +17,12 @@
 
 }
 
+.header-container p {
+    color: transparent;
+    background-color: #fffee4;
+    height: 15px;
+}
+
 .brand-name {
     text-decoration: none;
     color: rgb(245, 223, 77);
@@ -56,16 +62,41 @@
 .authentication :last-child:hover {
     color: rgb(184, 184, 184);
 }
+.nav-bar {
+    margin-right: 50px;
+    display: flex;
+    justify-self: space-around;
+    align-items: center;
+    width: 10%;
+    color: rgb(0 0 0);
+    font-size: 18px;
+    font-weight: 600;
+}
+.nav-bar :first-child {
+    border-right: 1px;
+    padding-right: 9px;
+    padding-left: 11px;
+    color:rgb(255, 223, 0);
+}
+.nav-bar :first-child:hover {
+    color:rgb(251, 239, 169);
+}
+.nav-bar :last-child {
+    background-color: transparent;
+    border: none;
+    /* border-right: 1px ; */
+    padding-left: 9px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 600;
+}
+.nav-bar :last-child:hover {
+    color: rgb(184, 184, 184);
+}
 
 .splash {
     background-color: rgb(245, 223, 77);
     height: 100%;
-}
-
-.splash-container p {
-    background-color: #fffee4;;
-    color: transparent;
-    height: 10px;
 }
 
 .search-bar {
@@ -77,13 +108,21 @@
 
 .search-bar input{
     width: 650px;
-    height: 39px;
+    height: 35px;
     box-sizing: border-box;
     padding: 5px 21px;
     border-radius: 4px;
     border: none;
     font-size: 15px;
+    border: none;
 }
 
 .search-bar input:focus{
+   
+    background-color: rgb(240, 244, 255);
+}
+
+
+.header-container .nav-bar button:hover {
+    color: rgb(184, 184, 184);
 }
