@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../stylesheets/product-show.css';
 
 class Comment extends React.Component {
     constructor(props){
@@ -30,18 +31,20 @@ class Comment extends React.Component {
         // if (!comment) return null;
 
         return (
-            <div className='comment' > 
-            <h1>Comment</h1>
-                <form onSubmit={this.handleSubmit}>
-                        <textarea 
-                            style={{resize: 'none', height: '100px', width: '50%', borderRadius: '5px'}}
-                            onChange={this.update('content')}
-                            value={this.state.content}
-                            placeholder="leave comment">
-                        </textarea>
-                        <br/>
-                    <button>comment</button>
-                </form>
+            <div className='comment-container'>
+                <div className='comment' > 
+                <h1>Leave a Comment</h1>
+                    <form onSubmit={this.handleSubmit}>
+                            <textarea 
+                                style={{resize: 'none', height: '100px', width: '50%', borderRadius: '5px'}}
+                                onChange={this.update('content')}
+                                value={this.state.content}
+                                placeholder="leave a comment">
+                            </textarea>
+                            <br/>
+                        <button>Submit</button>
+                    </form>
+                </div>
             </div>
         )
     }
