@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 
 const Comment = require('../../models/Comment');
-const validateProductInput = require('../../validation/products');
 
 
 router.post("/saveComment", (req,res)=>{
