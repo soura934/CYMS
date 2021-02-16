@@ -4,6 +4,9 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 
 const Comment = require('../../models/Comment');
+const user = require('../../models/User');
+// const ProductId = require('../models/Product')
+const validateProductInput = require('../../validation/products');
 
 
 router.post("/saveComment", (req,res)=>{
@@ -22,15 +25,15 @@ router.post("/saveComment", (req,res)=>{
 })
 
 
-router.post("/getComments", (req,res)=>{
+// router.post("/getComments", (req,res)=>{
     
-        Comment.find({'producttId': req.body.productId})
-        .populate('writer')
-        .exec((err, comments)=>{
-            if (err) return res.status(400).send(err)
-            return res.status(200).json({success:true, comments})
-        })
-})
+//         Comment.find({'producttId': req.body.productId})
+//         .populate('writer')
+//         .exec((err, comments)=>{
+//             if (err) return res.status(400).send(err)
+//             return res.status(200).json({success:true, comments})
+//         })
+// })
 
 router.get('/', (req, res) => {
     Comment.find()
