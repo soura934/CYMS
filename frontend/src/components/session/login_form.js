@@ -68,15 +68,17 @@ class LoginForm extends React.Component {
                   onChange={this.update('email')}
                   placeholder="Email"
                 />
+                <div className='errors'> {this.state.errors["email"]}</div>
                 <input className='input' type="password"
                   value={this.state.password}
                   onChange={this.update('password')}
                   placeholder="Password"
                 />
+                <div className='errors'> {this.state.errors["password"]}</div>
               </div>
               {/* <br/> */}
               <div className='errors'>
-                  {this.renderErrors()}
+                  {/* {this.renderErrors()} */}
               </div>
   
                   <div className='button-container'>
