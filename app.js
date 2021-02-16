@@ -8,6 +8,7 @@ const users = require("./routes/api/users");
 const User = require('./models/User');
 const products = require('./routes/api/products');
 const comments = require('./routes/api/comments')
+const carts = require('./routes/api/carts')
 const path = require('path');
 
 
@@ -31,6 +32,7 @@ app.get("/", (req, res) => {res.send("Hello");});
 app.use("/api/users", users);
 app.use("/api/products", products)
 app.use('/api/comments', comments)
+app.use('/api/carts', carts)
 
 const port = process.env.PORT || 5000;
 
