@@ -7,13 +7,14 @@ import Footer from './footer/footer';
 import Splash from './splash/splash';
 import ProductShowContainer from './product/product_show_container'
 import MainPageContainer from './main/main_page_container';
+import './app.css';
 
 const App = () => (
   <div className='full-page-container'>
     <header>
       <MainPageContainer /> 
     </header>
-    <main>
+    <main id='main'>
       <Switch>
         <Route exact path="/" component={ Splash } />
         <AuthRoute exact path="/login" component={LoginFormContainer} />
