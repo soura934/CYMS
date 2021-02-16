@@ -7,21 +7,24 @@ import Footer from './footer/footer';
 import Splash from './splash/splash';
 import ProductShowContainer from './product/product_show_container'
 import MainPageContainer from './main/main_page_container';
+import './app.css';
 
 const App = () => (
-  <div className='full-page-container'>
-    <header>
-      <MainPageContainer /> 
-    </header>
-    <main>
-      <Switch>
-        <Route exact path="/" component={ Splash } />
-        <AuthRoute exact path="/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <Route exact path="/product/:id/:_id" component={ProductShowContainer} />
-      </Switch>
-    </main>
-    <footer>
+  <div id="page-container">
+    <div id='content-wrap'>
+      <header>
+        <MainPageContainer /> 
+      </header>
+      <main id='main'>
+        <Switch>
+          <Route exact path="/" component={ Splash } />
+          <AuthRoute exact path="/login" component={LoginFormContainer} />
+          <AuthRoute exact path="/signup" component={SignupFormContainer} />
+          <Route exact path="/product/:id/:_id" component={ProductShowContainer} />
+        </Switch>
+      </main>
+    </div>
+    <footer id='footer'>
       <Footer />
     </footer>
   </div>
