@@ -16,13 +16,13 @@ class ProductIndex extends React.Component {
 
         let products = this.props.products.map((product) => {
             return (
-                    <ul className='product-item' key={product._id}>
-                        <li>
-                            <Link className='product-link' to={`/product/${product.id}/${product._id}`}>{product.title}</Link>
-                        </li>
-                        <li><img src={product.image} alt=""/></li>
-                        <li>${product.price}</li>
-                    </ul>
+                    <Link  key={product._id}  to={`/product/${product.id}/${product._id}`}>
+                        <ul className='product-item' >
+                            <li>{product.title}</li>
+                            <li><img src={product.image} alt=""/></li>
+                            <li>${product.price}</li>
+                        </ul>
+                    </Link>
             )
         })
         

@@ -35,6 +35,10 @@
    max-height: 139px;
 }
 
-.product-index .product-item .product-link:hover {
-   color: black;
+.product-index .product-item:hover {
+   color: rgb(0, 0, 0);
+}
+
+.product-index .product-item li:first-child {
+   min-height: 60px;
 }
