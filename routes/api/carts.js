@@ -2,42 +2,42 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require('mongoose');
 const passport = require('passport');
+const jwt = require('jsonwebtoken');
+const Cart = require("../../models/Cart");
+const User = require("../../models/User");
+const Item = require("../../models/Product");
+const { session } = require("passport");
 
-const Comment = require('../../models/Comment');
-
-
-router.post("/saveComment", (req,res)=>{
-    const comment = new Comment(req.body)
-
-    comment.save((err, comment) => {
-        if (err) return res.json({ success: false, err})
-
-        Comment.find({'_id': comment._id})
-        .populate('writer')
-        .exec((err, result)=>{
-            if (err) return res.json({ success: false, err})
-            return res.status(200).json({success:true, result})
-        })
-    })
-})
-
-
-router.post("/getComments", (req,res)=>{
-    
-        Comment.find({'producttId': req.body.productId})
-        .populate('writer')
-        .exec((err, comments)=>{
-            if (err) return res.status(400).send(err)
-            return res.status(200).json({success:true, comments})
-        })
-})
-
-router.get('/', (req, res) => {
-    Comment.find()
-        .sort({ date: -1 })
-        .then(comments => res.json(comments))
-        .catch(err => res.status(404).json({ noComments: 'No comment yet' }));
+router.get('/test', (req, res) => {
+    res.json({msg: "This is the cart route!"})
 });
+
+router.post("/",
+    passport.authenticate('jwt', {session:false}),
+    (req, res) => {
+        const cart = new Cart({
+            user: req.body.user.id,
+            cartItem: req.body.product_id
+         })
+        
+         cart.save()
+            .then(cart => res.json(cart))
+            .catch(err => res.status(400).json({err}))
+    }
+    )
+    
+    router.get('/user/:user_id',
+    passport.authenticate('jwt', {session: false}),
+    (req, res) =>{
+        Cart.find({user: req.params.user_id})
+        .then(user => {
+            return res.json(user)
+        })
+        .catch(err => res.status(400).json({err}))
+    })
+
+    
+
 
 
 module.exports = router;
