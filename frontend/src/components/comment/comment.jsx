@@ -30,9 +30,10 @@ class Comment extends React.Component {
 
         if (!this.props.comments) return null;
 
-        let comments = this.props.comments.map((comment) => {
+        let comments = this.props.comments.map((comment, i) => {
             return (
-                    <ul className="product-item" key={comment._id}>
+                    <ul className='user-comments' key={comment._id}>
+                        <h2>Customer Review {i + 1}:</h2>
                         <li>{comment.content}</li>
                     </ul>
             )
@@ -40,18 +41,21 @@ class Comment extends React.Component {
         return (
             <div className='comment-container'>
                 <div className='comment' > 
-                <h1>Leave a Comment</h1>
-                {comments}
-                    <form onSubmit={this.handleSubmit}>
-                            <textarea 
-                                style={{resize: 'none', height: '100px', width: '50%', borderRadius: '5px'}}
-                                onChange={this.update('content')}
-                                value={this.state.content}
-                                placeholder="leave a comment">
-                            </textarea>
-                            <br/>
-                        <button>Submit</button>
-                    </form>
+
+                    <h1>Leave a Comment</h1>
+                        <form onSubmit={this.handleSubmit}>
+                                <textarea 
+                                    style={{resize: 'none', height: '100px', width: '50%', borderRadius: '5px'}}
+                                    onChange={this.update('content')}
+                                    value={this.state.content}
+                                    placeholder="leave a comment">
+                                </textarea>
+                                <br/>
+                            <button>Submit</button>
+                        </form>
+
+                        <h1 className='comment-title'>Top Customer Reviews</h1>
+                        {comments}
                 </div>
             </div>
         )

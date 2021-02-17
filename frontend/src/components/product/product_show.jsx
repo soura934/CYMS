@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import '../../stylesheets/product-show.css';
+import '../../stylesheets/comment.css';
 import CommentContainer from '../comment/comment_container';
 
 class ProductShow extends React.Component{
