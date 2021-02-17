@@ -48,7 +48,7 @@ class Comment extends React.Component {
                                     style={{resize: 'none', height: '100px', width: '50%', borderRadius: '5px'}}
                                     onChange={this.update('content')}
                                     value={this.state.content}
-                                    placeholder="leave a comment">
+                                    placeholder="Comment here">
                                 </textarea>
                                 <br/>
                             <button>Submit</button>
