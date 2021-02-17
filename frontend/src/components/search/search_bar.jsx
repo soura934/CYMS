@@ -13,13 +13,10 @@ class SearchBar extends React.Component {
         this.update = this.update.bind(this);
     }
 
-    
-
-
     handleSubmit(e) {
         e.preventDefault();
-
         this.props.fetchSearchProducts(this.state.keyword)
+        .then(this.props.history.push("/"))
         this.setState({keyword: ''})
     }
 
@@ -28,7 +25,6 @@ class SearchBar extends React.Component {
     }
 
     render() {
-        
         return (
             <div className='search-bar'>
                 <form onSubmit={this.handleSubmit}>
@@ -38,10 +34,7 @@ class SearchBar extends React.Component {
                         onChange={this.update('keyword')}
                         placeholder="Search by keyword"
                     />
-                {/* <button>Search</button> */}
-                </form>
-            
-              
+                </form>    
             </div>
         )
     }
