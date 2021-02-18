@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import '../../stylesheets/product-show.css';
 import '../../stylesheets/comment.css';
 import CommentContainer from '../comment/comment_container';
+import { Link } from 'react-router-dom';
 
 class ProductShow extends React.Component{
 
@@ -11,10 +12,13 @@ class ProductShow extends React.Component{
     }
 
     render() {
+        debugger
         if (!this.props.product){
+            debugger
             return null;
         } 
-    
+        
+        
         return (
             <div>
                 <div className='product-show'>
@@ -47,6 +51,7 @@ class ProductShow extends React.Component{
                     <CommentContainer/>       
             </div>
             )
+
 
     }
 }
