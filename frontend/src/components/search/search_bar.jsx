@@ -6,7 +6,6 @@ class SearchBar extends React.Component {
 
         this.state = { 
             keyword: "",
-            products: []
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,8 +15,8 @@ class SearchBar extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.fetchSearchProducts(this.state.keyword)
-        .then(this.props.history.push("/"))
-        this.setState({keyword: ''})
+        .then((this.props.history.push(`/search/${this.state.keyword}`)))   
+        .then(this.setState({keyword: ''}))    
     }
 
     update(field) {

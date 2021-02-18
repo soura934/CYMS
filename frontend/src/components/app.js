@@ -7,6 +7,7 @@ import Footer from './footer/footer';
 import Splash from './splash/splash';
 import ProductShowContainer from './product/product_show_container'
 import MainPageContainer from './main/main_page_container';
+import SearchItemContainer from './search/search_item_container';
 import './app.css';
 
 const App = () => (
@@ -21,6 +22,7 @@ const App = () => (
           <AuthRoute exact path="/login" component={LoginFormContainer} />
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
           <Route exact path="/product/:id/:_id" component={ProductShowContainer} />
+          <Route exact path="/search/:query" component={SearchItemContainer} />
         </Switch>
       </main>
     </div>
