@@ -12,9 +12,9 @@ class ProductShow extends React.Component{
     }
 
     render() {
-        debugger
+        // debugger
         if (!this.props.product){
-            debugger
+            // debugger
             return null;
         } 
         

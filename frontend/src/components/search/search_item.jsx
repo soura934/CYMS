@@ -11,21 +11,21 @@ class SearchItem extends React.Component {
     }
 
     componentDidMount(){
-        debugger
+        // debugger
         this.props.fetchSearchProducts(this.props.match.params.query)
     }
     render() {
         if (!this.props.products){
-            debugger
+            // debugger
              return null;
         }
         if (!Array.isArray(this.props.products)){
             
-            debugger
+            // debugger
         return null;
         }
          let products = this.props.products.map((product) => {
-         debugger
+        //  debugger
             return (
                     <Link className='product-item' key={product._id}  to={`/product/${product.id}/${product._id}`}>
                         <li>{product.title}</li>
@@ -42,7 +42,7 @@ class SearchItem extends React.Component {
                 </div>
             )
         } else {
-            debugger
+            // debugger
             return (
                 <div>No results found</div>
             )
