@@ -10,19 +10,23 @@ class ProductShow extends React.Component{
         super(props)
         
     
-        // this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     componentDidMount(){
         this.props.fetchProduct(this.props.match.params._id)
     }
 
-    // handleSubmit(e){
-    //     e.preventDefault()
-    //     this.state = {
-    //         userId: this.props.user
-    //     }
-    // }
+    handleSubmit(e){
+        e.preventDefault()
+        const cart = {
+            user: this.props.userId,
+            price: this.props.product.price,
+            cartItem: this.props.product._id
+        }
+        debugger
+        this.props.createCart(cart)
+    }
     render() {
         debugger
         // debugger
@@ -55,7 +59,7 @@ class ProductShow extends React.Component{
                                     <p className='d'>Usually ships within 2 to 3 days.</p>
                                 </div>
                                 <div className='button-container'>
-                                    <button>Add to Cart</button>
+                                    <button onClick={this.handleSubmit}>Add to Cart</button>
                                     <button>Buy Now</button>
                                 </div>
                             </div>
