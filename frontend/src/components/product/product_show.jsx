@@ -1,9 +1,11 @@
 import React from 'react';
 import CommentContainer from '../comment/comment_container';
 import MainPageContainer from '../main/main_page_container';
+import  Footer from '../footer/footer';
+
 import '../../stylesheets/product-show.css';
 import '../../stylesheets/comment.css';
-
+import '../../stylesheets/app.css';
 
 class ProductShow extends React.Component{
 
@@ -48,7 +50,10 @@ class ProductShow extends React.Component{
                             </div>
                         </div>
                 </div>
-                    <CommentContainer/>       
+                    <CommentContainer/>    
+                <footer id='footer'>
+                    <Footer />
+                </footer>
             </div>
             )
 

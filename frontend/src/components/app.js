@@ -8,7 +8,8 @@ import Splash from './splash/splash';
 import ProductShowContainer from './product/product_show_container'
 import MainPageContainer from './main/main_page_container';
 import SearchItemContainer from './search/search_item_container';
-import './app.css';
+// import './app.css';
+import '../stylesheets/app.css';
 
 const App = () => (
   <div id="page-container">
@@ -26,9 +27,9 @@ const App = () => (
         </Switch>
       </main>
     </div>
-    <footer id='footer'>
+    {/* <footer id='footer'>
       <Footer />
-    </footer>
+    </footer> */}
   </div>
 );
 
