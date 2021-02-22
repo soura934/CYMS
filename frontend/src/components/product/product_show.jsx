@@ -30,11 +30,8 @@ class ProductShow extends React.Component{
         this.props.createCart(cart)
     }
     render() {
-<<<<<<< HEAD
-=======
         debugger
         // debugger
->>>>>>> main
         if (!this.props.product){
             return null;
         } 
@@ -65,13 +62,8 @@ class ProductShow extends React.Component{
                                     <p className='d'>Usually ships within 2 to 3 days.</p>
                                 </div>
                                 <div className='button-container'>
-<<<<<<< HEAD
-                                    <button>Add to Cart</button>
-                                    {/* <button>Buy Now</button> */}
-=======
                                     <button onClick={this.handleSubmit}>Add to Cart</button>
-                                    <button>Buy Now</button>
->>>>>>> main
+                                    {/* <button>Buy Now</button> */}
                                 </div>
                             </div>
                         </div>

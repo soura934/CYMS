@@ -8,13 +8,8 @@ import Splash from './splash/splash';
 import ProductShowContainer from './product/product_show_container'
 import MainPageContainer from './main/main_page_container';
 import SearchItemContainer from './search/search_item_container';
-<<<<<<< HEAD
-// import './app.css';
-import '../stylesheets/app.css';
-=======
 import CartContainer from "./cart/cart_container"
-import './app.css';
->>>>>>> main
+import '../stylesheets/app.css';
 
 const App = () => (
   <div id="page-container">
