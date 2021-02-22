@@ -45,7 +45,7 @@ class ProductShow extends React.Component{
                                 </div>
                                 <div className='button-container'>
                                     <button>Add to Cart</button>
-                                    <button>Buy Now</button>
+                                    {/* <button>Buy Now</button> */}
                                 </div>
                             </div>
                         </div>

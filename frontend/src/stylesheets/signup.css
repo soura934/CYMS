@@ -19,14 +19,14 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     justify-content: center;
     align-items: center;
     background-color: #ebeef3;
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
 .signup-form-container h1{
    font-weight: 600;
    color: rgb(47, 47, 47);
    font-size: 35px;
-   padding-bottom: 10px;
+   padding-bottom: 20px;
 }
 .signup-form-container h2{
    font-weight: 600;
