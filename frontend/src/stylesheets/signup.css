@@ -56,7 +56,7 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     box-sizing: border-box;
     width: 295px;
     margin: 16px;
-
+    text-align: center;
 }
 
 .signup-form-container .signup-form .input input:focus{

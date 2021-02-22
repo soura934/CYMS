@@ -13,9 +13,9 @@ import './app.css';
 const App = () => (
   <div id="page-container">
     <div id='content-wrap'>
-      <header>
+      {/* <header>
         <MainPageContainer /> 
-      </header>
+      </header> */}
       <main id='main'>
         <Switch>
           <Route exact path="/" component={ Splash } />

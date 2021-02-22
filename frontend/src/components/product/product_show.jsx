@@ -1,9 +1,9 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import CommentContainer from '../comment/comment_container';
+import MainPageContainer from '../main/main_page_container';
 import '../../stylesheets/product-show.css';
 import '../../stylesheets/comment.css';
-import CommentContainer from '../comment/comment_container';
-import { Link } from 'react-router-dom';
+
 
 class ProductShow extends React.Component{
 
@@ -12,15 +12,15 @@ class ProductShow extends React.Component{
     }
 
     render() {
-        // debugger
         if (!this.props.product){
-            // debugger
             return null;
         } 
         
         
         return (
             <div>
+                <MainPageContainer /> 
+
                 <div className='product-show'>
                         <div className='image-container'>
                             <img src={this.props.product.image} />

@@ -7,13 +7,10 @@ import ProductIndexContainer from '../product/product_index_container'
 class Splash extends React.Component {
     render () {
         return (
-            // <div className='splash-container'>
             <div className="splash">
+                <MainPageContainer /> 
                 <ProductIndexContainer />
-            </div>
-       
-            // </div>
-          
+            </div>          
         )
     }
 }
