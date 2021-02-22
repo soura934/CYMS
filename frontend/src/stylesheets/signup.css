@@ -42,7 +42,7 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     justify-content: center;
     align-items: center;
     width: 404px;
-    height: 540px;
+    height: 565px;
     border: 2px solid rgb(225, 225, 225);
     border-radius: 12px;
     margin-bottom: 9px;
@@ -122,6 +122,3 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     color: #6f6f6f;
     margin-bottom: 5px;
 }
-/* .signup-form-container .login-Link-container .link:hover{  
-    color: black;
-} */

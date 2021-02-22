@@ -113,15 +113,18 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     height: 26px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* border-radiu */
-    font-size: 17px;
-    /* background-color: #fffcc1; */
+    font-size: 16px;
     color: #615f52;
+    align-items: flex-end;
+    padding: 0px 8px;
+    color: #0066c0;
+}
+.log-in-form-container .register-Link-container .home{
+    align-items: flex-start;
 }
 .log-in-form-container .register-Link-container .link:hover{  
-    /* background-color: #dfda84; */
-    color: black;
+    color: rgb(190, 103, 3); 
+    text-decoration: underline;
 }
 .log-in-form-container .register-Link-container .text{
     font-size: 13px;
