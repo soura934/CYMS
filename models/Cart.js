@@ -12,8 +12,10 @@ const CartSchema = new Schema({
         ref: 'products'
                
      },
-        
-    
+    price: {
+      type: Number,
+      required: true
+    },
     date: {
       type: Date,
       default: Date.now
