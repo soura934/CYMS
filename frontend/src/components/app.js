@@ -9,14 +9,14 @@ import ProductShowContainer from './product/product_show_container'
 import MainPageContainer from './main/main_page_container';
 import SearchItemContainer from './search/search_item_container';
 import CartContainer from "./cart/cart_container"
-import './app.css';
+import '../stylesheets/app.css';
 
 const App = () => (
   <div id="page-container">
     <div id='content-wrap'>
-      <header>
+      {/* <header>
         <MainPageContainer /> 
-      </header>
+      </header> */}
       <main id='main'>
         <Switch>
           <Route exact path="/" component={ Splash } />
@@ -28,9 +28,9 @@ const App = () => (
         </Switch>
       </main>
     </div>
-    <footer id='footer'>
+    {/* <footer id='footer'>
       <Footer />
-    </footer>
+    </footer> */}
   </div>
 );
 

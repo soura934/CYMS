@@ -63,7 +63,7 @@
     color: rgb(184, 184, 184);
 }
 .nav-bar {
-    margin-right: 50px;
+    /* margin-right: 50px; */
     display: flex;
     justify-self: space-around;
     align-items: center;
@@ -85,13 +85,20 @@
     background-color: transparent;
     border: none;
     /* border-right: 1px ; */
-    padding-left: 9px;
-    color: rgb(255, 255, 255);
+    /* padding-left: 9px; */
+    /* color: rgb(255, 255, 255); */
+    color: rgb(255, 223, 0);
     font-size: 18px;
     font-weight: 600;
 }
-.nav-bar :last-child:hover {
-    color: rgb(184, 184, 184);
+
+#logout:hover {
+    color:rgb(251, 239, 169);
+}
+.nav-bar button:hover {
+    /* color: rgb(184, 184, 184); */
+    /* color:rgb(251, 239, 169); */
+    /* color:red; */
 }
 
 .splash {

@@ -92,7 +92,11 @@ class LoginForm extends React.Component {
 
         <div className='register-Link-container'>
           <p className='text'> New to CYMS? </p>
-          <Link className='link' to={'/signup'}> Create a new Account </Link>
+            <nav>
+              <Link className='link' to={'/signup'}>Sign Up</Link>
+              <span>|</span>
+              <Link className='link home' to={'/'}>Home</Link>
+            </nav>
         </div>
 
       </div>

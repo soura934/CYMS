@@ -19,7 +19,7 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     justify-content: center;
     align-items: center;
     background-color: #ebeef3;
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
 .log-in-form{ 
@@ -35,7 +35,7 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
    font-weight: 600;
    color: rgb(47, 47, 47);
    font-size: 35px;
-   padding-bottom: 10px;
+   padding-bottom: 20px;
 }
 .log-in-form-container h2{
    font-weight: 600;
@@ -113,15 +113,18 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     height: 26px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* border-radiu */
-    font-size: 17px;
-    /* background-color: #fffcc1; */
+    font-size: 16px;
     color: #615f52;
+    align-items: flex-end;
+    padding: 0px 8px;
+    color: #0066c0;
+}
+.log-in-form-container .register-Link-container .home{
+    align-items: flex-start;
 }
 .log-in-form-container .register-Link-container .link:hover{  
-    /* background-color: #dfda84; */
-    color: black;
+    color: rgb(190, 103, 3); 
+    text-decoration: underline;
 }
 .log-in-form-container .register-Link-container .text{
     font-size: 13px;
@@ -135,3 +138,12 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
 .log-in-form-container .log-in-button:hover{
     background-color: rgb(230, 155, 70);;
 }
+.log-in-form-container .register-Link-container nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: #6f6f6f;
+}
+/* .log-in-form-container .register-Link-container .home{
+    align-items: flex-start;
+} */
