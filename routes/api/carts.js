@@ -17,6 +17,7 @@ router.post("/",
         }
         const newCart = new Cart({
             user: req.body.user_id,
+            product: req.body.product_id,
             price: req.body.price
         })
         newCart.save()
