@@ -5,15 +5,16 @@ const CartSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId, 
         ref: 'users'
-        
     },
-    cartItem: {
-         type: Schema.Types.ObjectId,
-        ref: 'products'
-               
+
+    product: {
+        type: Schema.Types.ObjectId,
+        ref: 'products'           
      },
-        
-    
+    price: {
+      type: Number,
+      required: true
+    },
     date: {
       type: Date,
       default: Date.now

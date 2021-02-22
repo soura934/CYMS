@@ -8,12 +8,33 @@ import '../../stylesheets/comment.css';
 import '../../stylesheets/app.css';
 
 class ProductShow extends React.Component{
+    constructor(props){
+        super(props)
+        
+    
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
 
     componentDidMount(){
         this.props.fetchProduct(this.props.match.params._id)
     }
 
+    handleSubmit(e){
+        e.preventDefault()
+        const cart = {
+            user: this.props.userId,
+            price: this.props.product.price,
+            cartItem: this.props.product._id
+        }
+        debugger
+        this.props.createCart(cart)
+    }
     render() {
+<<<<<<< HEAD
+=======
+        debugger
+        // debugger
+>>>>>>> main
         if (!this.props.product){
             return null;
         } 
@@ -44,8 +65,13 @@ class ProductShow extends React.Component{
                                     <p className='d'>Usually ships within 2 to 3 days.</p>
                                 </div>
                                 <div className='button-container'>
+<<<<<<< HEAD
                                     <button>Add to Cart</button>
                                     {/* <button>Buy Now</button> */}
+=======
+                                    <button onClick={this.handleSubmit}>Add to Cart</button>
+                                    <button>Buy Now</button>
+>>>>>>> main
                                 </div>
                             </div>
                         </div>

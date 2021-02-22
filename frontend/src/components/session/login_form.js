@@ -59,24 +59,30 @@ class LoginForm extends React.Component {
           <h1>CYMS</h1>
           <div className='log-in-form'>
             <h2>Log In</h2>
-              <form onSubmit={this.handleSubmit}>
-                <div >
-                  <input  
-                    className='input'
-                    type="text"
-                    value={this.state.email}
-                    onChange={this.update('email')}
-                    placeholder="Email"
-                  />
-                  <div className='errors'> {this.state.errors["email"]}</div>
-                  <input className='input' type="password"
-                    value={this.state.password}
-                    onChange={this.update('password')}
-                    placeholder="Password"
-                  />
-                  <div className='errors'> {this.state.errors["password"]}</div>
-                </div>
-         
+            <form onSubmit={this.handleSubmit}>
+              
+              <div >
+                <input  
+                  className='input'
+                  type="text"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                  placeholder="Email"
+                />
+                
+                <div className='errors'> {this.state.errors["email"]}</div>
+                <input className='input' type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  placeholder="Password"
+                />
+                <div className='errors'> {this.state.errors["password"]}</div>
+              </div>
+              {/* <br/> */}
+              <div className='errors'>
+                  {/* {this.renderErrors()} */}
+              </div>
+  
                   <div className='button-container'>
                     <input className='log-in-button' type="submit" value="Log In" />
                     <input onClick={this.handleDemoSubmit} className='demo-log-in-button' type="submit" value="Demo Log In" />
