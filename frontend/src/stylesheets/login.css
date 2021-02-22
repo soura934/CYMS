@@ -135,3 +135,12 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
 .log-in-form-container .log-in-button:hover{
     background-color: rgb(230, 155, 70);;
 }
+.log-in-form-container .register-Link-container nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: #6f6f6f;
+}
+/* .log-in-form-container .register-Link-container .home{
+    align-items: flex-start;
+} */

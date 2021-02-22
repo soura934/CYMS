@@ -86,11 +86,17 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     display: flex;
     text-align: center;
     flex-direction: column;
-    /* justify-content: space-between; */
+    align-items: center;
     height: 100px;
     width: 295px;
     margin-bottom: 20px;
     padding-top: 14px;
+}
+.signup-form-container .login-Link-container nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: #6f6f6f;
 }
 
 .signup-form-container .login-Link-container .link{
@@ -98,18 +104,24 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     height: 26px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    font-size: 17px;
-    color: #615f52;
+    align-items: flex-end;
+    font-size: 16px;
+    color: #0066c0;
+    padding: 0px 8px
+    
+}
+.signup-form-container .login-Link-container .home{
+        align-items: flex-start;
 }
 .signup-form-container .login-Link-container .link:hover{  
-    color: black;
+    color: rgb(190, 103, 3); 
+    text-decoration: underline;
 }
 .signup-form-container .login-Link-container .text{
     font-size: 14px;
     color: #6f6f6f;
     margin-bottom: 5px;
 }
-.signup-form-container .login-Link-container .link:hover{  
+/* .signup-form-container .login-Link-container .link:hover{  
     color: black;
-}
+} */
