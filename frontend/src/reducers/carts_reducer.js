@@ -5,14 +5,18 @@ const cartReducer = (state = [], action) => {
     let nextState = Object.assign([], state.cart);
     switch (action.type) {
         case ADD_CART:
-            let nextState = Object.assign([], state.cart);
-           
-            case REMOVE_FROM_CART:
-                delete nextState[action.product.id]
+            nextState.push([action.product]);
+           return nextState;
+
+        case RECEIVE_CART:
+            return action.products  
+
+        case REMOVE_FROM_CART:
+               
+                delete nextState[action.product]
                 return nextState;
-           
-    
-        default:
+
+         default:
            return state
     }
 }

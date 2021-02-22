@@ -6,12 +6,25 @@ import CommentContainer from '../comment/comment_container';
 import { Link } from 'react-router-dom';
 
 class ProductShow extends React.Component{
+    constructor(props){
+        super(props)
+        
+    
+        // this.handleSubmit = this.handleSubmit.bind(this)
+    }
 
     componentDidMount(){
         this.props.fetchProduct(this.props.match.params._id)
     }
 
+    // handleSubmit(e){
+    //     e.preventDefault()
+    //     this.state = {
+    //         userId: this.props.user
+    //     }
+    // }
     render() {
+        debugger
         // debugger
         if (!this.props.product){
             // debugger

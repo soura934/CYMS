@@ -1,4 +1,3 @@
-import * as ProductApiUtil from '.././util/product_api_util';
 import * as CartApiUtil from '../util/cart_api_util';
 export const ADD_CART = "ADD_CART"
 export const RECEIVE_CART = 'RECEIVE_CART';

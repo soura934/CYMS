@@ -5,8 +5,11 @@ import { fetchProduct } from '../../actions/product_actions';
 
 
 const msp = (state, ownProps) => {
+    debugger
     return {
-        product: state.entities.products.data
+        product: state.entities.products.data,
+        userId: state.session.user.id
+
     }
 }
 const mdp = (dispatch, ownProps) => {
