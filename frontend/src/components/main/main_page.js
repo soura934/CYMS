@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Redirect } from "react-router-dom"
 import '../../stylesheets/splash-page.css';
 import SearchBarContainer from '../search/search_bar_container';
 
@@ -13,7 +14,7 @@ class MainPage extends React.Component {
 
   logoutUser(e) {
       e.preventDefault();
-      this.props.logout();
+      this.props.logout()     
   }
 
   getLinks() {
@@ -39,6 +40,7 @@ class MainPage extends React.Component {
   }
 
   render() {
+    
       return (
         <div className='header-container'>
           <div className='header'>
