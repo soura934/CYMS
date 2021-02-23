@@ -39,7 +39,7 @@ class ProductIndex extends React.Component {
         })
         
         return (
-            <div>
+            <div className='index-container'>
                 {this.getGreeting()}
                 <div className='product-index'>
                     {products}
