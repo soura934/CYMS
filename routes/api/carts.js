@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const Cart = require("../../models/Cart");
+const CartItem = require("../../models/CartItem");
 const passport = require('passport');
-const validateCartInput = require('../../validation/cart');
+const validateCartItemInput = require('../../validation/cartitem');
 
 router.get('/test', (req, res) => {
     res.json({msg: "This is the cart route!"})
@@ -31,12 +31,12 @@ router.post("/",
             .catch(err => res.status(400).json({err}))
             debugger
     }
-)
+);
 
 router.get('/user/:user_id',
     passport.authenticate('jwt', {session: false}),
     (req, res) =>{
-        Cart.find({user: req.params.user_id})
+        CartItem.find({user: req.params.user_id})
         .then(user => {
             return res.json(user)
         })
