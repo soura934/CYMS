@@ -1,9 +1,11 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import CommentContainer from '../comment/comment_container';
+import MainPageContainer from '../main/main_page_container';
+import  Footer from '../footer/footer';
+
 import '../../stylesheets/product-show.css';
 import '../../stylesheets/comment.css';
-import CommentContainer from '../comment/comment_container';
-import { Link } from 'react-router-dom';
+import '../../stylesheets/app.css';
 
 class ProductShow extends React.Component{
     constructor(props){
@@ -32,13 +34,14 @@ class ProductShow extends React.Component{
         debugger
         // debugger
         if (!this.props.product){
-            // debugger
             return null;
         } 
         
         
         return (
             <div>
+                <MainPageContainer /> 
+
                 <div className='product-show'>
                         <div className='image-container'>
                             <img src={this.props.product.image} />
@@ -61,12 +64,15 @@ class ProductShow extends React.Component{
                                 </div>
                                 <div className='button-container'>
                                     <button onClick={this.handleSubmit}>Add to Cart</button>
-                                    <button>Buy Now</button>
+                                    {/* <button>Buy Now</button> */}
                                 </div>
                             </div>
                         </div>
                 </div>
-                    <CommentContainer/>       
+                    <CommentContainer/>    
+                <footer id='footer'>
+                    <Footer />
+                </footer>
             </div>
             )
 

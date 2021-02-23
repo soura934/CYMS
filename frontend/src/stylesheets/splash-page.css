@@ -33,8 +33,6 @@
     color: rgb(255, 223, 0);
 }
 
-
-
 .authentication {
     margin-right: 50px;
     display: flex;
@@ -45,52 +43,61 @@
     font-size: 18px;
     font-weight: 600;
 }
+
 .authentication :first-child {
     border-right: 1px;
     padding-right: 9px;
     padding-left: 11px;
     color:rgb(255, 223, 0);
 }
+
 .authentication :first-child:hover {
     color:rgb(251, 239, 169);
 }
+
 .authentication :last-child {
     border-right: 1px ;
     padding-left: 9px;
     color: rgb(255, 255, 255);
 }
+
 .authentication :last-child:hover {
     color: rgb(184, 184, 184);
 }
+
 .nav-bar {
     margin-right: 50px;
     display: flex;
     justify-self: space-around;
     align-items: center;
     width: 10%;
-    color: rgb(0 0 0);
     font-size: 18px;
     font-weight: 600;
 }
-.nav-bar :first-child {
-    border-right: 1px;
-    padding-right: 9px;
-    padding-left: 11px;
-    color:rgb(255, 223, 0);
-}
-.nav-bar :first-child:hover {
-    color:rgb(251, 239, 169);
-}
-.nav-bar :last-child {
+
+.nav-bar #logout {
+    padding-right: 20px;
+    font-size: 18px;
+    font-weight: 600;
     background-color: transparent;
     border: none;
-    /* border-right: 1px ; */
+    color:rgb(245, 223, 77);
+}
+
+.nav-bar #logout:hover {
+    color:rgb(251, 239, 169);
+}
+
+.nav-bar .cart-link {
+    background-color: transparent;
+    border: none;
     padding-left: 9px;
     color: rgb(255, 255, 255);
     font-size: 18px;
     font-weight: 600;
 }
-.nav-bar :last-child:hover {
+
+.nav-bar .cart-link:hover {
     color: rgb(184, 184, 184);
 }
 
