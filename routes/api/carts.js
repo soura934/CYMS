@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const CartItem = require("../../models/CartItem");
+const Cart = require("../../models/Cart");
 const passport = require('passport');
 const validateCartItemInput = require('../../validation/cartitem');
 
@@ -13,9 +13,9 @@ router.post("/",
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
         debugger
-        const { errors, isValid } = validateCartInput(req.body);
+        const { errors, isValid } = validateCartItemInput(req.body);
         if(!isValid) {
-            
+            debugger
             return res.status(400).json(errors);
         }
         debugger
