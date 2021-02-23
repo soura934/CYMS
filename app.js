@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const users = require("./routes/api/users");
 const products = require('./routes/api/products');
 const comments = require('./routes/api/comments')
-const cartitems = require('./routes/api/cartitems')
+const cartitems = require('./routes/api/carts')
 const path = require('path');
 const passport = require('passport');
 
