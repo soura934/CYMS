@@ -22,15 +22,6 @@ class ProductShow extends React.Component{
 
     handleSubmit(e){
         e.preventDefault()
-<<<<<<< HEAD
-        this.state = {
-            user: this.props.userId,
-            price: this.props.product.price,
-            cartItem: this.props.product._id
-        }
-        debugger
-        this.props.createCart(this.state)
-=======
         debugger
         if (this.props.session.isAuthenticated){
         this.state = {
@@ -49,7 +40,6 @@ class ProductShow extends React.Component{
         // <Link className='link' to={'/login'}></Link>
     }
     
->>>>>>> main
     }
     render() {
         debugger
