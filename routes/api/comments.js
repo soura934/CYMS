@@ -4,24 +4,36 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 
 const Comment = require('../../models/Comment');
-const user = require('../../models/User');
-// const ProductId = require('../models/Product')
-const validateProductInput = require('../../validation/products');
+const User = require('../../models/User');
+const Product = require('../../models/Product')
+const validateCommentInput = require('../../validation/comments');
 
 
-router.post("/saveComment", (req,res)=>{
-    const comment = new Comment(req.body)
+router.post("/",
+    passport.authenticate('jwt', {session: false}),
+    (req, res) => {
+    const {isValid, errors} = validateCommentInput(req.body);
+        if (!isValid) {
+            return res.status(400).json(errors);
+        }
 
-    comment.save((err, comment) => {
-        if (err) return res.json({ success: false, err})
+        const newComment = new Comment({
+            user: req.user.id,
+            product: req.body.product_id,
+            content: req.body.content
+        });
 
-        Comment.find({'_id': comment._id})
-        .populate('writer')
-        .exec((err, result)=>{
-            if (err) return res.json({ success: false, err})
-            return res.status(200).json({success:true, result})
-        })
-    })
+        newComment.save().then(comment => res.json(comment));
+    // comment.save((err, comment) => {
+    //     if (err) return res.json({ success: false, err})
+
+    //     Comment.find({'_id': comment._id})
+    //     .populate('writer')
+    //     .exec((err, result)=>{
+    //         if (err) return res.json({ success: false, err})
+    //         return res.status(200).json({success:true, result})
+    //     })
+    // })
 })
 
 

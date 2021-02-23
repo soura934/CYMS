@@ -3,8 +3,9 @@ import Comment from './comment';
 import { fetchComments, fetchComment, deleteComment, createComment } from '../../actions/comment_actions';
 
 const msp = (state, ownProps) => {
+    // debugger
     return { 
-        // productId: ownProps.match,
+        product: state.entities.products.data,
         comments: state.entities.comments.data
     }
 }

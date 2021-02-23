@@ -6,7 +6,8 @@ class Comment extends React.Component {
         super(props);
         
         this.state = {
-            comment: []
+            comment: [], 
+            product_id: this.props.product.id
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,6 +27,7 @@ class Comment extends React.Component {
     }
 
     render () {
+        // debugger
         const { comment } = this.props;
 
         if (!this.props.comments) return null;
