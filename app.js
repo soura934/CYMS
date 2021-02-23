@@ -3,11 +3,10 @@ const app = express();
 const mongoose = require('mongoose');
 const db = require('./config/keys').mongoURI;
 const bodyParser = require('body-parser');
-
 const users = require("./routes/api/users");
 const products = require('./routes/api/products');
 const comments = require('./routes/api/comments')
-const carts = require('./routes/api/carts')
+const cartitems = require('./routes/api/cartitems')
 const path = require('path');
 const passport = require('passport');
 
@@ -22,19 +21,19 @@ mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
   .catch(err => console.log(err));
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
+  
 app.get("/", (req, res) => {res.send("Hello");});
 
 app.use(passport.initialize());
 require('./config/passport')(passport);
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 app.use("/api/users", users);
 app.use("/api/products", products);
+app.use('/api/carts', cartitems);
 app.use('/api/comments', comments);
-app.use('/api/carts', carts);
 
 const port = process.env.PORT || 5000;
 

@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import ProductShow from './product_show';
 import { fetchProduct } from '../../actions/product_actions';
-import {createCart} from "../../actions/cart_actions"
+import { createCart } from "../../actions/cart_actions"
 
 const msp = (state, ownProps) => {
     debugger
