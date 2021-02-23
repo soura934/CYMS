@@ -85,7 +85,12 @@
 }
 
 .nav-bar #logout:hover {
+    border:none;
     color:rgb(251, 239, 169);
+}
+
+.nav-bar #logout:active {
+    border:none;
 }
 
 .nav-bar .cart-link {
