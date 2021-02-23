@@ -2,6 +2,7 @@ import React from 'react';
 import CommentContainer from '../comment/comment_container';
 import MainPageContainer from '../main/main_page_container';
 import  Footer from '../footer/footer';
+import { Link } from 'react-router-dom'
 
 import '../../stylesheets/product-show.css';
 import '../../stylesheets/comment.css';
@@ -21,13 +22,20 @@ class ProductShow extends React.Component{
 
     handleSubmit(e){
         e.preventDefault()
-        const cart = {
-            user: this.props.userId,
-            price: this.props.product.price,
-            cartItem: this.props.product._id
+        debugger
+        if (this.props.session.isAuthenticated){
+        this.state = {
+            
+            user_id: this.props.user.id,
+            price:String(this.props.product.price),
+            product_id: this.props.product._id
         }
         debugger
-        this.props.createCart(cart)
+        this.props.createCart(this.state)
+    } else {
+        debugger
+        alert("Please Log in or Sign up to add items to your Cart!")
+    }
     }
     render() {
         debugger

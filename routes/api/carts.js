@@ -9,20 +9,27 @@ router.get('/test', (req, res) => {
 });
     
 router.post("/",
+
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
-        const { isValid, errors } = validateCartInput(req.body);
+        debugger
+        const { errors, isValid } = validateCartInput(req.body);
         if(!isValid) {
+            
             return res.status(400).json(errors);
         }
-        const newCart = new Cart({
+        debugger
+        const cart = new Cart({
+            
             user: req.body.user_id,
             price: req.body.price,
             cartItem: req.body.product_id
         })
-        newCart.save()
+        debugger
+        cart.save()
             .then(cart => res.json(cart))
             .catch(err => res.status(400).json({err}))
+            debugger
     }
 )
 
