@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import '../../stylesheets/signup.css';
 import { Link } from 'react-router-dom'
-
+import CYMS from "../../assets/CYMS.svg"
 class SignupForm extends React.Component {
   constructor(props) {
     super(props);
@@ -58,7 +58,7 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className='signup-form-container'>
-        <h1>CYMS</h1>
+        <h1><img className='CYMS-icon' src={CYMS}/></h1>
         <div className='signup-form'>
         <h2> Create Account</h2>
         <form onSubmit={this.handleSubmit}>      

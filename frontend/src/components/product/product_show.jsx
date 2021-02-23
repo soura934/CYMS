@@ -34,7 +34,10 @@ class ProductShow extends React.Component{
         this.props.createCart(this.state)
     } else {
         debugger
-        alert("Please Log in or Sign up to add items to your Cart!")
+        alert ("Please Log in or Sign up to add items to your Cart!")
+        window.location = '#/login';
+
+        // <Link className='link' to={'/login'}></Link>
     }
     }
     render() {

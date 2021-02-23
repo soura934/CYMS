@@ -20,7 +20,8 @@ class MainPage extends React.Component {
       if (this.props.loggedIn) {
         return (
             <div className='nav-bar'>
-                <button id='logout' onClick={this.logoutUser}>Logout</button>
+                <Link className='profile-link' to={'/profile'}>Profile</Link>
+                <button onClick={this.logoutUser}>Logout</button>
                 <div className='cart-button-container'>
                   <Link className='cart-link' to={'/cart'}>Cart</Link>
                 </div>
@@ -45,7 +46,9 @@ class MainPage extends React.Component {
               <SearchBarContainer />
               { this.getLinks() }
           </div>
-          <p>0</p>
+          
+          <div className='header-filler'></div>
+          
         </div>
       );
   }
