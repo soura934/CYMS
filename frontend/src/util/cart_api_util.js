@@ -1,11 +1,12 @@
 import axios from 'axios';
 
 export const createCart = (cart) => {
-    return axios.post(`/api/carts/`, cart)
+  debugger
+    return axios.post(`/api/carts`, cart)
 };
 
 export const fetchUserCart = user => {
-  return axios.get(`/api/cart/${user}`) 
+  return axios.get(`/api/carts/${user}`) 
 }
 
 

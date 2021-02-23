@@ -3,9 +3,25 @@ import { Link } from 'react-router-dom'
 import '../../stylesheets/product-index.css';
 
 class ProductIndex extends React.Component {
+    constructor(props){
+        super(props);
+        this.getGreeting = this.getGreeting.bind(this);
+    }
 
     componentDidMount() {
         this.props.fetchProducts();
+    }
+    
+    getGreeting() {
+        if (this.props.loggedIn){
+            let name = this.props.user.firstName;
+            let capped = name[0].toUpperCase() + name.slice(1);
+            return (
+                <div>Welcome, {capped}!</div>
+            );
+        } else {
+            return null;
+        }
     }
 
     render() {
@@ -23,8 +39,11 @@ class ProductIndex extends React.Component {
         })
         
         return (
-            <div className='product-index'>
-                {products}
+            <div className='index-container'>
+                {this.getGreeting()}
+                <div className='product-index'>
+                    {products}
+                </div>
             </div>
         );
     }

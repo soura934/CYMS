@@ -8,8 +8,9 @@ const msp = (state, ownProps) => {
     debugger
     return {
         product: state.entities.products.data,
-        userId: state.session.user.id
-
+        user: state.session.user,
+        session: state.session
+       
     }
 }
 const mdp = (dispatch, ownProps) => {

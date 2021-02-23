@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Redirect } from "react-router-dom"
 import '../../stylesheets/splash-page.css';
 import SearchBarContainer from '../search/search_bar_container';
 
@@ -13,14 +14,14 @@ class MainPage extends React.Component {
 
   logoutUser(e) {
       e.preventDefault();
-      this.props.logout();
+      this.props.logout()     
   }
 
   getLinks() {
       if (this.props.loggedIn) {
         return (
             <div className='nav-bar'>
-                <Link className='profile-link' to={'/profile'}>Profile</Link>
+                {/* <Link className='profile-link' to={'/profile'}>Profile</Link> */}
                 <button onClick={this.logoutUser}>Logout</button>
                 <div className='cart-button-container'>
                   <Link className='cart-link' to={'/cart'}>Cart</Link>
@@ -39,6 +40,7 @@ class MainPage extends React.Component {
   }
 
   render() {
+    
       return (
         <div className='header-container'>
           <div className='header'>
@@ -46,7 +48,9 @@ class MainPage extends React.Component {
               <SearchBarContainer />
               { this.getLinks() }
           </div>
-          <p>0</p>
+          
+          <div className='header-filler'></div>
+          
         </div>
       );
   }

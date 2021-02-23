@@ -8,22 +8,28 @@ router.get('/test', (req, res) => {
     res.json({msg: "This is the cart route!"})
 });
     
+router.post("/",
 
-router.post('/', 
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
-        const { isValid, errors } = validateCartItemInput(req.body);
-              
-        if (!isValid) {
+        debugger
+        const { errors, isValid } = validateCartInput(req.body);
+        if(!isValid) {
+            
             return res.status(400).json(errors);
         }
-        const item = new CartItem({
-            user: req.user.id,
-            product: req.body.product_id
-          });
-        item.save()
-            .then(item => res.json(item))
-            .catch(err =>res.status(400).json({ err }))
+        debugger
+        const cart = new Cart({
+            
+            user: req.body.user_id,
+            price: req.body.price,
+            cartItem: req.body.product_id
+        })
+        debugger
+        cart.save()
+            .then(cart => res.json(cart))
+            .catch(err => res.status(400).json({err}))
+            debugger
     }
 );
 

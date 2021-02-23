@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import '../../stylesheets/signup.css';
 import { Link } from 'react-router-dom'
-
+import CYMS from "../../assets/CYMS.svg"
 class SignupForm extends React.Component {
   constructor(props) {
     super(props);
@@ -58,7 +58,7 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className='signup-form-container'>
-        <h1>CYMS</h1>
+        <h1><img className='CYMS-icon' src={CYMS}/></h1>
         <div className='signup-form'>
         <h2> Create Account</h2>
         <form onSubmit={this.handleSubmit}>      
@@ -74,7 +74,7 @@ class SignupForm extends React.Component {
             <input type="text"
                 value={this.state.firstName}
                 onChange={this.update('firstName')}
-                placeholder="FirstName"
+                placeholder="First Name"
               />
             <br/>
               <div className='errors'> {this.state.errors["firstName"]}</div>
@@ -82,7 +82,7 @@ class SignupForm extends React.Component {
             <input type="text"
                 value={this.state.lastName}
                 onChange={this.update('lastName')}
-                placeholder="LastName"
+                placeholder="Last Name"
               />
             <br/>
               <div className='errors'> {this.state.errors["lastName"]}</div>
@@ -108,7 +108,11 @@ class SignupForm extends React.Component {
 
         <div className='login-Link-container'>
           <p className='text'> Already have an account? </p>
-          <Link className='link' to={'/login'}>Log In</Link>
+          <nav>
+            <Link className='link' to={'/login'}>Log In</Link>
+            <span>|</span>
+            <Link className='link home' to={'/'}>Home</Link>
+          </nav>
         </div>
 
       </div>

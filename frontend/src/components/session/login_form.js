@@ -1,7 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import '../../stylesheets/login.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import CYMS from "../../assets/CYMS.svg";
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
@@ -56,7 +57,7 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className='log-in-form-container'>
-          <h1>CYMS</h1>
+          <h1><img className='CYMS-icon' src={CYMS}/></h1>
           <div className='log-in-form'>
             <h2>Log In</h2>
             <form onSubmit={this.handleSubmit}>
@@ -92,7 +93,11 @@ class LoginForm extends React.Component {
 
         <div className='register-Link-container'>
           <p className='text'> New to CYMS? </p>
-          <Link className='link' to={'/signup'}> Create a new Account </Link>
+            <nav>
+              <Link className='link' to={'/signup'}>Sign Up</Link>
+              <span>|</span>
+              <Link className='link home' to={'/'}>Home</Link>
+            </nav>
         </div>
 
       </div>
