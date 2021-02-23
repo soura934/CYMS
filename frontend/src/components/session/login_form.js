@@ -1,7 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import '../../stylesheets/login.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import CYMS from "../../assets/CYMS.svg";
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
@@ -56,7 +57,7 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className='log-in-form-container'>
-          <h1>CYMS</h1>
+          <h1><img className='CYMS-icon' src={CYMS}/></h1>
           <div className='log-in-form'>
             <h2>Log In</h2>
             <form onSubmit={this.handleSubmit}>

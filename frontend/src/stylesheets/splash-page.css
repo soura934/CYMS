@@ -1,3 +1,7 @@
+.header-container{
+    background-color: #fffee4;
+}
+
 .header {
     /* background-color: #474756; */
     background-color: #5b6068;
@@ -16,12 +20,15 @@
     font-family: Arial, Helvetica, sans-serif;
 
 }
+.header-filler{
+    height: 15px;
+}
 
-.header-container p {
+/* .header-container p {
     color: transparent;
     background-color: #fffee4;
     height: 15px;
-}
+} */
 
 .brand-name {
     text-decoration: none;
