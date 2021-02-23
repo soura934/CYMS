@@ -19,13 +19,14 @@ class ProductShow extends React.Component{
 
     handleSubmit(e){
         e.preventDefault()
-        const cart = {
-            user: this.props.userId,
-            price: this.props.product.price,
-            cartItem: this.props.product._id
+        this.state = {
+            
+            user_id: this.props.userId,
+            price:String(this.props.product.price),
+            product_id: this.props.product._id
         }
         debugger
-        this.props.createCart(cart)
+        this.props.createCart(this.state)
     }
     render() {
         debugger

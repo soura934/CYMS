@@ -9,7 +9,7 @@ const msp = (state, ownProps) => {
     return {
         product: state.entities.products.data,
         userId: state.session.user.id
-
+       
     }
 }
 const mdp = (dispatch, ownProps) => {
