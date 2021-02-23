@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 
 const Product = require('../../models/Product');
-const validateProductInput = require('../../validation/products');
+const validateProductInput = require('../../validation/product');
 
 
 router.get('/test', (req, res) => {

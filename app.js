@@ -6,12 +6,10 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 
 const users = require("./routes/api/users");
-const User = require('./models/User');
 const products = require('./routes/api/products');
 const comments = require('./routes/api/comments')
-const carts = require('./routes/api/carts')
+const cartitems = require('./routes/api/carts')
 const path = require('path');
-
 
 
 if (process.env.NODE_ENV === 'production') {
@@ -20,10 +18,16 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
   })
 }
+
 mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
   .catch(err => console.log(err));
+  
+app.get("/", (req, res) => {res.send("Hello");});
+
+app.use(passport.initialize());
+require('./config/passport')(passport);
 
 app.use(passport.initialize());
 require('./config/passport')(passport);
@@ -31,12 +35,10 @@ require('./config/passport')(passport);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => {res.send("Hello");});
-
 app.use("/api/users", users);
-app.use("/api/products", products)
-app.use('/api/comments', comments)
-app.use('/api/carts', carts)
+app.use("/api/products", products);
+app.use('/api/carts', cartitems);
+app.use('/api/comments', comments);
 
 const port = process.env.PORT || 5000;
 

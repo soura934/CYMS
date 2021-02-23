@@ -4,7 +4,9 @@ import { fetchProducts, fetchSearchProducts } from '../../actions/product_action
 
 const msp = (state, ownProps) => {
     return { 
-        products: state.entities.products.data
+        products: state.entities.products.data,
+        loggedIn: state.session.isAuthenticated,
+        user: state.session.user
     }
 }
 

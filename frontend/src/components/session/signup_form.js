@@ -1,7 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import '../../stylesheets/signup.css';
-
+import { Link } from 'react-router-dom'
+import CYMS from "../../assets/CYMS.svg"
 class SignupForm extends React.Component {
   constructor(props) {
     super(props);
@@ -57,10 +58,10 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className='signup-form-container'>
-        <h1>CYMS</h1>
+        <h1><img className='CYMS-icon' src={CYMS}/></h1>
         <div className='signup-form'>
         <h2> Create Account</h2>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>      
           <div className='input'>
               <input type="text"
                 value={this.state.email}
@@ -68,36 +69,52 @@ class SignupForm extends React.Component {
                 placeholder="Email"
               />
             <br/>
+              <div className='errors'> {this.state.errors["email"]}</div>
+
             <input type="text"
                 value={this.state.firstName}
                 onChange={this.update('firstName')}
-                placeholder="FirstName"
+                placeholder="First Name"
               />
             <br/>
+              <div className='errors'> {this.state.errors["firstName"]}</div>
+
             <input type="text"
                 value={this.state.lastName}
                 onChange={this.update('lastName')}
-                placeholder="LastName"
+                placeholder="Last Name"
               />
             <br/>
+              <div className='errors'> {this.state.errors["lastName"]}</div>
+
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 placeholder="Password"
               />
             <br/>
+              <div className='errors'> {this.state.errors["password"]}</div>
             <input type="password"
                 value={this.state.confirm}
                 onChange={this.update('confirm')}
                 placeholder="Confirm Password"
               />
             <br/>
+              <div className='errors'> {this.state.errors["password"]}</div>
             </div>
-            <input className='signup-button' type="submit" value="Create your CYMS account" />
-            
-            {this.renderErrors()}
-        </form>
+            <input className='signup-button' type="submit" value="Create your CYMS account" />     
+          </form>
         </div>
+
+        <div className='login-Link-container'>
+          <p className='text'> Already have an account? </p>
+          <nav>
+            <Link className='link' to={'/login'}>Log In</Link>
+            <span>|</span>
+            <Link className='link home' to={'/'}>Home</Link>
+          </nav>
+        </div>
+
       </div>
     );
   }

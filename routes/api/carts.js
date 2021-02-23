@@ -1,43 +1,47 @@
 const express = require("express");
 const router = express.Router();
-const mongoose = require('mongoose');
-const passport = require('passport');
-const jwt = require('jsonwebtoken');
 const Cart = require("../../models/Cart");
-const User = require("../../models/User");
-const Item = require("../../models/Product");
-const { session } = require("passport");
+const passport = require('passport');
+const validateCartItemInput = require('../../validation/cartitem');
 
 router.get('/test', (req, res) => {
     res.json({msg: "This is the cart route!"})
 });
-
+    
 router.post("/",
-    passport.authenticate('jwt', {session:false}),
+
+    passport.authenticate('jwt', { session: false }),
     (req, res) => {
+        debugger
+        const { errors, isValid } = validateCartItemInput(req.body);
+        if(!isValid) {
+            debugger
+            return res.status(400).json(errors);
+        }
+        debugger
         const cart = new Cart({
-            user: req.body.user.id,
+            
+            user: req.body.user_id,
+            price: req.body.price,
             cartItem: req.body.product_id
-         })
-        
-         cart.save()
+        })
+        debugger
+        cart.save()
             .then(cart => res.json(cart))
             .catch(err => res.status(400).json({err}))
+            debugger
     }
-    )
-    
-    router.get('/user/:user_id',
+);
+
+router.get('/user/:user_id',
     passport.authenticate('jwt', {session: false}),
     (req, res) =>{
-        Cart.find({user: req.params.user_id})
+        CartItem.find({user: req.params.user_id})
         .then(user => {
             return res.json(user)
         })
         .catch(err => res.status(400).json({err}))
-    })
-
-    
-
+})
 
 
 module.exports = router;

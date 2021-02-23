@@ -8,14 +8,15 @@ import Splash from './splash/splash';
 import ProductShowContainer from './product/product_show_container'
 import MainPageContainer from './main/main_page_container';
 import SearchItemContainer from './search/search_item_container';
-import './app.css';
+import CartContainer from "./cart/cart_container"
+import '../stylesheets/app.css';
 
 const App = () => (
   <div id="page-container">
     <div id='content-wrap'>
-      <header>
+      {/* <header>
         <MainPageContainer /> 
-      </header>
+      </header> */}
       <main id='main'>
         <Switch>
           <Route exact path="/" component={ Splash } />
@@ -23,12 +24,13 @@ const App = () => (
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
           <Route exact path="/product/:id/:_id" component={ProductShowContainer} />
           <Route exact path="/search/:query" component={SearchItemContainer} />
+          <Route exact path="/cart" component={CartContainer} />
         </Switch>
       </main>
     </div>
-    <footer id='footer'>
+    {/* <footer id='footer'>
       <Footer />
-    </footer>
+    </footer> */}
   </div>
 );
 
