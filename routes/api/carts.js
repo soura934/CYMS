@@ -12,24 +12,24 @@ router.post("/",
 
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
-        debugger
+        
         const { errors, isValid } = validateCartItemInput(req.body);
         if(!isValid) {
-            debugger
+            
             return res.status(400).json(errors);
         }
-        debugger
+        
         const cart = new Cart({
             
             user: req.body.user_id,
             price: req.body.price,
             cartItem: req.body.product_id
         })
-        debugger
+        
         cart.save()
             .then(cart => res.json(cart))
             .catch(err => res.status(400).json({err}))
-            debugger
+            
     }
 );
 

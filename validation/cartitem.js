@@ -8,12 +8,12 @@ module.exports = function validateCartInput(data){
     data.cartItem = validText(data.product_id) ? data.cartItem : '';
 
     if (Validator.isEmpty(data.user_id)){
-        debugger
+        
         errors.user = 'User Id is required.';
     }
 
     if (Validator.isEmpty(data.product_id)){
-        debugger
+        
         errors.cartItem = 'Product Id is required.';
     }
 

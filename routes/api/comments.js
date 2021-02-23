@@ -12,7 +12,7 @@ const validateCommentInput = require('../../validation/comments');
 router.post("/",
     passport.authenticate('jwt', {session: false}),
     (req, res) => {
-        debugger
+        
     const {isValid, errors} = validateCommentInput(req.body);
         if (!isValid) {
             

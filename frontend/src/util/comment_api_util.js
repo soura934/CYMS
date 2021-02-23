@@ -9,7 +9,7 @@ export const fetchComment = (commentId) => {
 };
 
 export const createComment = (comment) => {
-  debugger
+  
   return axios.post(`/api/comments/`, comment);
 };
 

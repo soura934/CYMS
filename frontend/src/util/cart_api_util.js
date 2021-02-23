@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const createCart = (cart) => {
-  debugger
+  
     return axios.post(`/api/carts`, cart)
 };
 
