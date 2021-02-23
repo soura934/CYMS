@@ -6,7 +6,7 @@ const passport = require('passport');
 const Comment = require('../../models/Comment');
 const user = require('../../models/User');
 // const ProductId = require('../models/Product')
-const validateProductInput = require('../../validation/products');
+const validateProductInput = require('../../validation/product');
 
 
 router.post("/saveComment", (req,res)=>{
