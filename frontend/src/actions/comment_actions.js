@@ -41,12 +41,12 @@ export const fetchComment = (commentId) => {
     }
 }
 
-export const createComment = (comment) => {
-    return dispatch => {
-        return CommentApiUtil.createComment(comment).then(comment => {
-            dispatch(receiveComment(comment))
-        })
-    }
+export const createComment = (comment) => dispatch => {
+    debugger
+     return CommentApiUtil.createComment(comment)
+     .then(comment => {
+         debugger
+         return dispatch(receiveComment(comment))})
 }
 
 export const deleteComment = (commentId) => {

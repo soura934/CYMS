@@ -7,7 +7,7 @@ class Comment extends React.Component {
         
         this.state = {
             comment: [], 
-            product_id: this.props.product.id
+            product_id:this.props.product._id
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,21 +17,27 @@ class Comment extends React.Component {
         this.props.fetchComments()
     }
 
+    componentDidUpdate(){
+        this.props.fetchComments()
+    }
+
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value })
     }
 
     handleSubmit(e) {
          e.preventDefault();
+         debugger
         this.props.createComment(this.state)
     }
 
     render () {
-        // debugger
+        
         const { comment } = this.props;
-
+        debugger
         if (!this.props.comments) return null;
-
+            
+            if (!Array.isArray(this.props.comments)) return null;
         let comments = this.props.comments.map((comment, i) => {
             return (
                     <ul className='user-comments' key={comment._id}>

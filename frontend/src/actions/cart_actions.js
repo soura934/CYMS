@@ -34,8 +34,7 @@ export const createCart = (cart) => dispatch => {
        
         .then(cart => {
             debugger
-            console.log("cart")
-            console.log(cart)
+           
 
              return dispatch(addCart(cart))})
 }

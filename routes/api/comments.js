@@ -12,18 +12,23 @@ const validateCommentInput = require('../../validation/comments');
 router.post("/",
     passport.authenticate('jwt', {session: false}),
     (req, res) => {
+        debugger
     const {isValid, errors} = validateCommentInput(req.body);
         if (!isValid) {
+            
             return res.status(400).json(errors);
         }
 
         const newComment = new Comment({
+            
             user: req.user.id,
             product: req.body.product_id,
             content: req.body.content
         });
 
-        newComment.save().then(comment => res.json(comment));
+        newComment.save()
+        .then(comment => res.json(comment))
+        .catch(err => res.status(400).json({err}))
     // comment.save((err, comment) => {
     //     if (err) return res.json({ success: false, err})
 
