@@ -245,12 +245,23 @@ html {
 
 /* footer section */
 
+
+
 .new-footer {
+    width: 100vw;
+    display: flex;
     background-color: var(--drk-grey);
     color: var(--white);
 }
 
 .new-footer h1{
-    background-color: var(--drk-grey);
     color: var(--white);
+}
+
+.new-footer a img {
+    width: 10%;
+}
+
+.new-footer img {
+    width: 3%;
 }

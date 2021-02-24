@@ -6,7 +6,7 @@ import MainPageContainer from '../main/main_page_container';
 import  Footer from '../footer/footer'; 
 
 import '../../stylesheets/landing.css'; 
-import chris from '../../assets/IMG_3036.jpeg'
+import github from '../../assets/github-pages-logo-repository-fork-github-86eddab19cbc3ae293ada0fe0fb9e27d.png'
 
 class Landing extends React.Component {
 
@@ -100,9 +100,12 @@ class Landing extends React.Component {
                 </section>
 
                 <footer className='new-footer'>
-                    <h1>CYMS</h1>
+                    <div>
+                        <h1>CYMS</h1>
+                        <p>Thanks for stopping by :)</p>
+                    </div>
                     <a href="https://github.com/soura934/CYMS">
-                        <img src="https://p7.hiclipart.com/preview/551/770/413/github-pages-logo-repository-fork-github-thumbnail.jpg" alt="Github"/>
+                        <img src={github} alt="Github"/>
                     </a>
 
 
