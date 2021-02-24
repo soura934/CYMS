@@ -245,34 +245,63 @@ html {
 
 /* footer section */
 
-
-
 .new-footer {
     width: 100vw;
-    /* position: relative;
-    text-align: center; */
     display: flex;
     justify-content: space-between;
     background-color: var(--drk-grey);
     color: var(--white);
+    /* position: absolute; */
+    bottom: 0;
 }
 
 .new-footer div {
     width: 33.3%;
-    /* text-align: center; */
+    padding: 3em 8em;
+}
+
+.new-footer .brand p {
+    font-size: 1.5rem;
+    display: flex;
+}
+
+.new-footer .brand {
+    display: flex;
+    flex-direction: column;
 }
 
 .new-footer .git {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
 }
-
-
 
 .new-footer h1{
     color: var(--white);
 }
 
 .new-footer a img {
-    width: 15%;
+    width: 35%;
     text-align: center;
+}
+
+.new-footer .techs {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.new-footer .techs ul {
+    list-style: none;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.new-footer .techs li {
+    padding: .5rem;
+}
+
+.new-footer .techs h1{
+    font-size: 2rem;
+    padding-bottom: .5em;
 }
