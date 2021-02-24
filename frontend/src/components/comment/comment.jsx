@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../stylesheets/product-show.css';
+import CommentItem from './comment_item_container';
 
 class Comment extends React.Component {
     constructor(props){
@@ -7,19 +8,21 @@ class Comment extends React.Component {
         
         this.state = {
             comment: [], 
-            product_id:this.props.product._id
+            product_id:this.props.product._id,
+            
         
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        
     }
 
     componentDidMount() {
-        
         // if (!Array.isArray(this.props.product)){
-        //     
-        this.props.fetchProductComments(this.props.productId)
-        // }
+            //     
+            this.props.fetchProductComments(this.props.productId)
+            // }
+            
     }
     
 
@@ -38,7 +41,8 @@ class Comment extends React.Component {
 
     handleSubmit(e) {
          e.preventDefault();
-         let {loggedIn, content} = this.props 
+         
+         let {loggedIn} = this.props 
          
          if (!this.state.content){
              
@@ -51,36 +55,30 @@ class Comment extends React.Component {
                 content: this.state.content
              }
          this.props.createComment(comment)
+         
          this.setState({ content: "" })
     } else {
         window.location = '#/login';
     }
     }
 
+    
+
     render () {
         
-        const { comment } = this.props;
-        
         if (!this.props.comments) return null;
-         if (!Array.isArray(this.props.comments)) return null;
-
-        let comments = this.props.comments.map((comment, i) => {
-            let firstName = comment.user.firstName
-            let lastName = comment.user.lastName
+        if (!Array.isArray(this.props.comments)) return null;
+         let comments = this.props.comments.map((comment, i) => {
             
-           
-            const dateObj = new Date(comment.date)
-            let date = new Intl.DateTimeFormat('en-US').format(dateObj);
-
             return (
-                    <ul className='user-comments' key={comment._id}>
+                <ul className='user-comments' key={comment._id}>
                     
-                        <li>"{comment.content}"</li>
-                        <li>Posted by: {firstName} {lastName}</li>
-                        <li>Review left: {date}</li>
-                    </ul>
+                    <CommentItem comment={comment} />                       
+                </ul>
             )
-        })
+         })
+      
+       
         return (
             <div className='comment-container'>
                 <div className='comment' > 

@@ -17,7 +17,7 @@ const mdp = (dispatch, ownProps) => {
         fetchProductComments: (productId) => dispatch(fetchProductComments(productId)),
         fetchComment: (productId) => dispatch(fetchComment(productId)),
         createComment: (product) => dispatch(createComment(product)),        
-        deleteComment: (productId) => dispatch(deleteComment(productId))
+        deleteComment: (commentId) => dispatch(deleteComment(commentId))
     }
 }
 
