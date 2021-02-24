@@ -3,7 +3,7 @@ import Landing from './landing';
 
 const mSTP = (state, ownProps) => {
     return {
-        
+        loggedIn: state.session.isAuthenticated
     };
 };
 

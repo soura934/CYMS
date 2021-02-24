@@ -1,26 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 import MainPageContainer from '../main/main_page_container';
 import  Footer from '../footer/footer'; 
 
 import '../../stylesheets/landing.css'; 
 import chris from '../../assets/IMG_3036.jpeg'
-// import chris from './IMG_3036.jpeg'
 
 class Landing extends React.Component {
 
     render() {
+        if (this.props.loggedIn) {
+            return <Redirect to='/products' />
+        };
         
         return (
-            
             <div className='landing'>
                 <MainPageContainer /> 
-                <Link to='/products'>product index link</Link>
+                {/* <Link to='/products'>product index link</Link> */}
 
                 <section className='heading'>
-                    <h1>Welcome to CYMS.</h1>
-                    <h2>Your one-stop-shop for all things related to your software engineering needs.</h2>
+                    <div className='text-container'>
+                        <h1>Welcome to CYMS.</h1>
+                        <h2>Your one-stop-shop for all things related to your software engineering needs.</h2>
+                    </div>
 
                     <div className='container'>
                         <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>

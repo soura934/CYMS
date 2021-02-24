@@ -26,23 +26,73 @@ time, mark, audio, video input{
     font-family: 'Courier New';
 }
 
-.landing .heading img {
+html {
+    font-size: 62.5%;
+}
+
+.landing {
+    width: 100vw;
+}
+
+.landing .heading {
     width: 100%;
 }
 
-.landing .heading h1 {
+.landing h1 {
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 900;
 }
 
-.container {
+.landing .heading {
+    text-align: center;
+    /* background-color: white; */
+}
+
+.landing .heading .text-container{
+    padding: 2.5em 4em;
+}
+
+.landing .heading .text-container h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #2e2528;
+    font-size: 3.6rem;
+    padding-bottom: .4em;
+}
+
+.landing .heading .text-container h2 {
+    color: #2e2528;
+    font-size: 2rem;
+}
+
+.landing .heading img {
+    width: 100%;
+    height: 100vh;
+}
+
+.landing .container {
     position: relative;
     text-align: center;
+    width: 100%;
 }
 
-.centered {
+.landing .centered {
     color: white;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.landing .container .centered h1 {
+    font-size: 3.6rem;
+    margin-bottom: .7em;
+}
+
+.landing .container .centered a {
+    color: #2e2528;
+    background-color: #ebc456;
+    font-size: 2em;
+    font-weight: 550;
+    padding: .6em 1em;
 }
