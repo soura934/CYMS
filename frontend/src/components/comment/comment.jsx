@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../stylesheets/product-show.css';
+import CommentItem from './comment_item_container';
 
 class Comment extends React.Component {
     constructor(props){
@@ -7,24 +8,31 @@ class Comment extends React.Component {
         
         this.state = {
             comment: [], 
-            product_id:this.props.product._id
+            product_id:this.props.product._id,
+            
         
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        
     }
 
     componentDidMount() {
-        debugger
-        // this.props.fetchProductComments(this.props.product_id)
+        // if (!Array.isArray(this.props.product)){
+            //     
+            
+            this.props.fetchProductComments(this.props.productId)
+            // }
+            
     }
+    
 
     componentDidUpdate(prevProps, prevState){
         // this.props.fetchComments()
-        debugger
-        if(!this.props.comments || JSON.stringify(this.props.comments) !== JSON.stringify(prevProps.comments)){
-            debugger
-        this.props.fetchProductComments(this.props.product._id)
+        
+        if ( JSON.stringify(this.props.comments) !== JSON.stringify(prevProps.comments)){
+            
+        this.props.fetchProductComments(this.props.productId)
         }
     }
 
@@ -34,36 +42,47 @@ class Comment extends React.Component {
 
     handleSubmit(e) {
          e.preventDefault();
+         
          let {loggedIn} = this.props 
+         
+         if (!this.state.content){
+             
+            return;
+   
+         }
          if (loggedIn){
-        let comment = {
-            product_id: this.props.product._id,
-            content: this.state.content
-        }
+            let comment = {
+                product_id: this.props.product._id,
+                content: this.state.content
+             }
          this.props.createComment(comment)
+         
          this.setState({ content: "" })
     } else {
         window.location = '#/login';
     }
     }
 
+    
+
     render () {
         
-        const { comment } = this.props;
-        
         if (!this.props.comments) return null;
-         if (!Array.isArray(this.props.comments)) return null;
+        if (!Array.isArray(this.props.comments)) return null;
+        
+         let comments = this.props.comments.map((comment, i) => {
+           
 
-        let comments = this.props.comments.map((comment, i) => {
+           
             return (
-                    <ul className='user-comments' key={comment._id}>
+                <ul className='user-comments' key={comment._id}>
                     
-                        <h2>Posted by: {comment.user.firstName} {comment.user.firstName}</h2>
-                        <li>"{comment.content}"</li>
-                        <li>Comment created on:{comment.date}</li>
-                    </ul>
+                    <CommentItem comment={comment} />                       
+                </ul>
             )
-        })
+         })
+      
+       
         return (
             <div className='comment-container'>
                 <div className='comment' > 
@@ -79,7 +98,7 @@ class Comment extends React.Component {
                                 <br/>
                             <button>Submit</button>
                         </form>
-
+                
                         <h1 className='comment-title'>Top Customer Reviews</h1>
                         {comments}
                 </div>

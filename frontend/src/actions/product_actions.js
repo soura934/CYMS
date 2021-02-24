@@ -41,6 +41,16 @@ export const fetchProduct = (productId) => {
     }
 }
 
+export const fetchOneCartItem = (productId) => {
+    return dispatch => {
+        
+        return ProductApiUtil.fetchOneCartItem(productId).then(product => {
+            
+            dispatch(receiveProduct(product))
+        })
+    }
+}
+
 export const createProduct = (product) => {
     return dispatch => {
         return ProductApiUtil.createProduct(product).then(product => {

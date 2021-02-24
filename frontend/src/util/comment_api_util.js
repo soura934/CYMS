@@ -14,10 +14,11 @@ export const createComment = (comment) => {
 };
 
 export const deleteComment = (commentId) => {
-  return axios.delete(`/api/comments/${commentId}`, commentId);
+  
+  return axios.delete(`/api/comments/${commentId}`);
 };
 
 export const fetchProductComments = (product_id) => {
-  debugger
+  
   return axios.get(`/api/comments/product/${product_id}`);
 };

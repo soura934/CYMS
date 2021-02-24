@@ -36,19 +36,19 @@ router.post("/",
 
 
 router.get('/product/:product_id', (req, res) =>{
-     debugger
+     
 
     Comment.find({product: req.params.product_id})
     .sort({date: -1})
     .populate('user')
     .then(comments => {
-        debugger
+        
          return res.json(comments)})
     .catch(err => {
-        debugger
+        
         return 
         res.status(404).json({ nocommentsfound: 'No Comments found from that product'})})
-})
+});
 
 
 
@@ -58,6 +58,30 @@ router.get('/', (req, res) => {
         .then(comments => res.json(comments))
         .catch(err => res.status(404).json({ noComments: 'No comment yet' }));
 });
+
+router.delete('/:comment_id', 
+    passport.authenticate('jwt', {session: false}),
+    (req, res) => { 
+
+    Comment.findByIdAndDelete(req.params.comment_id)
+    .then(() => res.status(200).json({message: "Deleted!"}))
+    .catch(err => {res.status(400).json({err: "no comment found"})})
+
+});
+
+router.put('/:comment_id', 
+    passport.authenticate('jwt', {session: false}),
+    (req, res) => {
+
+    Comment.findByIdAndUpdate(req.params.comment_id, 
+    {content: req.body.content})
+    .then(comments => { return res.json(comments)})
+    .catch(err => { 
+       return res.status(404).json({
+            nocommentsfound: 'No Comments found from that product'
+        })
+    })
+})
 
 
 module.exports = router;
