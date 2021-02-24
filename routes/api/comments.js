@@ -49,5 +49,15 @@ router.get('/', (req, res) => {
         .catch(err => res.status(404).json({ noComments: 'No comment yet' }));
 });
 
+router.delete('/:comment_id', 
+    passport.authenticate('jwt', {session: false}),
+    (req, res) => { 
+
+    Comment.findByIdAndDelete(req.params.comment_id)
+    .then(() => res.status(200).json({message: "Deleted!"}))
+    .catch(err => {res.status(400).json({err: "no comment found"})})
+
+})
+
 
 module.exports = router;
