@@ -62,7 +62,16 @@ class Comment extends React.Component {
         window.location = '#/login';
     }
     }
-
+renderHeader(){
+    
+    if (this.props.comments.length > 0){
+        
+      return  (<h1 className='comment-title'>Top Customer Reviews</h1>)
+    } else {
+        
+      return  null
+    }
+}
     
 
     render () {
@@ -99,7 +108,7 @@ class Comment extends React.Component {
                             <button>Submit</button>
                         </form>
                 
-                        <h1 className='comment-title'>Top Customer Reviews</h1>
+                        {this.renderHeader()}
                         {comments}
                 </div>
             </div>
