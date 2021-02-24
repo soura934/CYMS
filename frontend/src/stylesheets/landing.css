@@ -75,7 +75,7 @@ html {
 }
 
 .landing .heading .text-container h2 {
-    color: #2e2528;
+    color: var(--drk-grey);
     font-size: 2rem;
 }
 
@@ -132,7 +132,7 @@ html {
 }
 
 .featured-products .browse{
-    color: #2e2528;
+    color: var(--drk-grey);
     background-color: #ebc456;
     font-size: 2em;
     font-weight: 550;
@@ -142,7 +142,7 @@ html {
 
 .featured-products .text h2{
     padding: .8em 0;
-    color: #575965;
+    color: var(--grey);
 }
 
 
@@ -208,6 +208,13 @@ html {
 
 .contact .names ul h2 {
     color: rgb(175, 175, 175);
+    padding: .3em;
+}
+
+.contact .names ul h2:hover {
+    /* color: #cccccc; */
+    color: var(--white);
+    text-decoration: underline;
 }
 
 .contact .text h2 {
@@ -217,8 +224,14 @@ html {
 .contact .names{
     display: flex;
     justify-content: space-evenly;
+    padding-bottom: 5em;
 }
 
 .contact .names .name {
     color: var(--white);
+}
+
+.contact .names .name:hover {
+    color: var(--white);
+    text-decoration: none;
 }

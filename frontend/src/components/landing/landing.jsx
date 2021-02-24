@@ -29,7 +29,8 @@ class Landing extends React.Component {
                         <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
                         <div className='centered'>
                             <h1>We have the gear Software Engineers need to keep creating.</h1>
-                            <a href="#story">Learn More</a>
+                            <a href="/#link">Learn More</a>
+                            {/* <Link to='/#link'>learn more</Link> */}
                         </div>
                     </div>
                 </section>
@@ -45,7 +46,7 @@ class Landing extends React.Component {
 
                 <section className='story'>
                     <div className='text'>
-                        <h1>Our story.</h1>
+                        <h1 id='link'>Our story.</h1>
                         <h2>We are four software engineers who got tired of scouring 
                             the web for the gear we needed to do our jobs. We 
                             thought “there must be a better way”. CYMS is an 
@@ -72,27 +73,28 @@ class Landing extends React.Component {
                     <div className='names'>
                         <ul>
                             <h2 className='name'>Christopher Thorne</h2>
-                            <h2>cfthlskdjfsa</h2>
-                            <h2>sdfasdf</h2>
-                            <h2>sdfasdf</h2>
+                            <h2><a href="https://github.com/cfthorne83">LinkedIn</a></h2>
+                            <h2><a href="https://github.com/cfthorne83"></a> Github</h2>
+                            <h2><a href="mailto:cfthorne83@gmail.com">Email</a></h2>
+
                         </ul>
                         <ul>
                             <h2 className='name'>Yehuda Rosenberg</h2>
-                            <h2>cfthlskdjfsa</h2>
-                            <h2>sdfasdf</h2>
-                            <h2>sdfasdf</h2>
+                            <h2><a href="https://www.linkedin.com/in/yehudah-rosenberg/">LinkedIn</a></h2>
+                            <h2>Github</h2>
+                            <h2>Email</h2>
                         </ul>
                         <ul>
                             <h2 className='name'>Mansour Dione</h2>
-                            <h2>cfthlskdjfsa</h2>
-                            <h2>sdfasdf</h2>
-                            <h2>sdfasdf</h2>
+                            <h2>LinkedIn</h2>
+                            <h2>Github</h2>
+                            <h2>Email</h2>
                         </ul>
                         <ul>
                             <h2 className='name'>Soobin Kim</h2>
-                            <h2>cfthlskdjfsa</h2>
-                            <h2>sdfasdf</h2>
-                            <h2>sdfasdf</h2>
+                            <h2>LinkedIn</h2>
+                            <h2>Github</h2>
+                            <h2>Email</h2>
                         </ul>
                     </div>
                 </section>
