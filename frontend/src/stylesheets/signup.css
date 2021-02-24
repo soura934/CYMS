@@ -78,6 +78,7 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     font-size: 13px;
     text-align: center;
     height: 15px;
+    width: 345px;
 }
 .signup-form-container .signup-button:hover{
     background-color: rgb(240, 188, 45);

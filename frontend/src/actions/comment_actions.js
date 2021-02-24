@@ -64,9 +64,11 @@ export const createComment = (comment) => dispatch => {
 }
 
 export const deleteComment = (commentId) => {
+    
     return dispatch => {
         return CommentApiUtil.deleteComment(commentId).then(() => {
-            dispatch(removeComment(commentId))
+            
+            return dispatch(removeComment(commentId))
         })
     }
 }

@@ -9,17 +9,22 @@ class Cart extends React.Component{
     }
 
     componentDidMount() {
+        
         this.props.fetchCartItems(this.props.user)
+        
+        
     }
 
     componentDidUpdate(prevProps) {
         
-        if(JSON.stringify(prevProps.cart) !== JSON.stringify(this.props.cart)){
-             debugger
-            this.props.fetchCartItems(this.props.user)
-        }
+    //     if(!this.props.cart || JSON.stringify(prevProps.cart) !== JSON.stringify(this.props.cart)){
+             
+    //         this.props.fetchCartItems(this.props.user)
+    //     }
+    // }
+    
+    // this.props.fetchOneCartItem(this.props.productId)
     }
-
     render() {
         let totalprice = 0;
         let totalnumber;
