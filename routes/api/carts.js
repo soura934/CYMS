@@ -37,7 +37,9 @@ router.get('/user/:user_id',
     passport.authenticate('jwt', {session: false}),
     (req, res) =>{
         CartItem.find({user: req.params.user_id})
+        .populate('cartItem')
         .then(user => {
+            
             return res.json(user)
         })
         .catch(err => res.status(400).json({err}))

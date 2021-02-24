@@ -18,14 +18,15 @@ class SignupForm extends React.Component {
     
   }
 
-  componentWillReceiveProps(nextProps) {
-    // if (nextProps.signedIn === true) {
-    //   
-    //   this.props.history.push('/');
-    // }
-
-    this.setState({errors: nextProps.errors})
-  }
+//   componentWillReceiveProps(nextProps) {
+//     // if (nextProps.signedIn === true) {
+//     //   
+//     //   this.props.history.push('/');
+//     // }
+// debugger
+//     // this.setState({errors: nextProps.errors})
+//     debugger
+//   }
 
   update(field) {
     return e => this.setState({[field]: e.currentTarget.value});
@@ -39,11 +40,17 @@ class SignupForm extends React.Component {
         lastName: this.state.lastName,
         password: this.state.password,
         confirm: this.state.confirm};
-    this.props.signup(user); 
-    this.props.login({email:this.state.email, password:this.state.password }); 
+    // this.props.signup(user); 
+   this.props.signup(user).then( (res) => { 
+     if(res.type === "RECEIVE_SESSION_ERRORS"){ 
+      this.setState({errors: res.errors})
+     } else {
+       
+     this.props.login({email:this.state.email, password:this.state.password }) 
+   }})
   }
-
   renderErrors() {
+    
     return(
       <ul className='errors'>
         {Object.keys(this.state.errors).map((error, i) => (
@@ -56,6 +63,7 @@ class SignupForm extends React.Component {
   }
 
   render() {
+    
     return (
       <div className='signup-form-container'>
         <h1><img className='CYMS-icon' src={CYMS}/></h1>

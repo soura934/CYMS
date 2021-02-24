@@ -8,6 +8,9 @@ const User = require('../../models/User');
 const Product = require('../../models/Product')
 const validateCommentInput = require('../../validation/comments');
 
+router.get('/test', (req, res) => {
+    res.json({msg: "This is the comments route!"})
+});
 
 router.post("/",
     passport.authenticate('jwt', {session: false}),
@@ -29,28 +32,25 @@ router.post("/",
         newComment.save()
         .then(comment => res.json(comment))
         .catch(err => res.status(400).json({err}))
-    // comment.save((err, comment) => {
-    //     if (err) return res.json({ success: false, err})
-
-    //     Comment.find({'_id': comment._id})
-    //     .populate('writer')
-    //     .exec((err, result)=>{
-    //         if (err) return res.json({ success: false, err})
-    //         return res.status(200).json({success:true, result})
-    //     })
-    // })
 })
 
 
-// router.post("/getComments", (req,res)=>{
-    
-//         Comment.find({'producttId': req.body.productId})
-//         .populate('writer')
-//         .exec((err, comments)=>{
-//             if (err) return res.status(400).send(err)
-//             return res.status(200).json({success:true, comments})
-//         })
-// })
+router.get('/product/:product_id', (req, res) =>{
+     debugger
+
+    Comment.find({product: req.params.product_id})
+    .sort({date: -1})
+    .populate('user')
+    .then(comments => {
+        debugger
+         return res.json(comments)})
+    .catch(err => {
+        debugger
+        return 
+        res.status(404).json({ nocommentsfound: 'No Comments found from that product'})})
+})
+
+
 
 router.get('/', (req, res) => {
     Comment.find()

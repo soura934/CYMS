@@ -15,12 +15,18 @@ class Comment extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchComments()
+        debugger
+        // this.props.fetchProductComments(this.props.product_id)
     }
 
-    // componentDidUpdate(){
-    //     // this.props.fetchComments()
-    // }
+    componentDidUpdate(prevProps, prevState){
+        // this.props.fetchComments()
+        debugger
+        if(!this.props.comments || JSON.stringify(this.props.comments) !== JSON.stringify(prevProps.comments)){
+            debugger
+        this.props.fetchProductComments(this.props.product._id)
+        }
+    }
 
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value })
@@ -28,12 +34,17 @@ class Comment extends React.Component {
 
     handleSubmit(e) {
          e.preventDefault();
+         let {loggedIn} = this.props 
+         if (loggedIn){
         let comment = {
             product_id: this.props.product._id,
             content: this.state.content
         }
          this.props.createComment(comment)
-          
+         this.setState({ content: "" })
+    } else {
+        window.location = '#/login';
+    }
     }
 
     render () {
@@ -41,13 +52,15 @@ class Comment extends React.Component {
         const { comment } = this.props;
         
         if (!this.props.comments) return null;
-            
-            if (!Array.isArray(this.props.comments)) return null;
+         if (!Array.isArray(this.props.comments)) return null;
+
         let comments = this.props.comments.map((comment, i) => {
             return (
                     <ul className='user-comments' key={comment._id}>
-                        <h2>Customer Review {i + 1}:</h2>
-                        <li>{comment.content}</li>
+                    
+                        <h2>Posted by: {comment.user.firstName} {comment.user.firstName}</h2>
+                        <li>"{comment.content}"</li>
+                        <li>Comment created on:{comment.date}</li>
                     </ul>
             )
         })
