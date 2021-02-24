@@ -18,7 +18,7 @@ export const receiveCart = (products) => {
     }
 };
  
-export const removeFromCart = (product) => {
+export const removeFromCart = (productId) => {
     
     return {
         type: REMOVE_FROM_CART,
