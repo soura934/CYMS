@@ -33,6 +33,13 @@ export const fetchComments = () => {
     }
 }
 
+export const fetchProductComments = (product_id) => {
+    return dispatch => {
+        return CommentApiUtil.fetchProductComments(product_id).then(comments => {
+            dispatch(receiveComments(comments))
+        })
+    }
+}
 export const fetchComment = (commentId) => {
     return dispatch => {
         return CommentApiUtil.fetchComment(commentId).then(comment => {
@@ -41,12 +48,19 @@ export const fetchComment = (commentId) => {
     }
 }
 
+// export const createComment = (comment) => dispatch => {
+    
+//      return CommentApiUtil.createComment(comment)
+//      .then(comment => {
+         
+//          return dispatch(receiveComment(comment))})
+// }
 export const createComment = (comment) => dispatch => {
     
-     return CommentApiUtil.createComment(comment)
-     .then(comment => {
-         
-         return dispatch(receiveComment(comment))})
+    return CommentApiUtil.createComment(comment)
+    .then(() => {
+        
+        return dispatch(fetchComments())})
 }
 
 export const deleteComment = (commentId) => {
