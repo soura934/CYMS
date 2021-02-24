@@ -1,4 +1,3 @@
-
 import * as CartApiUtil from '../util/cart_api_util';
 export const ADD_CART = "ADD_CART"
 export const RECEIVE_CART = 'RECEIVE_CART';
@@ -24,14 +23,13 @@ export const removeFromCart = (product) => {
     
     return {
         type: REMOVE_FROM_CART,
-        product
+        productId
     }
 };
  
 export const createCart = (cart) => dispatch => { 
     
         return CartApiUtil.createCart(cart)
-       
         .then(cart => {
             
            

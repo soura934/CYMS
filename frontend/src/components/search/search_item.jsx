@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import '../../stylesheets/product-index.css';
+import MainPageContainer from '../main/main_page_container';
+import  Footer from '../footer/footer';
 
 class SearchItem extends React.Component {
     constructor(props) {
@@ -35,17 +37,28 @@ class SearchItem extends React.Component {
                     </Link>
             )
         })
-
         if (this.props.products.length) {
             return(
-                <div className='product-index'>
-                {products}
-                </div>
+            <div className="splash">
+                    <MainPageContainer /> 
+                        <div className='product-index'>
+                        {products}
+                        </div>
+                    <footer id='footer'>
+                        <Footer />
+                    </footer>
+                </div>   
             )
         } else {
             // 
             return (
-                <div>No results found</div>
+                <div className="splash">
+                    <MainPageContainer /> 
+                        <div>No results found</div>
+                    <footer id='footer'>
+                        <Footer />
+                    </footer>
+                </div>   
             )
         }
         

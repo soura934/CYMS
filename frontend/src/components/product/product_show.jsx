@@ -25,9 +25,8 @@ class ProductShow extends React.Component{
         
         if (this.props.session.isAuthenticated){
         this.state = {
-            
             user_id: this.props.user.id,
-            price:String(this.props.product.price),
+            price: String(this.props.product.price),
             product_id: this.props.product._id
         }
         

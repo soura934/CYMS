@@ -14,7 +14,7 @@ class MainPage extends React.Component {
 
   logoutUser(e) {
       e.preventDefault();
-      this.props.logout()     
+      this.props.logout()
   }
 
   getLinks() {
