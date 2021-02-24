@@ -26,7 +26,7 @@ time, mark, audio, video input{
     font-family: 'Courier New';
 }
 
-.landing img {
+.landing .heading img {
     width: 100%;
 }
 
