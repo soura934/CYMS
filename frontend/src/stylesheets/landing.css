@@ -249,19 +249,30 @@ html {
 
 .new-footer {
     width: 100vw;
+    /* position: relative;
+    text-align: center; */
     display: flex;
+    justify-content: space-between;
     background-color: var(--drk-grey);
     color: var(--white);
 }
+
+.new-footer div {
+    width: 33.3%;
+    /* text-align: center; */
+}
+
+.new-footer .git {
+    text-align: center;
+}
+
+
 
 .new-footer h1{
     color: var(--white);
 }
 
 .new-footer a img {
-    width: 10%;
-}
-
-.new-footer img {
-    width: 3%;
+    width: 15%;
+    text-align: center;
 }

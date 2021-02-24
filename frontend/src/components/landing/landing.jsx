@@ -100,15 +100,25 @@ class Landing extends React.Component {
                 </section>
 
                 <footer className='new-footer'>
-                    <div>
+                    <div className='brand'>
                         <h1>CYMS</h1>
                         <p>Thanks for stopping by :)</p>
                     </div>
-                    <a href="https://github.com/soura934/CYMS">
-                        <img src={github} alt="Github"/>
-                    </a>
 
+                    <div className='git'>
+                        <a href="https://github.com/soura934/CYMS">
+                            <img src={github} alt="Github"/>
+                        </a>
+                    </div>
 
+                    <div className='techs'>
+                        <h1>Technologies</h1>
+                        <ul>
+                            <h2>asdf</h2>
+                            <h2>sdf</h2>
+                            <h2>sadf</h2>
+                        </ul>
+                    </div>
                 </footer>
 
 
