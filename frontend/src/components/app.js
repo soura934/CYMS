@@ -9,6 +9,7 @@ import ProductShowContainer from './product/product_show_container'
 import MainPageContainer from './main/main_page_container';
 import SearchItemContainer from './search/search_item_container';
 import CartContainer from "./cart/cart_container"
+import LandingContainer from './landing/landing_container'
 import '../stylesheets/app.css';
 
 const App = () => (
@@ -19,9 +20,10 @@ const App = () => (
       </header> */}
       <main id='main'>
         <Switch>
-          <Route exact path="/" component={ Splash } />
+          <Route exact path="/" component={LandingContainer} />
           <AuthRoute exact path="/login" component={LoginFormContainer} />
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
+          <Route exact path="/products" component={Splash} />
           <Route exact path="/product/:id/:_id" component={ProductShowContainer} />
           <Route exact path="/search/:query" component={SearchItemContainer} />
           <Route exact path="/cart" component={CartContainer} />

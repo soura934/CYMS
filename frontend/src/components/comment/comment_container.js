@@ -1,22 +1,24 @@
 import { connect } from 'react-redux';
 import Comment from './comment';
-import { fetchComments, fetchComment, deleteComment, createComment } from '../../actions/comment_actions';
-
+import { fetchProductComments, fetchComment, deleteComment, createComment } from '../../actions/comment_actions';
+import { withRouter } from "react-router";
 const msp = (state, ownProps) => {
-    // 
+    
     return { 
         product: state.entities.products.data,
-        comments: state.entities.comments.data
+        comments: state.entities.comments.data,
+        loggedIn: state.session.isAuthenticated,
+        productId: ownProps.match.params._id
     }
 }
 
 const mdp = (dispatch, ownProps) => {
     return {
-        fetchComments: () => dispatch(fetchComments()),
+        fetchProductComments: (productId) => dispatch(fetchProductComments(productId)),
         fetchComment: (productId) => dispatch(fetchComment(productId)),
         createComment: (product) => dispatch(createComment(product)),        
         deleteComment: (productId) => dispatch(deleteComment(productId))
     }
 }
 
-export default connect(msp, mdp)(Comment);
+export default withRouter(connect(msp, mdp)(Comment));

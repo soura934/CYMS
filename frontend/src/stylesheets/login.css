@@ -95,6 +95,7 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     list-style: none;
     color: rgb(204, 2, 2);
     font-size: 13px;
+    height: 15px;
 }
 
 .log-in-form-container .register-Link-container{

@@ -8,6 +8,9 @@ const User = require('../../models/User');
 const Product = require('../../models/Product')
 const validateCommentInput = require('../../validation/comments');
 
+router.get('/test', (req, res) => {
+    res.json({msg: "This is the comments route!"})
+});
 
 router.post("/",
     passport.authenticate('jwt', {session: false}),
@@ -33,11 +36,18 @@ router.post("/",
 
 
 router.get('/product/:product_id', (req, res) =>{
+     
+
     Comment.find({product: req.params.product_id})
     .sort({date: -1})
-    .then(comments => res.json(comments))
-    .catch(err => 
-        res.status(404).json({ nocommentsfound: 'No Comments found from that product'}))
+    .populate('user')
+    .then(comments => {
+        
+         return res.json(comments)})
+    .catch(err => {
+        
+        return 
+        res.status(404).json({ nocommentsfound: 'No Comments found from that product'})})
 })
 
 

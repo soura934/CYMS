@@ -31,6 +31,7 @@ class SearchItem extends React.Component {
                         <li>{product.title}</li>
                         <li><img src={product.image} alt=""/></li>
                         <li>${product.price}</li>
+                     
                     </Link>
             )
         })
