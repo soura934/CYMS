@@ -18,7 +18,7 @@ class Landing extends React.Component {
         return (
             <div className='landing'>
                 <MainPageContainer /> 
-                {/* <Link to='/products'>product index link</Link> */}
+                <Link to='/products'>product index link</Link>
 
                 <section className='heading'>
                     <div className='text-container'>
@@ -35,11 +35,11 @@ class Landing extends React.Component {
                     </div>
                 </section>
 
-                <section>
-                    <div>
+                <section className='featured-products'>
+                    <div className='text'>
                         <h1>Featured Products</h1>
                         <h2>Hot products we know you'll love!</h2>
-                        <button>Browse</button>
+                        <Link className='browse' to='/products'>Browse</Link>
                     </div>
                     <img src="https://images.unsplash.com/photo-1544931170-3ca1337cce88?crop=entropy&cs=srgb&fm=jpg&ixid=MXwxNDEzNDF8MHwxfHNlYXJjaHw1fHxjb2RlJTIweWVsbG93fGVufDB8fHw&ixlib=rb-1.2.1&q=85&w=430&dpr=1" alt=""/>
                 </section>

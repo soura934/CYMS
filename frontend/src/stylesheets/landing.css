@@ -41,11 +41,17 @@ html {
 .landing h1 {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 900;
+    font-size: 3.6rem;
+    color: #2e2528;
+}
+
+.landing h2 {
+    color: #2e2528;
+    font-size: 2rem;
 }
 
 .landing .heading {
     text-align: center;
-    /* background-color: white; */
 }
 
 .landing .heading .text-container{
@@ -87,6 +93,7 @@ html {
 .landing .container .centered h1 {
     font-size: 3.6rem;
     margin-bottom: .7em;
+    color: white;
 }
 
 .landing .container .centered a {
@@ -95,4 +102,24 @@ html {
     font-size: 2em;
     font-weight: 550;
     padding: .6em 1em;
+}
+
+.featured-products {
+    display: flex;
+    justify-content: space-around;
+}
+
+.featured-products .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-products .browse{
+    color: #2e2528;
+    background-color: #ebc456;
+    font-size: 2em;
+    font-weight: 550;
+    padding: .6em 1em;
+    width: 19%;
 }
