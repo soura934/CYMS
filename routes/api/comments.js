@@ -48,7 +48,7 @@ router.get('/product/:product_id', (req, res) =>{
         
         return 
         res.status(404).json({ nocommentsfound: 'No Comments found from that product'})})
-})
+});
 
 
 
@@ -67,6 +67,20 @@ router.delete('/:comment_id',
     .then(() => res.status(200).json({message: "Deleted!"}))
     .catch(err => {res.status(400).json({err: "no comment found"})})
 
+});
+
+router.put('/:comment_id', 
+    passport.authenticate('jwt', {session: false}),
+    (req, res) => {
+
+    Comment.findByIdAndUpdate(req.params.comment_id, 
+    {content: req.body.content})
+    .then(comments => { return res.json(comments)})
+    .catch(err => { 
+       return res.status(404).json({
+            nocommentsfound: 'No Comments found from that product'
+        })
+    })
 })
 
 
