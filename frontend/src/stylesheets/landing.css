@@ -162,6 +162,10 @@ html {
     padding-bottom: .5em;
 }
 
+.story .text h2{
+    color: var(--grey);
+}
+
 .landing .story .us {
     display: flex;
     justify-content: space-evenly;
@@ -196,21 +200,25 @@ html {
     display: flex;
 }
 
-.landing .contact .names ul{
+.contact .names ul{
     width: 19%;
     text-align: center;
     list-style: none;
 } 
 
 .contact .names ul h2 {
-    color: #cccccc;
+    color: rgb(175, 175, 175);
 }
 
-.landing .contact .text h2 {
-    color: rgb(148, 148, 148);
+.contact .text h2 {
+    color: rgb(175, 175, 175);
 }
 
-.landing .contact .names{
+.contact .names{
     display: flex;
     justify-content: space-evenly;
+}
+
+.contact .names .name {
+    color: var(--white);
 }

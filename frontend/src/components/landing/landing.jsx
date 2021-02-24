@@ -29,7 +29,7 @@ class Landing extends React.Component {
                         <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
                         <div className='centered'>
                             <h1>We have the gear Software Engineers need to keep creating.</h1>
-                            <a href="">Learn More</a>
+                            <a href="#story">Learn More</a>
                         </div>
                     </div>
                 </section>
@@ -71,25 +71,25 @@ class Landing extends React.Component {
 
                     <div className='names'>
                         <ul>
-                            <h2>Christopher Thorne</h2>
+                            <h2 className='name'>Christopher Thorne</h2>
                             <h2>cfthlskdjfsa</h2>
                             <h2>sdfasdf</h2>
                             <h2>sdfasdf</h2>
                         </ul>
                         <ul>
-                            <h2>Yehuda Rosenberg</h2>
+                            <h2 className='name'>Yehuda Rosenberg</h2>
                             <h2>cfthlskdjfsa</h2>
                             <h2>sdfasdf</h2>
                             <h2>sdfasdf</h2>
                         </ul>
                         <ul>
-                            <h2>Mansour Dione</h2>
+                            <h2 className='name'>Mansour Dione</h2>
                             <h2>cfthlskdjfsa</h2>
                             <h2>sdfasdf</h2>
                             <h2>sdfasdf</h2>
                         </ul>
                         <ul>
-                            <h2>Soobin Kim</h2>
+                            <h2 className='name'>Soobin Kim</h2>
                             <h2>cfthlskdjfsa</h2>
                             <h2>sdfasdf</h2>
                             <h2>sdfasdf</h2>
