@@ -4,7 +4,6 @@ export const RECEIVE_CART = 'RECEIVE_CART';
 export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 
 export const addCart = cart => {
-    
     return {
         type: ADD_CART,
         cart
