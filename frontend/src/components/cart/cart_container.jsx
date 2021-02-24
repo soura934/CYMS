@@ -3,10 +3,10 @@ import Cart from './cart';
 import { fetchCartItems, removeProduct } from '../../actions/cart_actions'
 
 const msp = (state, ownProps) => {
-    
     return { 
         cart: state.entities.cart.data,
-        user: state.session.user.id
+        user: state.session.user.id,
+        product: state.entities.products.data
     }
 }
 

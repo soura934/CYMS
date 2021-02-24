@@ -6,12 +6,14 @@ class CartItem extends React.Component {
     }
 
     componentDidMount(){
-        
-        this.props.fetchOneCartItem(this.props.cartitem)
+        debugger
+        this.props.fetchOneCartItem(this.props.productId)
     }
 
+
     render() {
-        if (!this.props.bread) {
+        debugger
+        if (!this.props.product) {
             return null
         } else {
             return (

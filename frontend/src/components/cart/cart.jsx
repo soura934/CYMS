@@ -30,7 +30,10 @@ class Cart extends React.Component{
             let cartProducts = this.props.cart.map((product, idx) => {
                 return (
                     <div>
-                        <CartItem cartItem={product}/>                       
+                        <CartItem 
+                        product={product}
+                        productId={product.cartItem}
+                        />                       
                     </div>
                 )
             })  
