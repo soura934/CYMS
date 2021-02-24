@@ -6,7 +6,7 @@ import MainPageContainer from '../main/main_page_container';
 import  Footer from '../footer/footer'; 
 
 import '../../stylesheets/landing.css'; 
-import chris from '../../assets/IMG_3036.jpeg'
+import github from '../../assets/github-pages-logo-repository-fork-github-86eddab19cbc3ae293ada0fe0fb9e27d.png'
 
 class Landing extends React.Component {
 
@@ -29,7 +29,8 @@ class Landing extends React.Component {
                         <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
                         <div className='centered'>
                             <h1>We have the gear Software Engineers need to keep creating.</h1>
-                            <a href="">Learn More</a>
+                            <a href="/#link">Learn More</a>
+                            {/* <Link to='/#link'>learn more</Link> */}
                         </div>
                     </div>
                 </section>
@@ -45,7 +46,7 @@ class Landing extends React.Component {
 
                 <section className='story'>
                     <div className='text'>
-                        <h1>Our story.</h1>
+                        <h1 id='link'>Our story.</h1>
                         <h2>We are four software engineers who got tired of scouring 
                             the web for the gear we needed to do our jobs. We 
                             thought “there must be a better way”. CYMS is an 
@@ -54,12 +55,72 @@ class Landing extends React.Component {
                     </div>
 
                     <div className='us'>
+                        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHbqyL4KM5hLA/profile-displayphoto-shrink_800_800/0/1613427608176?e=1619654400&v=beta&t=IzXpLEbaTJBOTbJP1kkkyxgD-EejAh0xqFRlkW3lf8E" alt="Chris"/>
+                        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQH-DJHSTvK6xQ/profile-displayphoto-shrink_800_800/0/1613428586843?e=1619654400&v=beta&t=EvUG-24Zfvz7eL5LX-qV40ZrAFFJ6nwNxpAPtBDUyDo" alt="Yehuda"/>
                         <img src="https://media-exp1.licdn.com/dms/image/C5603AQHQAdZifgPz_w/profile-displayphoto-shrink_800_800/0/1517351265179?e=1619654400&v=beta&t=YGJjK7JWDslQff0sEbUG7-RrSUNb3Q1m3yrEZs1-mMc" alt="Mansour"/>
                         <img src="https://ca.slack-edge.com/T03GU501J-U01DE1L5CKE-g26b91ddcb6d-512" alt="Soobin"/>
-                        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQH-DJHSTvK6xQ/profile-displayphoto-shrink_800_800/0/1613428586843?e=1619654400&v=beta&t=EvUG-24Zfvz7eL5LX-qV40ZrAFFJ6nwNxpAPtBDUyDo" alt="Yehuda"/>
-                        <img src={chris} alt="Chris"/>
                     </div>   
                 </section>
+
+                <section className='contact'>
+                    <div className='text'>
+                        <h1 className='heading'>Contact Us</h1>
+                        <h2 id='blerb'>If you like what we have done here or have any questions
+                            about our services:
+                        </h2>
+                    </div>
+
+                    <div className='names'>
+                        <ul>
+                            <h2 className='name'>Christopher Thorne</h2>
+                            <h2><a href="https://github.com/cfthorne83">LinkedIn</a></h2>
+                            <h2><a href="https://github.com/cfthorne83"></a> Github</h2>
+                            <h2><a href="mailto:cfthorne83@gmail.com">Email</a></h2>
+
+                        </ul>
+                        <ul>
+                            <h2 className='name'>Yehuda Rosenberg</h2>
+                            <h2><a href="https://www.linkedin.com/in/yehudah-rosenberg/">LinkedIn</a></h2>
+                            <h2><a href=""></a> Github</h2>
+                            <h2><a href=""></a> Email</h2>
+                        </ul>
+                        <ul>
+                            <h2 className='name'>Mansour Dione</h2>
+                            <h2>LinkedIn</h2>
+                            <h2>Github</h2>
+                            <h2>Email</h2>
+                        </ul>
+                        <ul>
+                            <h2 className='name'>Soobin Kim</h2>
+                            <h2>LinkedIn</h2>
+                            <h2>Github</h2>
+                            <h2>Email</h2>
+                        </ul>
+                    </div>
+                </section>
+
+                <footer className='new-footer'>
+                    <div className='brand'>
+                        <h1>CYMS</h1>
+                        <p>Thanks for stopping by :)</p>
+                    </div>
+
+                    <div className='git'>
+                        <a href="https://github.com/soura934/CYMS">
+                            <img src={github} alt="Github"/>
+                        </a>
+                    </div>
+
+                    <div className='techs'>
+                        <ul>
+                            <h1>Technologies</h1>
+                            <li>MongoDB</li>
+                            <li>Express</li>
+                            <li>Nodejs</li>
+                            <li>React</li>
+                        </ul>
+                    </div>
+                </footer>
 
 
 
