@@ -81,8 +81,8 @@ class Landing extends React.Component {
                         <ul>
                             <h2 className='name'>Yehuda Rosenberg</h2>
                             <h2><a href="https://www.linkedin.com/in/yehudah-rosenberg/">LinkedIn</a></h2>
-                            <h2>Github</h2>
-                            <h2>Email</h2>
+                            <h2><a href=""></a> Github</h2>
+                            <h2><a href=""></a> Email</h2>
                         </ul>
                         <ul>
                             <h2 className='name'>Mansour Dione</h2>
@@ -98,6 +98,15 @@ class Landing extends React.Component {
                         </ul>
                     </div>
                 </section>
+
+                <footer className='new-footer'>
+                    <h1>CYMS</h1>
+                    <a href="https://github.com/soura934/CYMS">
+                        <img src="https://p7.hiclipart.com/preview/551/770/413/github-pages-logo-repository-fork-github-thumbnail.jpg" alt="Github"/>
+                    </a>
+
+
+                </footer>
 
 
 

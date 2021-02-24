@@ -43,6 +43,9 @@ html {
     width: 100vw;
 }
 
+
+/* heading section */
+
 .landing .heading {
     width: 100%;
 }
@@ -114,6 +117,7 @@ html {
 }
 
 
+/* featured-products section */
 
 .featured-products {
     display: flex;
@@ -146,6 +150,7 @@ html {
 }
 
 
+/* story section */
 
 .landing .story {
     box-sizing: border-box;
@@ -178,6 +183,7 @@ html {
 }
 
 
+/* contact section */
 
 .landing .contact {
     width: 100vw;
@@ -234,4 +240,17 @@ html {
 .contact .names .name:hover {
     color: var(--white);
     text-decoration: none;
+}
+
+
+/* footer section */
+
+.new-footer {
+    background-color: var(--drk-grey);
+    color: var(--white);
+}
+
+.new-footer h1{
+    background-color: var(--drk-grey);
+    color: var(--white);
 }
