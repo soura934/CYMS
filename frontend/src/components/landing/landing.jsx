@@ -18,7 +18,6 @@ class Landing extends React.Component {
         return (
             <div className='landing'>
                 <MainPageContainer /> 
-                <Link to='/products'>product index link</Link>
 
                 <section className='heading'>
                     <div className='text-container'>
@@ -44,18 +43,21 @@ class Landing extends React.Component {
                     <img src="https://images.unsplash.com/photo-1544931170-3ca1337cce88?crop=entropy&cs=srgb&fm=jpg&ixid=MXwxNDEzNDF8MHwxfHNlYXJjaHw1fHxjb2RlJTIweWVsbG93fGVufDB8fHw&ixlib=rb-1.2.1&q=85&w=430&dpr=1" alt=""/>
                 </section>
 
-                <section>
-                    <h1>Our story.</h1>
-                    <p>We are four software engineers who got tired of scouring 
-                        the web for the gear we needed to do our jobs. We 
-                        thought “there must be a better way”. CYMS is an 
-                        e-commerce website with products curated specifically 
-                        for the needs of the modern software engineer.</p>
-                    <div>
-                        <img src={chris} alt="Chris"/>
-                        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQH-DJHSTvK6xQ/profile-displayphoto-shrink_800_800/0/1613428586843?e=1619654400&v=beta&t=EvUG-24Zfvz7eL5LX-qV40ZrAFFJ6nwNxpAPtBDUyDo" alt="Yehuda"/>
+                <section className='story'>
+                    <div className='text'>
+                        <h1>Our story.</h1>
+                        <h2>We are four software engineers who got tired of scouring 
+                            the web for the gear we needed to do our jobs. We 
+                            thought “there must be a better way”. CYMS is an 
+                            e-commerce website with products curated specifically 
+                            for the needs of the modern software engineer.</h2>
+                    </div>
+
+                    <div className='us'>
                         <img src="https://media-exp1.licdn.com/dms/image/C5603AQHQAdZifgPz_w/profile-displayphoto-shrink_800_800/0/1517351265179?e=1619654400&v=beta&t=YGJjK7JWDslQff0sEbUG7-RrSUNb3Q1m3yrEZs1-mMc" alt="Mansour"/>
                         <img src="https://ca.slack-edge.com/T03GU501J-U01DE1L5CKE-g26b91ddcb6d-512" alt="Soobin"/>
+                        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQH-DJHSTvK6xQ/profile-displayphoto-shrink_800_800/0/1613428586843?e=1619654400&v=beta&t=EvUG-24Zfvz7eL5LX-qV40ZrAFFJ6nwNxpAPtBDUyDo" alt="Yehuda"/>
+                        <img src={chris} alt="Chris"/>
                     </div>   
                 </section>
 

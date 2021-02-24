@@ -46,7 +46,7 @@ html {
 }
 
 .landing h2 {
-    color: #2e2528;
+    color: #575965;
     font-size: 2rem;
 }
 
@@ -107,6 +107,11 @@ html {
 .featured-products {
     display: flex;
     justify-content: space-around;
+    padding: 4em
+}
+
+.featured-products img {
+    width: 42%;
 }
 
 .featured-products .text{
@@ -123,3 +128,28 @@ html {
     padding: .6em 1em;
     width: 19%;
 }
+
+.featured-products .text h2, .story .text h1 {
+    padding: .8em 0;
+    color: #575965;
+}
+
+.landing .story {
+    background-color: #ebc456;
+    text-align: center;
+}
+
+.landing .story h2{
+    padding: 0 3em 2em 3em;
+}
+
+.landing .story .us {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.landing .story .us img {
+    width: 15%;
+}
+
