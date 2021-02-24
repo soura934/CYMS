@@ -14,13 +14,16 @@ class Cart extends React.Component{
 
     componentDidUpdate(prevProps) {
         
-        if(!this.props.cart || JSON.stringify(prevProps.cart) !== JSON.stringify(this.props.cart)){
+        if(JSON.stringify(prevProps.cart) !== JSON.stringify(this.props.cart)){
              debugger
             this.props.fetchCartItems(this.props.user)
         }
     }
 
     render() {
+        let totalprice = 0;
+        let totalnumber;
+        
        if (!this.props.cart){
            return null
        }
@@ -35,9 +38,9 @@ class Cart extends React.Component{
                 </div>
            )
        } else {
-           
             let cartProducts = this.props.cart.map((product, idx) => {
-                
+                debugger
+                 totalprice += parseFloat(product.price)
                 return (
                     <ul key={idx}>
                         <CartItem 
@@ -47,18 +50,26 @@ class Cart extends React.Component{
                     </ul>
                 )
             })  
+            totalnumber = this.props.cart.length
             return (
                 <div className="splash">
                     <MainPageContainer /> 
-                        {cartProducts}
-                    
+                    <div>
+                        <h1>Your Cart</h1>
+
+                            {cartProducts}
+
+                        <p>Total price: $ {totalprice}</p>
+                        <p>{totalnumber} in cart</p>
+
+                        <div>
+                            <button>Check Out</button>
+                        </div>
+                    </div>
                     <footer id='footer'>
                         <Footer />
                     </footer>
                 </div>          
-              
-                  
-               
             )  
         } 
     }

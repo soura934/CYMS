@@ -57,11 +57,10 @@ router.get("/find/:query", (req, res) => {
         .then(product => {
             if (product) {
                 res.json(product)
-            } else {
+            } else {                                                                                                                                                                                                                    
                 return res.status(404).json({search: 'Did not find any'})
             }
         });
 })
-
 
 module.exports = router;

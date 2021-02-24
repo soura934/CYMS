@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 class CartItem extends React.Component {
     constructor(props) {
@@ -6,11 +7,8 @@ class CartItem extends React.Component {
     }
 
     componentDidMount(){
-        
-        this.props.fetchOneCartItem(this.props.productId)
-          
+        this.props.fetchOneCartItem(this.props.productId)    
     }
-
 
     render() {
         
@@ -19,9 +17,11 @@ class CartItem extends React.Component {
         } else {
             return (
                 <div>
-                    <li>{this.props.product.title}</li>
-                    <li>{this.props.product.price}</li>
-                    <li>{this.props.product.image}</li>
+                    <Link to={`/product/${this.props.product.id}/${this.props.product._id}`}>
+                        <li>{this.props.product.title}</li>
+                        <img width="200" height="200" src={this.props.product.image} alt=""/>
+                    </Link>
+                        <li>${this.props.product.price}</li>
                 </div>
             )
         }
