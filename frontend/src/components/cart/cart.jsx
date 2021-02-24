@@ -12,6 +12,14 @@ class Cart extends React.Component{
         this.props.fetchCartItems(this.props.user)
     }
 
+    componentDidUpdate(prevProps) {
+        
+        if(!this.props.cart || JSON.stringify(prevProps.cart) !== JSON.stringify(this.props.cart)){
+             debugger
+            this.props.fetchCartItems(this.props.user)
+        }
+    }
+
     render() {
        if (!this.props.cart){
            return null
@@ -27,14 +35,16 @@ class Cart extends React.Component{
                 </div>
            )
        } else {
+           
             let cartProducts = this.props.cart.map((product, idx) => {
+                
                 return (
-                    <div>
+                    <ul key={idx}>
                         <CartItem 
                         product={product}
                         productId={product.cartItem}
-                        />                       
-                    </div>
+                        />   
+                    </ul>
                 )
             })  
             return (
