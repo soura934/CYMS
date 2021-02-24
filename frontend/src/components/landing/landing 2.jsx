@@ -54,47 +54,11 @@ class Landing extends React.Component {
                     </div>
 
                     <div className='us'>
-                        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHbqyL4KM5hLA/profile-displayphoto-shrink_800_800/0/1613427608176?e=1619654400&v=beta&t=IzXpLEbaTJBOTbJP1kkkyxgD-EejAh0xqFRlkW3lf8E" alt="Chris"/>
-                        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQH-DJHSTvK6xQ/profile-displayphoto-shrink_800_800/0/1613428586843?e=1619654400&v=beta&t=EvUG-24Zfvz7eL5LX-qV40ZrAFFJ6nwNxpAPtBDUyDo" alt="Yehuda"/>
                         <img src="https://media-exp1.licdn.com/dms/image/C5603AQHQAdZifgPz_w/profile-displayphoto-shrink_800_800/0/1517351265179?e=1619654400&v=beta&t=YGJjK7JWDslQff0sEbUG7-RrSUNb3Q1m3yrEZs1-mMc" alt="Mansour"/>
                         <img src="https://ca.slack-edge.com/T03GU501J-U01DE1L5CKE-g26b91ddcb6d-512" alt="Soobin"/>
+                        <img src="https://media-exp1.licdn.com/dms/image/C4D03AQH-DJHSTvK6xQ/profile-displayphoto-shrink_800_800/0/1613428586843?e=1619654400&v=beta&t=EvUG-24Zfvz7eL5LX-qV40ZrAFFJ6nwNxpAPtBDUyDo" alt="Yehuda"/>
+                        <img src={chris} alt="Chris"/>
                     </div>   
-                </section>
-
-                <section className='contact'>
-                    <div className='text'>
-                        <h1 className='heading'>Contact Us</h1>
-                        <h2 id='blerb'>If you like what we have done here or have any questions
-                            about our services:
-                        </h2>
-                    </div>
-
-                    <div className='names'>
-                        <ul>
-                            <h2>Christopher Thorne</h2>
-                            <h2>cfthlskdjfsa</h2>
-                            <h2>sdfasdf</h2>
-                            <h2>sdfasdf</h2>
-                        </ul>
-                        <ul>
-                            <h2>Yehuda Rosenberg</h2>
-                            <h2>cfthlskdjfsa</h2>
-                            <h2>sdfasdf</h2>
-                            <h2>sdfasdf</h2>
-                        </ul>
-                        <ul>
-                            <h2>Mansour Dione</h2>
-                            <h2>cfthlskdjfsa</h2>
-                            <h2>sdfasdf</h2>
-                            <h2>sdfasdf</h2>
-                        </ul>
-                        <ul>
-                            <h2>Soobin Kim</h2>
-                            <h2>cfthlskdjfsa</h2>
-                            <h2>sdfasdf</h2>
-                            <h2>sdfasdf</h2>
-                        </ul>
-                    </div>
                 </section>
 
 

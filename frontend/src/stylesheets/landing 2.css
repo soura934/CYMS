@@ -30,15 +30,6 @@ html {
     font-size: 62.5%;
 }
 
-:root {
-    --charcoal: #2c2526;
-    --drk-grey: #545661;
-    --grey: #818792;
-    --lt-grey: #ebeef3;
-    --yellow: #ebc456;
-    --white: #f4f4f4;
-}
-
 .landing {
     width: 100vw;
 }
@@ -113,8 +104,6 @@ html {
     padding: .6em 1em;
 }
 
-
-
 .featured-products {
     display: flex;
     justify-content: space-around;
@@ -140,77 +129,27 @@ html {
     width: 19%;
 }
 
-.featured-products .text h2{
+.featured-products .text h2, .story .text h1 {
     padding: .8em 0;
     color: #575965;
 }
 
-
-
 .landing .story {
-    box-sizing: border-box;
     background-color: #ebc456;
-}
-
-.story .text {
-    padding: 4em 5.5em 5.5em 5.5em;
     text-align: center;
 }
 
-.story .text h1{
-    color: #545661;
-    padding-bottom: .5em;
+.landing .story h2{
+    padding: 0 3em 2em 3em;
 }
 
 .landing .story .us {
     display: flex;
     justify-content: space-evenly;
     width: 100vw;
-    padding-bottom: 5em;
 }
 
 .landing .story .us img {
-    width: 19%;
+    width: 15%;
 }
 
-
-
-.landing .contact {
-    width: 100vw;
-    background-color: #2c2526;
-    color: #f4f4f4;
-}
-
-.landing .contact .text{
-    padding: 4em 5.5em 5.5em 5.5em;
-    text-align: center;
-}
-
-.landing .contact .text h1 {
-    padding-bottom: .5em;
-    color: #dadada;
-}
-
-.landing .contact .names{
-    width: 100%;
-    display: flex;
-}
-
-.landing .contact .names ul{
-    width: 19%;
-    text-align: center;
-    list-style: none;
-} 
-
-.contact .names ul h2 {
-    color: #cccccc;
-}
-
-.landing .contact .text h2 {
-    color: rgb(148, 148, 148);
-}
-
-.landing .contact .names{
-    display: flex;
-    justify-content: space-evenly;
-}
