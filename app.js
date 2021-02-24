@@ -3,12 +3,14 @@ const app = express();
 const mongoose = require('mongoose');
 const db = require('./config/keys').mongoURI;
 const bodyParser = require('body-parser');
+const passport = require('passport');
+
 const users = require("./routes/api/users");
 const products = require('./routes/api/products');
 const comments = require('./routes/api/comments')
 const cartitems = require('./routes/api/carts')
 const path = require('path');
-const passport = require('passport');
+
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('frontend/build'));
@@ -23,6 +25,9 @@ mongoose
   .catch(err => console.log(err));
   
 app.get("/", (req, res) => {res.send("Hello");});
+
+app.use(passport.initialize());
+require('./config/passport')(passport);
 
 app.use(passport.initialize());
 require('./config/passport')(passport);

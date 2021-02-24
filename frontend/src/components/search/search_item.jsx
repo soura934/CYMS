@@ -13,21 +13,27 @@ class SearchItem extends React.Component {
     }
 
     componentDidMount(){
+        // 
         this.props.fetchSearchProducts(this.props.match.params.query)
     }
     render() {
         if (!this.props.products){
-            return null;
+            // 
+             return null;
         }
         if (!Array.isArray(this.props.products)){
-            return null;
+            
+            // 
+        return null;
         }
          let products = this.props.products.map((product) => {
+        //  
             return (
                     <Link className='product-item' key={product._id}  to={`/product/${product.id}/${product._id}`}>
                         <li>{product.title}</li>
                         <li><img src={product.image} alt=""/></li>
                         <li>${product.price}</li>
+                     
                     </Link>
             )
         })

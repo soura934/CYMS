@@ -6,14 +6,30 @@ class Comment extends React.Component {
         super(props);
         
         this.state = {
-            comment: []
+            comment: [], 
+            product_id:this.props.product._id
+        
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
-        this.props.fetchComments()
+        
+        // if (!Array.isArray(this.props.product)){
+        //     
+        this.props.fetchProductComments(this.props.productId)
+        // }
+    }
+    
+
+    componentDidUpdate(prevProps, prevState){
+        // this.props.fetchComments()
+        
+        if ( JSON.stringify(this.props.comments) !== JSON.stringify(prevProps.comments)){
+            
+        this.props.fetchProductComments(this.props.productId)
+        }
     }
 
     update(field) {
@@ -22,19 +38,46 @@ class Comment extends React.Component {
 
     handleSubmit(e) {
          e.preventDefault();
-        this.props.createComment(this.state)
+         let {loggedIn, content} = this.props 
+         
+         if (!this.state.content){
+             
+            return;
+   
+         }
+         if (loggedIn){
+            let comment = {
+                product_id: this.props.product._id,
+                content: this.state.content
+             }
+         this.props.createComment(comment)
+         this.setState({ content: "" })
+    } else {
+        window.location = '#/login';
+    }
     }
 
     render () {
+        
         const { comment } = this.props;
-
+        
         if (!this.props.comments) return null;
+         if (!Array.isArray(this.props.comments)) return null;
 
         let comments = this.props.comments.map((comment, i) => {
+            let firstName = comment.user.firstName
+            let lastName = comment.user.lastName
+            
+           
+            const dateObj = new Date(comment.date)
+            let date = new Intl.DateTimeFormat('en-US').format(dateObj);
+
             return (
                     <ul className='user-comments' key={comment._id}>
-                        <h2>Customer Review {i + 1}:</h2>
-                        <li>{comment.content}</li>
+                    
+                        <li>"{comment.content}"</li>
+                        <li>Posted by: {firstName} {lastName}</li>
+                        <li>Review left: {date}</li>
                     </ul>
             )
         })

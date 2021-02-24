@@ -38,6 +38,7 @@ router.get('/user/:user_id',
     (req, res) =>{
         Cart.find({user: req.params.user_id})
         .then(user => {
+            
             return res.json(user)
         })
         .catch(err => res.status(400).json({ err }))
