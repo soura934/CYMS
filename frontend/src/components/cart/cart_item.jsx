@@ -6,6 +6,7 @@ class CartItem extends React.Component {
     }
 
     componentDidMount(){
+        
         this.props.fetchOneCartItem(this.props.cartitem)
     }
 
