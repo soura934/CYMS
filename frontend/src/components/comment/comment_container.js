@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
 import Comment from './comment';
 import { fetchProductComments, fetchComment, deleteComment, createComment } from '../../actions/comment_actions';
-
+import { withRouter } from "react-router";
 const msp = (state, ownProps) => {
     debugger
     return { 
         product: state.entities.products.data,
         comments: state.entities.comments.data,
-        loggedIn: state.session.isAuthenticated
+        loggedIn: state.session.isAuthenticated,
+        productId: ownProps.match.params._id
     }
 }
 
@@ -20,4 +21,4 @@ const mdp = (dispatch, ownProps) => {
     }
 }
 
-export default connect(msp, mdp)(Comment);
+export default withRouter(connect(msp, mdp)(Comment));

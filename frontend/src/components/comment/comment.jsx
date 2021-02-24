@@ -16,17 +16,21 @@ class Comment extends React.Component {
 
     componentDidMount() {
         debugger
-        // this.props.fetchProductComments(this.props.product_id)
+        // if (!Array.isArray(this.props.product)){
+        //     debugger
+        this.props.fetchProductComments(this.props.productId)
+        // }
     }
+    
 
-    componentDidUpdate(prevProps, prevState){
-        // this.props.fetchComments()
-        debugger
-        if(!this.props.comments || JSON.stringify(this.props.comments) !== JSON.stringify(prevProps.comments)){
-            debugger
-        this.props.fetchProductComments(this.props.product._id)
-        }
-    }
+    // componentDidUpdate(prevProps, prevState){
+    //     // this.props.fetchComments()
+    //     debugger
+    //     if(!this.props.comments || JSON.stringify(this.props.comments) !== JSON.stringify(prevProps.comments)){
+    //         debugger
+    //     this.props.fetchProductComments(this.props.product._id)
+    //     }
+    // }
 
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value })
@@ -58,9 +62,9 @@ class Comment extends React.Component {
             return (
                     <ul className='user-comments' key={comment._id}>
                     
-                        <h2>Posted by: {comment.user.firstName} {comment.user.firstName}</h2>
+                        <h2>Posted by: {comment.user.firstName} {comment.user.lastName}</h2>
                         <li>"{comment.content}"</li>
-                        <li>Comment created on:{comment.date}</li>
+                        <li>Comment created on: {comment.date}</li>
                     </ul>
             )
         })

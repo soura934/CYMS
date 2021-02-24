@@ -3,6 +3,7 @@ import SearchItem from './search_item';
 import { fetchSearchProducts } from '../../actions/product_actions';
 import { withRouter }from 'react-router-dom';
 const mapStateToProps = (state, ownProps) => {
+    debugger
     return{
     products: state.entities.products.data
 }
