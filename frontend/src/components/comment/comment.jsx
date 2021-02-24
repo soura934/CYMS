@@ -20,6 +20,7 @@ class Comment extends React.Component {
     componentDidMount() {
         // if (!Array.isArray(this.props.product)){
             //     
+            
             this.props.fetchProductComments(this.props.productId)
             // }
             
@@ -68,8 +69,11 @@ class Comment extends React.Component {
         
         if (!this.props.comments) return null;
         if (!Array.isArray(this.props.comments)) return null;
+        
          let comments = this.props.comments.map((comment, i) => {
-            
+           
+
+           
             return (
                 <ul className='user-comments' key={comment._id}>
                     
@@ -94,7 +98,7 @@ class Comment extends React.Component {
                                 <br/>
                             <button>Submit</button>
                         </form>
-
+                
                         <h1 className='comment-title'>Top Customer Reviews</h1>
                         {comments}
                 </div>

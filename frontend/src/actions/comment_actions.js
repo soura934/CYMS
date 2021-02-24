@@ -64,10 +64,10 @@ export const createComment = (comment) => dispatch => {
 }
 
 export const deleteComment = (commentId) => {
-    debugger
+    
     return dispatch => {
         return CommentApiUtil.deleteComment(commentId).then(() => {
-            debugger
+            
             return dispatch(removeComment(commentId))
         })
     }

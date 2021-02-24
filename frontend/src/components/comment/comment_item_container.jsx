@@ -1,18 +1,22 @@
 import { connect } from 'react-redux';
 import CommentItem from './comment_item';
 
-import {  deleteComment } from '../../actions/comment_actions';
+import { fetchProductComments, deleteComment } from '../../actions/comment_actions';
 
 const msp = (state, ownProps) => {
-    
+    debugger
     return {
-       comment: ownProps.comment
+       comment: ownProps.comment,
+       user: state.session.user,
+       productId: ownProps.comment.product
+    //    state.entities.products.data._id
     }
 }
 
 const mdp = dispatch => {
     return {
-    deleteComment: (commentId) => dispatch(deleteComment(commentId))
+    deleteComment: (commentId) => dispatch(deleteComment(commentId)),
+    fetchProductComments: (productId) => dispatch(fetchProductComments(productId))
     }
 }
 

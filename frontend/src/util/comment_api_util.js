@@ -14,7 +14,7 @@ export const createComment = (comment) => {
 };
 
 export const deleteComment = (commentId) => {
-  debugger
+  
   return axios.delete(`/api/comments/${commentId}`);
 };
 
