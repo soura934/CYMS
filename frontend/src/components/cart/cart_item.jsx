@@ -7,16 +7,21 @@ class CartItem extends React.Component {
 
     componentDidMount(){
         
-        this.props.fetchOneCartItem(this.props.cartitem)
+        this.props.fetchOneCartItem(this.props.productId)
+          
     }
 
+
     render() {
-        if (!this.props.bread) {
+        
+        if (!this.props.product) {
             return null
         } else {
             return (
                 <div>
                     <li>{this.props.product.title}</li>
+                    <li>{this.props.product.price}</li>
+                    <li>{this.props.product.image}</li>
                 </div>
             )
         }

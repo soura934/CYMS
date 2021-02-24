@@ -42,7 +42,6 @@ export const fetchProduct = (productId) => {
 }
 
 export const fetchOneCartItem = (productId) => {
-    
     return dispatch => {
         
         return ProductApiUtil.fetchOneCartItem(productId).then(product => {
