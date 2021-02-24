@@ -23,9 +23,9 @@ class SignupForm extends React.Component {
 //     //   
 //     //   this.props.history.push('/');
 //     // }
-// debugger
+// 
 //     // this.setState({errors: nextProps.errors})
-//     debugger
+//     
 //   }
 
   update(field) {

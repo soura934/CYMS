@@ -18,6 +18,6 @@ export const deleteComment = (commentId) => {
 };
 
 export const fetchProductComments = (product_id) => {
-  debugger
+  
   return axios.get(`/api/comments/product/${product_id}`);
 };

@@ -49,11 +49,14 @@ background-color: rgb(245, 208, 106);
   width: 150px;
   height: 30px;
   margin-left: 15px;
+  
 }
 
 .comment button:hover{
     background-color: rgb(240, 188, 45);
 }
+
+
 
 .comment .user-comments{
     list-style: none;

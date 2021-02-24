@@ -36,16 +36,16 @@ router.post("/",
 
 
 router.get('/product/:product_id', (req, res) =>{
-     debugger
+     
 
     Comment.find({product: req.params.product_id})
     .sort({date: -1})
     .populate('user')
     .then(comments => {
-        debugger
+        
          return res.json(comments)})
     .catch(err => {
-        debugger
+        
         return 
         res.status(404).json({ nocommentsfound: 'No Comments found from that product'})})
 })

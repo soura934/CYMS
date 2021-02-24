@@ -3,7 +3,7 @@ import Comment from './comment';
 import { fetchProductComments, fetchComment, deleteComment, createComment } from '../../actions/comment_actions';
 import { withRouter } from "react-router";
 const msp = (state, ownProps) => {
-    debugger
+    
     return { 
         product: state.entities.products.data,
         comments: state.entities.comments.data,
