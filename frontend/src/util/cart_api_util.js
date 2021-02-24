@@ -1,15 +1,15 @@
 import axios from 'axios';
 
 export const createCart = (cart) => {
-  debugger
+  
     return axios.post(`/api/carts`, cart)
 };
 
-export const fetchUserCart = user => {
-  return axios.get(`/api/carts/${user}`) 
+export const fetchUserCart = userId => {
+  return axios.get(`/api/carts/user/${userId}`) 
 }
 
 
-export const deleteCartItem = product => {
-    return axios.delete(`/api/cart/${product}`)
+export const deleteCartItem = productId => {
+    return axios.delete(`/api/carts/${productId}`)
 };

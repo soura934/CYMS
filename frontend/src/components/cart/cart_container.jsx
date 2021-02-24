@@ -3,17 +3,16 @@ import Cart from './cart';
 import { fetchCartItems, removeProduct } from '../../actions/cart_actions'
 
 const msp = (state, ownProps) => {
-    debugger
     return { 
-        cart: state.entities.carts,
+        cart: state.entities.cart.data,
         user: state.session.user.id
     }
 }
 
 const mdp = (dispatch, ownProps) => {
     return {
-        fetchCartItems: (user) => dispatch(fetchCartItems(user)),
-        removeProduct: (product) => dispatch(removeProduct(product))
+        fetchCartItems: (userId) => dispatch(fetchCartItems(userId)),
+        removeProduct: (productId) => dispatch(removeProduct(productId))
     }
 }
 

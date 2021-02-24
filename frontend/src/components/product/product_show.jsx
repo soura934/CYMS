@@ -22,18 +22,17 @@ class ProductShow extends React.Component{
 
     handleSubmit(e){
         e.preventDefault()
-        debugger
+        
         if (this.props.session.isAuthenticated){
         this.state = {
-            
             user_id: this.props.user.id,
-            price:String(this.props.product.price),
+            price: String(this.props.product.price),
             product_id: this.props.product._id
         }
-        debugger
+        
         this.props.createCart(this.state)
     } else {
-        debugger
+        
         alert ("Please Log in or Sign up to add items to your Cart!")
         window.location = '#/login';
 
@@ -42,8 +41,8 @@ class ProductShow extends React.Component{
     
     }
     render() {
-        debugger
-        // debugger
+        
+        // 
         if (!this.props.product){
             return null;
         } 

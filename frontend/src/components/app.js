@@ -1,5 +1,5 @@
 import React from 'react';
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route, Switch } from 'react-router-dom';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
@@ -24,7 +24,7 @@ const App = () => (
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
           <Route exact path="/product/:id/:_id" component={ProductShowContainer} />
           <Route exact path="/search/:query" component={SearchItemContainer} />
-          <Route exact path="/cart" component={CartContainer} />
+          <ProtectedRoute exact path="/cart" component={CartContainer} />
         </Switch>
       </main>
     </div>
