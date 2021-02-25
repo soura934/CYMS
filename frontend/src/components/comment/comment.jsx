@@ -42,7 +42,7 @@ class Comment extends React.Component {
 
     handleSubmit(e) {
          e.preventDefault();
-         
+         debugger
          let {loggedIn} = this.props 
          
          if (!this.state.content){
@@ -66,10 +66,15 @@ renderHeader(){
     
     if (this.props.comments.length > 0){
         
-      return  (<h1 className='comment-title'>Top Customer Reviews</h1>)
+      return  (
+        <div className="Reviews"> 
+            <h1 className='comment-title'>Top Customer Reviews</h1>
+      </div>
+      )
     } else {
         
       return  null
+      
     }
 }
     
