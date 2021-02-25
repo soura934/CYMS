@@ -176,19 +176,28 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.2em;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 1em;
 }
 
 .brand-name {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 3.5rem;
     font-weight: 600;
+    width: 25%;
+    /* padding-left: 3em */
 }
 
 .auth {
     color: rgb(194, 194, 194);
     font-size: 1.8rem;
     font-weight: 550;
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* padding-right: 4em; */
 }
 
 .login {
@@ -202,5 +211,19 @@ html {
 }
 
 .login, .signup {
+    padding: 0.5em .9em;
+    border-radius: .4em;
+}
+
+.search-bar {
+    width: 50%;
+    text-align: center;
+}
+
+.search-bar input {
     padding: 1em;
+    width: 80%;
+    text-align: center;
+    border-radius: .6em;
+    border: none;
 }

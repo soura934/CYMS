@@ -30,21 +30,9 @@ html {
     font-size: 62.5%;
 }
 
-:root {
-    --charcoal: #2c2526;
-    --drk-grey: #545661;
-    --grey: #818792;
-    --lt-grey: #ebeef3;
-    --yellow: #ebc456;
-    --white: #f4f4f4;
-}
-
 .landing {
     width: 100vw;
 }
-
-
-/* heading section */
 
 .landing .heading {
     width: 100%;
@@ -78,7 +66,7 @@ html {
 }
 
 .landing .heading .text-container h2 {
-    color: var(--drk-grey);
+    color: #2e2528;
     font-size: 2rem;
 }
 
@@ -116,9 +104,6 @@ html {
     padding: .6em 1em;
 }
 
-
-/* featured-products section */
-
 .featured-products {
     display: flex;
     justify-content: space-around;
@@ -136,7 +121,7 @@ html {
 }
 
 .featured-products .browse{
-    color: var(--drk-grey);
+    color: #2e2528;
     background-color: #ebc456;
     font-size: 2em;
     font-weight: 550;
@@ -144,171 +129,27 @@ html {
     width: 19%;
 }
 
-.featured-products .text h2{
+.featured-products .text h2, .story .text h1 {
     padding: .8em 0;
-    color: var(--grey);
+    color: #575965;
 }
-
-
-/* story section */
 
 .landing .story {
-    box-sizing: border-box;
     background-color: #ebc456;
-}
-
-.story .text {
-    padding: 4em 5.5em 5.5em 5.5em;
     text-align: center;
 }
 
-.story .text h1{
-    color: #545661;
-    padding-bottom: .5em;
-}
-
-.story .text h2{
-    color: var(--grey);
+.landing .story h2{
+    padding: 0 3em 2em 3em;
 }
 
 .landing .story .us {
     display: flex;
     justify-content: space-evenly;
     width: 100vw;
-    padding-bottom: 5em;
 }
 
 .landing .story .us img {
-    width: 19%;
+    width: 15%;
 }
 
-
-/* contact section */
-
-.landing .contact {
-    width: 100vw;
-    background-color: #2c2526;
-    color: #f4f4f4;
-}
-
-.landing .contact .text{
-    padding: 4em 5.5em 5.5em 5.5em;
-    text-align: center;
-}
-
-.landing .contact .text h1 {
-    padding-bottom: .5em;
-    color: #dadada;
-}
-
-.landing .contact .names{
-    width: 100%;
-    display: flex;
-}
-
-.contact .names ul{
-    width: 19%;
-    text-align: center;
-    list-style: none;
-} 
-
-.contact .names ul h2 {
-    color: rgb(175, 175, 175);
-    padding: .3em;
-}
-
-.contact .names ul h2:hover {
-    color: var(--white);
-    text-decoration: underline;
-}
-
-.contact .text h2 {
-    color: rgb(175, 175, 175);
-}
-
-.contact .names{
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 5em;
-}
-
-.contact .names .name {
-    color: var(--white);
-}
-
-.contact .names .name:hover {
-    color: var(--white);
-    text-decoration: none;
-}
-
-
-/* footer section */
-
-.new-footer {
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--drk-grey);
-    color: var(--white);
-    /* position: absolute; */
-    bottom: 0;
-}
-
-.new-footer div {
-    width: 33.3%;
-    padding: 3em 8em;
-}
-
-.new-footer .brand p {
-    font-size: 1.5rem;
-    display: flex;
-}
-
-.new-footer .brand {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
-.new-footer .git {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
-.new-footer h1{
-    color: var(--white);
-}
-
-.new-footer a img {
-    width: 20%;
-    text-align: center;
-}
-
-.new-footer .techs {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
-.new-footer .techs ul {
-    list-style: none;
-    font-size: 1.5rem;
-    display: flex;
-}
-
-.new-footer .techs li {
-    padding: .5rem;
-}
-
-.new-footer .techs h1{
-    font-size: 2rem;
-    padding-bottom: .5em;
-}
