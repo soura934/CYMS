@@ -3,6 +3,7 @@ import Cart from './cart';
 import { fetchCartItems, removeProduct } from '../../actions/cart_actions'
 
 const msp = (state, ownProps) => {
+    debugger
     return { 
         cart: state.entities.cart.data,
         user: state.session.user.id,
