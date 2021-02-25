@@ -40,6 +40,10 @@ html {
     --white: #f4f4f4;
     --button-pad: 0.7em 1.2em;
     --button-font: 1.8rem;
+    --heading-font-size: 4rem;
+    --heading-font-weight: 600;
+    --heading-font: 'Source Sans Pro', sans-serif;
+    --font: 'Courier New';
 }
 
 .landing {
