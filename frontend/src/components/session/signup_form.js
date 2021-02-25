@@ -117,21 +117,20 @@ class SignupForm extends React.Component {
                 <div className='errors'> {this.state.errors["password"]}</div>
 
               </div>
-              
+
                 <input className='signup-button' type="submit" value="Create your CYMS account" />     
             </form>
 
+
+            <div className='login-Link-container'>
+              <p className='text'> Already have an account? </p>
+                <nav>
+                  <Link className='link' to={'/login'}>Login</Link>
+                  <Link className='link home' to={'/'}>Home</Link>
+                </nav>
+            </div>
+
           </div>
-
-        <div className='login-Link-container'>
-          <p className='text'> Already have an account? </p>
-          <nav>
-          <Link className='link' to={'/login'}>Log In</Link>
-          <span>|</span>
-          <Link className='link home' to={'/'}>Home</Link>
-          </nav>
-        </div>
-
         </div>
       </div>
     );
