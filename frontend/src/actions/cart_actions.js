@@ -43,10 +43,9 @@ export const fetchCartItems = user => dispatch => {
 }
 
 
-export const removeProduct = (product) => dispatch => {
-    
-        return CartApiUtil.deleteCartItem(product)
-        .then(() => dispatch(removeFromCart(product)))
+export const removeProduct = (productId) => dispatch => {
+        return CartApiUtil.deleteCartItem(productId)
+        .then(() => dispatch(removeFromCart(productId)))
  }
 
 // =======

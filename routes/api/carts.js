@@ -37,6 +37,8 @@ router.get('/user/:user_id',
     passport.authenticate('jwt', {session: false}),
     (req, res) =>{
         Cart.find({user: req.params.user_id})
+        .sort({date: -1})
+        .populate('cartItem')
         .then(user => {
             
             return res.json(user)
@@ -44,6 +46,20 @@ router.get('/user/:user_id',
         .catch(err => res.status(400).json({ err }))
         
 })
+
+router.delete('/:productId', 
+    passport.authenticate('jwt',  {session: false }),
+    (req, res) => {
+        Cart.findByIdAndDelete(req.params.productId, function (error, product) {
+            if (error){
+                res.status(404).json({ no: 'no' });
+            } else {
+                res.json(product);
+            }
+        })
+    }
+
+)
 
 
 module.exports = router;

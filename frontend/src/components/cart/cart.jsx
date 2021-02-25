@@ -6,25 +6,18 @@ import CartItem from './cart_item_container';
 class Cart extends React.Component{
     constructor(props){
         super(props)
+
+        this.deleteItem = this.deleteItem.bind(this);
     }
 
     componentDidMount() {
-        
         this.props.fetchCartItems(this.props.user)
-        
-        
     }
 
-    componentDidUpdate(prevProps) {
-        
-    //     if(!this.props.cart || JSON.stringify(prevProps.cart) !== JSON.stringify(this.props.cart)){
-             
-    //         this.props.fetchCartItems(this.props.user)
-    //     }
-    // }
-    
-    // this.props.fetchOneCartItem(this.props.productId)
+    deleteItem(productId){
+        return e => this.props.removeProduct(productId).then(() => this.props.fetchCartItems(this.props.user))
     }
+
     render() {
         let totalprice = 0;
         let totalnumber;
@@ -32,6 +25,7 @@ class Cart extends React.Component{
        if (!this.props.cart){
            return null
        }
+
        if (this.props.cart.length === 0){
            return (
                 <div className="splash">
@@ -44,14 +38,14 @@ class Cart extends React.Component{
            )
        } else {
             let cartProducts = this.props.cart.map((product, idx) => {
-                debugger
                  totalprice += parseFloat(product.price)
                 return (
                     <ul key={idx}>
+                        {product.price}
                         <CartItem 
-                        product={product}
                         productId={product.cartItem}
                         />   
+                        <button onClick={this.deleteItem(product._id)}>Delete</button>
                     </ul>
                 )
             })  

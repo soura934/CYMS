@@ -2,6 +2,7 @@ import {
     RECEIVE_ALL_PRODUCTS,
     RECEIVE_PRODUCT,
     REMOVE_PRODUCT,
+    RECEIVE_ONE_PRODUCT
 } from '../actions/product_actions';
 
 const productsReducer = (state = {}, action) => {
@@ -13,6 +14,9 @@ const productsReducer = (state = {}, action) => {
             return action.products;
         case RECEIVE_PRODUCT:
             return nextState[action.product.id] = action.product;
+        case RECEIVE_ONE_PRODUCT:
+            const newState = Object.assign([], state, {[action.product.data._id]: action.product.data});
+            return newState
         case REMOVE_PRODUCT:
             delete nextState[action.productId];
             return nextState;
