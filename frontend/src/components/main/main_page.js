@@ -23,17 +23,17 @@ class MainPage extends React.Component {
             <div className='nav-bar'>
                 {/* <Link className='profile-link' to={'/profile'}>Profile</Link> */}
                 <button id='logout' onClick={this.logoutUser}>Logout</button>
-                <div className='cart-button-container'>
+                {/* <div className='cart-button-container'> */}
                   <Link className='cart-link' to={'/cart'}>Cart</Link>
-                </div>
+                {/* </div> */}
             </div>
         );
       } else {
         return (
-            <div className="authentication">
-                <Link to={'/login'}>Login</Link>
-                <>or</>
-                <Link to={'/signup'}>Signup</Link>
+            <div className="auth">
+                <Link to={'/login'} className='login'>Login</Link>
+                <>&nbsp;or&nbsp;</>
+                <Link to={'/signup'} className='signup'>Signup</Link>
             </div>
         );
       }
@@ -42,16 +42,16 @@ class MainPage extends React.Component {
   render() {
     
       return (
-        <div className='header-container'>
+        // <div className='header-container'>
           <div className='header'>
               <Link to={'/'} className="brand-name" >CYMS</Link>
               <SearchBarContainer />
               { this.getLinks() }
           </div>
           
-          <div className='header-filler'></div>
+          // <div className='header-filler'></div>
           
-        </div>
+        // </div>
       );
   }
 }
