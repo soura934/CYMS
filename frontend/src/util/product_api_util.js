@@ -25,5 +25,6 @@ export const fetchSearchProducts = (keyword) => {
 }
 
 export const fetchOneCartItem = (productId) => {
+  
   return axios.get(`/api/products/${productId}`);
 };
