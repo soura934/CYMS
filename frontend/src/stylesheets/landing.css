@@ -32,9 +32,9 @@ html {
 
 :root {
     --charcoal: #2c2526;
-    --drk-grey: #545661;
+    --drk-grey: rgb(83, 85, 95);
     --grey: #818792;
-    --lt-grey: #ebeef3;
+    --lt-grey: rgb(235, 238, 243);
     --yellow: #ebc456;
     --yellow-hov: #c28e00;
     --white: #f4f4f4;
