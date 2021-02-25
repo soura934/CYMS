@@ -12,7 +12,7 @@ class CartItem extends React.Component {
     }
 
     render() {
-                  
+               
         if (!this.props.product) {
             return null
         } else {

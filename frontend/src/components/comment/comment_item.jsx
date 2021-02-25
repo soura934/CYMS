@@ -11,11 +11,11 @@ class CommentItem extends React.Component {
     }
 
     // componentDidMount(){
-    //     debugger
+    //     
     // }
 
     // componentDidUpdate(){
-    //     debugger
+    //     
     // }
     deleteComment(){
         
@@ -36,8 +36,7 @@ class CommentItem extends React.Component {
             </ul>
         )
     }
-    renderInfo(){
-debugger       
+    renderInfo(){       
 
     }
 

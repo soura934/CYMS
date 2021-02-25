@@ -42,7 +42,6 @@ class Comment extends React.Component {
 
     handleSubmit(e) {
          e.preventDefault();
-         debugger
          let {loggedIn} = this.props 
          
          if (!this.state.content){

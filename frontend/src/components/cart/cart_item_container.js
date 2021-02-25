@@ -5,8 +5,8 @@ import { fetchOneCartItem } from "../../actions/product_actions";
 const msp = (state, ownProps) => {
     
     return {
-        productId: ownProps.productId,
-        product: state.entities.products[ownProps.productId]
+        productId: ownProps.productId._id,
+        product: state.entities.products[ownProps.productId._id]
     }
 }
 
