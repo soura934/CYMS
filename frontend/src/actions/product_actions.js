@@ -27,7 +27,7 @@ export const removeProduct = (productId) => {
 };
 
 export const receiveOneProduct = (product) => {
-    debugger
+    
     return {
         type: RECEIVE_ONE_PRODUCT,
         product
@@ -36,7 +36,7 @@ export const receiveOneProduct = (product) => {
 
 export const fetchOneCartItem = (productId) => {
     return dispatch => {
-        debugger
+        
         return ProductApiUtil.fetchOneCartItem(productId).then(product => {   
             dispatch(receiveOneProduct(product))
         })

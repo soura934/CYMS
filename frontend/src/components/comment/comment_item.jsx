@@ -11,11 +11,11 @@ class CommentItem extends React.Component {
     }
 
     // componentDidMount(){
-    //     debugger
+    //     
     // }
 
     // componentDidUpdate(){
-    //     debugger
+    //     
     // }
     deleteComment(){
         
