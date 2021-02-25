@@ -3,6 +3,7 @@ import * as ProductApiUtil from '.././util/product_api_util';
 export const RECEIVE_ALL_PRODUCTS = 'RECEIVE_ALL_PRODUCTS';
 export const RECEIVE_PRODUCT = 'RECEIVE_PRODUCT';
 export const REMOVE_PRODUCT = 'REMOVE_PRODUCT';
+export const RECEIVE_ONE_PRODUCT = 'RECEIVE_ONE_PRODUCT';
 
 export const receiveProducts = (products) => {
     return {
@@ -25,6 +26,23 @@ export const removeProduct = (productId) => {
     }
 };
 
+export const receiveOneProduct = (product) => {
+    debugger
+    return {
+        type: RECEIVE_ONE_PRODUCT,
+        product
+    }
+};
+
+export const fetchOneCartItem = (productId) => {
+    return dispatch => {
+        debugger
+        return ProductApiUtil.fetchOneCartItem(productId).then(product => {   
+            dispatch(receiveOneProduct(product))
+        })
+    }
+}
+
 export const fetchProducts = () => {
     return dispatch => {
         return ProductApiUtil.fetchProducts().then(products => {
@@ -36,16 +54,6 @@ export const fetchProducts = () => {
 export const fetchProduct = (productId) => {
     return dispatch => {
         return ProductApiUtil.fetchProduct(productId).then(product => {
-            dispatch(receiveProduct(product))
-        })
-    }
-}
-
-export const fetchOneCartItem = (productId) => {
-    return dispatch => {
-        
-        return ProductApiUtil.fetchOneCartItem(productId).then(product => {
-            
             dispatch(receiveProduct(product))
         })
     }

@@ -10,7 +10,6 @@ const msp = (state, ownProps) => {
        comment: ownProps.comment,
        user: state.session.user,
        productId: ownProps.comment.product
-    //    state.entities.products.data._id
     }
 }
 
