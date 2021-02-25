@@ -36,8 +36,7 @@ class CommentItem extends React.Component {
             </ul>
         )
     }
-    renderInfo(){
-debugger       
+    renderInfo(){       
 
     }
 
