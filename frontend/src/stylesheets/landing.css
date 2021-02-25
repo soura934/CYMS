@@ -36,7 +36,9 @@ html {
     --grey: #818792;
     --lt-grey: #ebeef3;
     --yellow: #ebc456;
+    --yellow-hov: #c28e00;
     --white: #f4f4f4;
+    --button-pad: 0.7em 1.2em;
 }
 
 .landing {
@@ -67,13 +69,13 @@ html {
 }
 
 .landing .heading .text-container{
-    padding: 2.5em 4em;
+    padding: 4em 4em;
 }
 
 .landing .heading .text-container h1 {
     font-family: 'Source Sans Pro', sans-serif;
     color: #2e2528;
-    font-size: 3.6rem;
+    font-size: 4rem;
     padding-bottom: .4em;
 }
 
@@ -103,17 +105,20 @@ html {
 }
 
 .landing .container .centered h1 {
-    font-size: 3.6rem;
+    font-size: 4rem;
     margin-bottom: .7em;
     color: white;
 }
 
+.landing .container .centered a:hover {
+    background-color: var(--yellow-hov);
+}
 .landing .container .centered a {
     color: #2e2528;
-    background-color: #ebc456;
+    background-color: var(--yellow);
     font-size: 2em;
     font-weight: 550;
-    padding: .6em 1em;
+    padding: var(--button-pad)
 }
 
 
@@ -127,6 +132,7 @@ html {
 
 .featured-products img {
     width: 42%;
+    /* border-radius: 1em; */
 }
 
 .featured-products .text{
@@ -137,11 +143,15 @@ html {
 
 .featured-products .browse{
     color: var(--drk-grey);
-    background-color: #ebc456;
+    background-color: var(--yellow);
     font-size: 2em;
     font-weight: 550;
-    padding: .6em 1em;
+    padding: var(--button-pad);
     width: 19%;
+}
+
+.featured-products .browse:hover {
+    background-color: var(--yellow-hov);
 }
 
 .featured-products .text h2{
@@ -180,6 +190,7 @@ html {
 
 .landing .story .us img {
     width: 19%;
+    /* border-radius: 1em; */
 }
 
 
@@ -218,7 +229,6 @@ html {
 }
 
 .contact .names ul h2:hover {
-    /* color: #cccccc; */
     color: var(--white);
     text-decoration: underline;
 }
@@ -269,6 +279,8 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .new-footer .git {
@@ -276,6 +288,8 @@ html {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .new-footer h1{
@@ -283,19 +297,22 @@ html {
 }
 
 .new-footer a img {
-    width: 35%;
+    width: 20%;
     text-align: center;
 }
 
 .new-footer .techs {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .new-footer .techs ul {
     list-style: none;
-    text-align: center;
     font-size: 1.5rem;
+    display: flex;
 }
 
 .new-footer .techs li {
