@@ -50,14 +50,27 @@ router.get('/product/:product_id', (req, res) =>{
         res.status(404).json({ nocommentsfound: 'No Comments found from that product'})})
 });
 
+router.get('/', (req, res) =>{
+     
 
-
-router.get('/', (req, res) => {
-    Comment.find()
-        .sort({ date: -1 })
-        .then(comments => res.json(comments))
-        .catch(err => res.status(404).json({ noComments: 'No comment yet' }));
+    Comment.find({product: req.params.product_id})
+    .sort({date: -1})
+    .populate('user')
+    .then(comments => {
+        
+         return res.json(comments)})
+    .catch(err => {
+        
+        return 
+        res.status(404).json({ nocommentsfound: 'No Comments found from that product'})})
 });
+
+// router.get('/', (req, res) => {
+//     Comment.find()
+//         .sort({ date: -1 })
+//         .then(comments => res.json(comments))
+//         .catch(err => res.status(404).json({ noComments: 'No comment yet' }));
+// });
 
 router.delete('/:comment_id', 
     passport.authenticate('jwt', {session: false}),
