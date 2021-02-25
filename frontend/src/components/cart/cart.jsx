@@ -11,12 +11,10 @@ class Cart extends React.Component{
     }
 
     componentDidMount() {
-        debugger
         this.props.fetchCartItems(this.props.user)
     }
 
     deleteItem(productId){
-        debugger
         return e => this.props.removeProduct(productId).then(() => this.props.fetchCartItems(this.props.user))
     }
 
