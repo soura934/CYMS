@@ -10,13 +10,13 @@ class CommentItem extends React.Component {
         this.editComment = this.editComment.bind(this)
     }
 
-    componentDidMount(){
-        debugger
-    }
+    // componentDidMount(){
+    //     debugger
+    // }
 
-    componentDidUpdate(){
-        debugger
-    }
+    // componentDidUpdate(){
+    //     debugger
+    // }
     deleteComment(){
         
         let commentId = this.props.comment._id
@@ -32,25 +32,32 @@ class CommentItem extends React.Component {
         return (
             <ul className='comment-button-containers'>
             <li><button onClick={this.deleteComment}>Delete Comment</button></li>
-            <li><button onClick={this.editComment}>Edit Comment</button></li>
+            {/* <li><button onClick={this.editComment}>Edit Comment</button></li> */}
             </ul>
         )
     }
+    renderInfo(){
+debugger       
+
+    }
 
     render() {
-        
         let {comment} = this.props
+        if (typeof (comment.user)  === 'object'){
+        
+        
         let names;
         let commentCreater;
-        if (comment.user){
-            debugger
+        
+           
             let firstName = comment.user.firstName
             let lastName = comment.user.lastName
+            firstName = firstName[0].toUpperCase() + firstName.slice(1)
+            lastName = lastName[0].toUpperCase() + lastName.slice(1)
             names = <li>Posted by: {firstName} {lastName}</li>
+            
             commentCreater = (this.props.comment.user._id === this.props.user.id)
-            // firstName = firstName[0].toUpperCase() + firstName.slice(1)
-            // lastName = lastName[0].toUpperCase() + lastName.slice(1)
-        }
+      
             const dateObj = new Date(comment.date)
             let date = new Intl.DateTimeFormat('en-US').format(dateObj);
            
@@ -67,7 +74,9 @@ class CommentItem extends React.Component {
                        
                         
                     </div>
-            )
+            )} else {
+                return null
+            }
         }
    
 }
