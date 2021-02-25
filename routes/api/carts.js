@@ -37,6 +37,8 @@ router.get('/user/:user_id',
     passport.authenticate('jwt', {session: false}),
     (req, res) =>{
         Cart.find({user: req.params.user_id})
+        .sort({date: -1})
+        .populate('cartItem')
         .then(user => {
             
             return res.json(user)

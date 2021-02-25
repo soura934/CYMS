@@ -75,6 +75,7 @@
    padding: var(--button-pad);
    margin-top: 50px;
    text-align: center;
+   cursor: pointer;
 }
 
 .browse:hover{
