@@ -57,7 +57,7 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className='log-in-form-container'>
-          <h1><img className='CYMS-icon' src={CYMS}/></h1>
+         <h1><Link className='link' to={'/products'}><img className='CYMS-icon' src={CYMS}/></Link></h1>
           <div className='log-in-form'>
             <h2>Log In</h2>
             <form onSubmit={this.handleSubmit}>
