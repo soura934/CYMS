@@ -1,9 +1,11 @@
 import { connect } from 'react-redux';
 import CommentItem from './comment_item';
 
-import { fetchProductComments, deleteComment } from '../../actions/comment_actions';
+import { editComment,fetchProductComments, deleteComment } from '../../actions/comment_actions';
+
 
 const msp = (state, ownProps) => {
+    
     return {
        comment: ownProps.comment,
        user: state.session.user,
@@ -14,7 +16,8 @@ const msp = (state, ownProps) => {
 const mdp = dispatch => {
     return {
     deleteComment: (commentId) => dispatch(deleteComment(commentId)),
-    fetchProductComments: (productId) => dispatch(fetchProductComments(productId))
+    fetchProductComments: (productId) => dispatch(fetchProductComments(productId)),
+    editComment: (comment) => dispatch(editComment(comment))
     }
 }
 

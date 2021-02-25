@@ -48,3 +48,36 @@
    /* font-family: Arial, Helvetica, sans-serif; */
 
 }
+
+.no-result-container{
+   height: 500px;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+   
+}
+
+.no-result {
+   font-size: 30px;
+   background-color: #ebc456;
+   padding-left: 10px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   width: -webkit-fill-available;
+}
+
+.browse{
+   color: #2e2528;
+   background-color: var(--yellow);
+   font-size: 2em;
+   font-weight: 550;
+   padding: var(--button-pad);
+   margin-top: 50px;
+   text-align: center;
+   cursor: pointer;
+}
+
+.browse:hover{
+   background-color: var(--yellow-hov);
+}

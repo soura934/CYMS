@@ -1,3 +1,4 @@
+import Comment from '../components/comment/comment';
 import * as CommentApiUtil from '../util/comment_api_util';
 
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
@@ -71,4 +72,10 @@ export const deleteComment = (commentId) => {
             return dispatch(removeComment(commentId))
         })
     }
+}
+
+export const editComment = (comment) => dispatch => {
+    return CommentApiUtil.editComment(comment).then(() => {
+        return dispatch(receiveComment(comment))
+    })
 }

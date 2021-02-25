@@ -66,7 +66,7 @@ class SignupForm extends React.Component {
     
     return (
       <div className='signup-form-container'>
-        <h1><img className='CYMS-icon' src={CYMS}/></h1>
+        <h1><Link className='link' to={'/products'}><img className='CYMS-icon' src={CYMS}/></Link></h1>
         <div className='signup-form'>
         <h2> Create Account</h2>
         <form onSubmit={this.handleSubmit}>      

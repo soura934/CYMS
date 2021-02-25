@@ -29,7 +29,7 @@ class Landing extends React.Component {
                         <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt=""/>
                         <div className='centered'>
                             <h1>We have the gear Software Engineers need to keep creating.</h1>
-                            <a href="/#link">Learn More</a>
+                            <a href="#link">Learn More</a>
                             {/* <Link to='/#link'>learn more</Link> */}
                         </div>
                     </div>
@@ -79,10 +79,10 @@ class Landing extends React.Component {
 
                         </ul>
                         <ul>
-                            <h2 className='name'>Yehuda Rosenberg</h2>
+                            <h2 className='name'>Yehudah Rosenberg</h2>
                             <h2><a href="https://www.linkedin.com/in/yehudah-rosenberg/">LinkedIn</a></h2>
-                            <h2><a href=""></a> Github</h2>
-                            <h2><a href=""></a> Email</h2>
+                            <h2><a href="https://github.com/yrosenberg1/"> Github</a></h2>
+                            <h2><a href="mailto:jros987@gmail.com"> Email</a></h2>
                         </ul>
                         <ul>
                             <h2 className='name'>Mansour Dione</h2>
@@ -112,11 +112,11 @@ class Landing extends React.Component {
                     </div>
 
                     <div className='techs'>
-                        <ul>
                             <h1>Technologies</h1>
-                            <li>MongoDB</li>
-                            <li>Express</li>
-                            <li>Nodejs</li>
+                        <ul>
+                            <li>MongoDB|</li>
+                            <li>Express|</li>
+                            <li>Nodejs|</li>
                             <li>React</li>
                         </ul>
                     </div>

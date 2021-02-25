@@ -1,20 +1,17 @@
-.header-container{
-    background-color: #fffee4;
+/* .header-container{
+    background-color: var(--yellow);
 }
 
 .header {
-    /* background-color: #474756; */
-    background-color: #5b6068;
+    background-color: var(--yellow);
     display: flex;
     justify-content: space-between;
-    min-height: 10vh;
+    min-height: 14vh;
     overflow: hidden;
     top: 0;
     width: 100%;
-    /* position: fixed; */
     margin-top: 0;
     align-items: center;
-    margin-right: 100px;
     left: 0;
     color: rgb(245, 223, 77);
     font-family: Arial, Helvetica, sans-serif;
@@ -23,12 +20,6 @@
 .header-filler{
     height: 15px;
 }
-
-/* .header-container p {
-    color: transparent;
-    background-color: #fffee4;
-    height: 15px;
-} */
 
 .brand-name {
     text-decoration: none;
@@ -144,4 +135,112 @@
 
 .header-container .nav-bar button:hover {
     color: rgb(184, 184, 184);
+} */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video input{
+	margin: 0;
+	padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: 0;
+    box-sizing: inherit;
+    text-decoration: inherit;
+    text-align: inherit;
+    color: inherit;
+    background: transparent;
+    font-family: 'Courier New';
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.header {
+    background-color: var(--drk-grey);
+    color: var(--white);
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 3.5em 7em;
+}
+
+.brand-name {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    width: 25%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    /* padding-left: 3em */
+}
+
+.auth {
+    color: rgb(194, 194, 194);
+    font-size: 1.8rem;
+    font-weight: 550;
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.login {
+    color: var(--charcoal);
+    background-color: var(--yellow);
+}
+
+.signup:hover {
+    background-color: var(--grey);
+}
+
+.login:hover {
+    background-color: var(--yellow-hov);
+}
+
+.signup {
+    color: var(--white);
+    background-color: var(--charcoal);
+}
+
+.login, .signup {
+    padding: 0.7em 1.2em;
+}
+
+.search-bar {
+    width: 50%;
+    text-align: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.search-bar input {
+    padding: 1em;
+    width: 80%;
+    text-align: center;
+    border: none;
+}
+
+.search-bar input:focus {
+    border: .3rem solid var(--yellow);
+    border-radius: none;
+    /* background-color: var(--yellow); */
 }

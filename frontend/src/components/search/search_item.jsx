@@ -54,7 +54,14 @@ class SearchItem extends React.Component {
             return (
                 <div className="splash">
                     <MainPageContainer /> 
-                        <div>No results found</div>
+                       <div className='no-result-container'>
+                        <div className="no-result">
+                            <h1>No results found</h1></div>
+                    <br/>
+                        <div className='browse'>
+                        <Link className='link' to={'/products'}>Browse</Link>
+                        </div>
+                        </div>
                     <footer id='footer'>
                         <Footer />
                     </footer>
