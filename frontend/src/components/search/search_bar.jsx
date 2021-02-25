@@ -31,7 +31,7 @@ class SearchBar extends React.Component {
                         type="text"
                         value={this.state.keyword}
                         onChange={this.update('keyword')}
-                        placeholder="Search by keyword"
+                        placeholder="Search products by keyword"
                     />
                 </form>    
             </div>

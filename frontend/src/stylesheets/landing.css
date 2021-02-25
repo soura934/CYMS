@@ -218,7 +218,6 @@ html {
 }
 
 .contact .names ul h2:hover {
-    /* color: #cccccc; */
     color: var(--white);
     text-decoration: underline;
 }
@@ -283,19 +282,20 @@ html {
 }
 
 .new-footer a img {
-    width: 35%;
+    width: 20%;
     text-align: center;
 }
 
 .new-footer .techs {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .new-footer .techs ul {
     list-style: none;
-    text-align: center;
     font-size: 1.5rem;
+    display: flex;
 }
 
 .new-footer .techs li {

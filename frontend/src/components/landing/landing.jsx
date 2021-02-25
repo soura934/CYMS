@@ -112,11 +112,11 @@ class Landing extends React.Component {
                     </div>
 
                     <div className='techs'>
-                        <ul>
                             <h1>Technologies</h1>
-                            <li>MongoDB</li>
-                            <li>Express</li>
-                            <li>Nodejs</li>
+                        <ul>
+                            <li>MongoDB|</li>
+                            <li>Express|</li>
+                            <li>Nodejs|</li>
                             <li>React</li>
                         </ul>
                     </div>
