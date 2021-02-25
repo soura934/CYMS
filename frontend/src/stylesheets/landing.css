@@ -39,6 +39,7 @@ html {
     --yellow-hov: #c28e00;
     --white: #f4f4f4;
     --button-pad: 0.7em 1.2em;
+    --button-font: 1.8rem;
 }
 
 .landing {
