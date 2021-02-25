@@ -47,5 +47,19 @@ router.get('/user/:user_id',
         
 })
 
+router.delete('/:productId', 
+    passport.authenticate('jwt',  {session: false }),
+    (req, res) => {
+        Cart.findByIdAndDelete(req.params.productId, function (error, product) {
+            if (error){
+                res.status(404).json({ no: 'no' });
+            } else {
+                res.json(product);
+            }
+        })
+    }
+
+)
+
 
 module.exports = router;

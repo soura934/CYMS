@@ -3,11 +3,10 @@ import CartItem from './cart_item';
 import { fetchOneCartItem } from "../../actions/product_actions";
 
 const msp = (state, ownProps) => {
-    debugger
+    
     return {
-        product: ownProps.product,
         productId: ownProps.productId,
-        product: state.entities.products.data
+        product: state.entities.products[ownProps.productId]
     }
 }
 

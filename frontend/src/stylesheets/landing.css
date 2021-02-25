@@ -32,13 +32,18 @@ html {
 
 :root {
     --charcoal: #2c2526;
-    --drk-grey: #545661;
+    --drk-grey: #53555f;
     --grey: #818792;
     --lt-grey: #ebeef3;
     --yellow: #ebc456;
     --yellow-hov: #c28e00;
     --white: #f4f4f4;
     --button-pad: 0.7em 1.2em;
+    --button-font: 1.8rem;
+    --heading-font-size: 4rem;
+    --heading-font-weight: 600;
+    --heading-font: 'Source Sans Pro', sans-serif;
+    --font: 'Courier New';
 }
 
 .landing {
