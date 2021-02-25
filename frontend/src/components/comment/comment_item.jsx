@@ -35,8 +35,8 @@ class CommentItem extends React.Component {
              const deleteEditButtons = commentCreater ? this.deleteEditButtons() : null
             
             return (
-                
-                  <div>
+                <div>
+
                       
                         <li>"{comment.content}"</li>
                         <li>Posted by: {firstName} {lastName}</li>
