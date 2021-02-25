@@ -178,14 +178,16 @@ html {
     align-items: center;
     width: 100vw;
     box-sizing: border-box;
-    padding: 1em;
+    padding: 3.5em 7em;
 }
 
 .brand-name {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 600;
     width: 25%;
+    flex-grow: 1;
+    flex-shrink: 1;
     /* padding-left: 3em */
 }
 
@@ -197,12 +199,21 @@ html {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    /* padding-right: 4em; */
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .login {
     color: var(--charcoal);
     background-color: var(--yellow);
+}
+
+.signup:hover {
+    background-color: var(--grey);
+}
+
+.login:hover {
+    background-color: var(--yellow-hov);
 }
 
 .signup {
@@ -211,19 +222,25 @@ html {
 }
 
 .login, .signup {
-    padding: 0.5em .9em;
-    border-radius: .4em;
+    padding: 0.7em 1.2em;
 }
 
 .search-bar {
     width: 50%;
     text-align: center;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .search-bar input {
     padding: 1em;
     width: 80%;
     text-align: center;
-    border-radius: .6em;
     border: none;
+}
+
+.search-bar input:focus {
+    border: .3rem solid var(--yellow);
+    border-radius: none;
+    /* background-color: var(--yellow); */
 }

@@ -31,9 +31,9 @@ class MainPage extends React.Component {
       } else {
         return (
             <div className="auth">
-                <Link to={'/login'} className='login'>Login</Link>
-                <>&nbsp;or&nbsp;</>
                 <Link to={'/signup'} className='signup'>Signup</Link>
+                <>&nbsp;or&nbsp;</>
+                <Link to={'/login'} className='login'>Login</Link>
             </div>
         );
       }
