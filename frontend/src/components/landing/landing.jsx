@@ -92,9 +92,9 @@ class Landing extends React.Component {
                         </ul>
                         <ul>
                             <h2 className='name'>Soobin Kim</h2>
-                            <h2>LinkedIn</h2>
-                            <h2>Github</h2>
-                            <h2>Email</h2>
+                            <h2><a href="https://www.linkedin.com/in/soobin-lim-2a47a2206/">LinkedIn</a></h2>
+                            <h2><a href="https://github.com/nhsb00">Github</a></h2>
+                            <h2><a href="nhsb00@hotmail.com">Email</a></h2>
                         </ul>
                     </div>
                 </section>
