@@ -14,7 +14,7 @@ import '../stylesheets/app.css';
 
 const App = () => (
   <div id="page-container">
-    <div id='content-wrap'>
+    {/* <div id='content-wrap'> */}
       {/* <header>
         <MainPageContainer /> 
       </header> */}
@@ -29,7 +29,7 @@ const App = () => (
           <ProtectedRoute exact path="/cart" component={CartContainer} />
         </Switch>
       </main>
-    </div>
+    {/* </div> */}
     {/* <footer id='footer'>
       <Footer />
     </footer> */}

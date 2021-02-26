@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Redirect } from "react-router-dom"
-import '../../stylesheets/splash-page.css';
 import SearchBarContainer from '../search/search_bar_container';
+import '../../stylesheets/splash-page.css';
 
 
 class MainPage extends React.Component {

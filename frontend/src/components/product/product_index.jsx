@@ -43,11 +43,11 @@ class ProductIndex extends React.Component {
                 {this.getGreeting()}
 
                 <div className='banner'>
-                    <div className='gradient'>
-                <div className='product-index'>
-                    {products}
-                </div>
-                    </div>
+                    {/* <div className='gradient'> */}
+                        <div className='product-index'>
+                            {products}
+                        </div>
+                    {/* </div> */}
                 </div>
 
             </div>
