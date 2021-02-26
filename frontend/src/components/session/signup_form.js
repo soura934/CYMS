@@ -69,7 +69,8 @@ class SignupForm extends React.Component {
       <div className='signup-form-container'>
         <div className='inner-container'> 
 
-          <h1>CYMS</h1>
+          <h1><Link id='q' to={'/products'}>CYMS</Link></h1>
+
           <div className='signup-form'>
             <h2> Create Account</h2>
             <form onSubmit={this.handleSubmit}>  

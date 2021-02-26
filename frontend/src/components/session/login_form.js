@@ -57,7 +57,10 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className='log-in-form-container'>
-         <h1><Link className='link' to={'/products'}><img className='CYMS-icon' src={CYMS}/></Link></h1>
+        <div className='log-inner-container'>
+
+        <h1><Link id='q' to={'/products'}>CYMS</Link></h1>
+        
           <div className='log-in-form'>
             <h2>Log In</h2>
             <form onSubmit={this.handleSubmit}>
@@ -70,8 +73,8 @@ class LoginForm extends React.Component {
                   onChange={this.update('email')}
                   placeholder="Email"
                 />
-                
                 <div className='errors'> {this.state.errors["email"]}</div>
+                
                 <input className='input' type="password"
                   value={this.state.password}
                   onChange={this.update('password')}
@@ -79,27 +82,26 @@ class LoginForm extends React.Component {
                 />
                 <div className='errors'> {this.state.errors["password"]}</div>
               </div>
-              {/* <br/> */}
-              <div className='errors'>
-                  {/* {this.renderErrors()} */}
-              </div>
+              <div className='errors'></div>
   
                   <div className='button-container'>
                     <input className='log-in-button' type="submit" value="Log In" />
-                    <input onClick={this.handleDemoSubmit} className='demo-log-in-button' type="submit" value="Demo Log In" />
+                    <input className='demo-log-in-button' onClick={this.handleDemoSubmit} type="submit" value="Demo Log In" />
                   </div>
+                  
               </form>
+
+          <div className='register-Link-container'>
+            <p className='text'> Don't have an account?</p>
+              <nav>
+                <Link className='link' to={'/signup'}>Signup</Link>
+                {/* <span>|</span> */}
+                <Link className='link home' to={'/'}>Home</Link>
+              </nav>
           </div>
 
-        <div className='register-Link-container'>
-          <p className='text'> New to CYMS? </p>
-            <nav>
-              <Link className='link' to={'/signup'}>Sign Up</Link>
-              <span>|</span>
-              <Link className='link home' to={'/'}>Home</Link>
-            </nav>
+          </div>
         </div>
-
       </div>
     );
   }
