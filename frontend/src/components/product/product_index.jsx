@@ -41,6 +41,9 @@ class ProductIndex extends React.Component {
         return (
             <div className='index-container'>
                 {this.getGreeting()}
+                <div className='banner'>
+                    <div className='gradient'></div>
+                </div>
                 <div className='product-index'>
                     {products}
                 </div>
