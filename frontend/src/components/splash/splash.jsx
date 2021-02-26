@@ -12,9 +12,9 @@ class Splash extends React.Component {
                 <MainPageContainer /> 
                 <ProductIndexContainer />
                 
-                <footer id='footer'>
+                {/* <footer id='footer'>
                     <Footer />
-                </footer>
+                </footer> */}
             </div>          
         )
     }

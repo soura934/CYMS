@@ -1,15 +1,104 @@
-.index-container .banner {
-   width: 100vw;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video input{
+	margin: 0;
+	padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: 0;
+    box-sizing: inherit;
+    text-decoration: inherit;
+    text-align: inherit;
+    color: inherit;
+    background: transparent;
+    font-family: 'Courier New';
+}
+
+:root {
+    --charcoal: #2c2526;
+    --drk-grey: #53555f;
+    --grey: #818792;
+    --lt-grey: #ebeef3;
+    --yellow: #ebc456;
+    --yellow-hov: #c28e00;
+    --white: #f4f4f4;
+    --button-pad: 0.7em 1.2em;
+    --button-font: 1.8rem;
+    --heading-font-size: 4rem;
+    --heading-font-weight: 600;
+    --heading-font: 'Source Sans Pro', sans-serif;
+    --font: 'Courier New';
+}
+   
+.index-container {
+   width: 100%;
+   background-color: red;
+}
+
+.banner {
+   /* position: relative; */
+   /* width: 100%;
+   height: 70vh; */
    margin-top: 1em;
-   height: 100vh;
+   background-color: green;
    background-image: url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80);
-   background-size: cover;
+   background-repeat: no-repeat;
+   width: 100vw;
+   height: 100vh;
+   background-size: 100%;
+   background-position: center;
 }
 
 .gradient {
    width: 100%;
    height: 100%;
-   background: linear-gradient(rgba(235, 238, 243, 0), rgb(235, 238, 243));
+   background: linear-gradient(rgba(255, 255, 255, 0), white);
+}
+
+/* .index-container .banner img{ */
+   /* width: 200%; */
+   /* background-image: url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80); */
+   /* background-size: cover; */
+/* } */
+
+/* .centered {
+   position: absolute;
+   top: 20.5%;
+   left: 50%;
+   transform: translate(-50%, -20%);
+   width: 100%;
+   height: 100%;
+} */
+
+.title {
+   width: 100%;
+   position: absolute;
+   /* top: 20%;
+   left: 24%; */
+   /* text-align: center; */
+}
+
+
+
+.index-container h1 {
+   width: 80%;
+   font-size: 5em;
+   font-family: var(--heading-font);
+   font-weight: var(--heading-font-weight);
+   /* color: var(--white); */
+   color: var(--yellow);
 }
 
 .filler {
@@ -20,7 +109,9 @@
 .product-index {
     box-sizing: border-box;
     display: flex;
-    background-color: var(--lt-grey);
+    /* background-color: var(--lt-grey); */
+    background-color: transparent;
+    position: absolute;
     flex-wrap: wrap;
     height: 100%;
     padding-bottom: 53px;
@@ -62,11 +153,6 @@
    min-height: 60px;
 }
 
-.index-container {
-   background-color: #ebeef3;
-   /* font-family: Arial, Helvetica, sans-serif; */
-
-}
 
 .no-result-container{
    height: 500px;
