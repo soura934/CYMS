@@ -33,6 +33,13 @@ ProductSchema.index({
   }
 })
 
+ProductSchema.index({
+  title: "text"
+
+})
+
+
+
 const Product = mongoose.model('products', ProductSchema);
 
 module.exports = Product;
