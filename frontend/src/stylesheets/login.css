@@ -1,148 +1,3 @@
-/* html, body, section, article, header
-h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  outline: 0;
-  box-sizing: inherit;
-  font: inherit;
-  text-decoration: inherit;
-  text-align: inherit;
-  color: inherit;
-  background: transparent;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.log-in-form-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #ebeef3;
-    padding-top: 50px;
-}
-
-.log-in-form{ 
-    box-sizing: border-box;
-   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-}
-
-.log-in-form-container h1{
-   font-weight: 600;
-   color: rgb(47, 47, 47);
-   font-size: 35px;
-   padding-bottom: 20px;
-}
-.log-in-form-container h2{
-   font-weight: 600;
-   color: rgb(80, 80, 80);
-   font-size: 25px;
-   padding-bottom: 16px;
-}
-.log-in-form-container .log-in-form {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 404px;
-    height: 442px;
-    border: 2px solid rgb(225, 225, 225);
-    border-radius: 12px;
-    margin-bottom: 9px;
-    text-align: center;
-}
-.log-in-form-container .log-in-form input{
-    border-radius: 6px;
-    border: 1px solid #afafaf;
-    height: 39px;
-    padding: 5px 5px 5px 15px;
-    box-sizing: border-box;
-    width: 295px;
-    margin: 16px;
-    text-align: center;
-}
-
-.log-in-form-container .log-in-form .input:focus{
-    background-color: rgb(240, 244, 255);
-}
- 
-.log-in-form-container .log-in-form .log-in-button {
-    background-color: rgb(245, 181, 106);;
-    border: 1px solid #957400;
-    height: 39px;
-    font-size: 15px;
-    color: #4c4c4c;
-    width: 295px;
-}
-.log-in-form-container .log-in-form .demo-log-in-button {
-    background-color: rgb(245, 208, 106);
-    border: 1px solid #956600;
-    height: 39px;
-    font-size: 15px;
-    color: #4c4c4c;
-    width: 295px;
-}
-.log-in-form-container .button-container {
-    margin-top: 25px;
-}
-.log-in-form-container .errors {
-    list-style: none;
-    color: rgb(204, 2, 2);
-    font-size: 13px;
-    height: 15px;
-}
-
-.log-in-form-container .register-Link-container{
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    height: 100px;
-    width: 295px;
-    margin-bottom: 20px;
-    padding-top: 14px;
-}
-
-.log-in-form-container .register-Link-container .link{
-    width: 100%;
-    height: 26px;
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    color: #615f52;
-    align-items: flex-end;
-    padding: 0px 8px;
-    color: #0066c0;
-}
-.log-in-form-container .register-Link-container .home{
-    align-items: flex-start;
-}
-.log-in-form-container .register-Link-container .link:hover{  
-    color: rgb(190, 103, 3); 
-    text-decoration: underline;
-}
-.log-in-form-container .register-Link-container .text{
-    font-size: 13px;
-    color: #6f6f6f;
-    margin-bottom: 5px;
-}
-
-.log-in-form-container .demo-log-in-button:hover{
-    background-color: rgb(240, 188, 45);
-}
-.log-in-form-container .log-in-button:hover{
-    background-color: rgb(230, 155, 70);;
-}
-.log-in-form-container .register-Link-container nav{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    color: #6f6f6f;
-} */
 html, body, section, article, header
 h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
   margin: 0;
@@ -190,6 +45,14 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     padding-top: .8em;
 }
 
+#q {
+    font-family: var(--heading-font);
+}
+
+#q:hover{
+    color: var(--yellow-hov);
+}
+
 .log-in-form-container h2{
     font-weight: 600;
     font-family: var(--font);
@@ -225,50 +88,6 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     font-family: var(--font);
 }
 
-/* .log-in-form{ 
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-} */
-
-/* .log-in-form-container h1{
-   font-weight: 600;
-   color: rgb(47, 47, 47);
-   font-size: 35px;
-   padding-bottom: 20px;
-} */
-/* .log-in-form-container h2{
-   font-weight: 600;
-   color: rgb(80, 80, 80);
-   font-size: 25px;
-   padding-bottom: 16px;
-} */
-/* .log-in-form-container .log-in-form {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 404px;
-    height: 442px;
-    border: 2px solid rgb(225, 225, 225);
-    border-radius: 12px;
-    margin-bottom: 9px;
-    text-align: center;
-} */
-/* .log-in-form-container .log-in-form input{
-    border-radius: 6px;
-    border: 1px solid #afafaf;
-    height: 39px;
-    padding: 5px 5px 5px 15px;
-    box-sizing: border-box;
-    width: 295px;
-    margin: 16px;
-    text-align: center;
-} */
 
 .log-in-form-container .log-in-form .input:focus{
     border: 2px solid #ffd30e;  
@@ -282,22 +101,15 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     color: var(--drk-grey);
 }
 
-/* .log-in-form-container .log-in-form .log-in-button {
-    background-color: rgb(245, 181, 106);;
-    border: 1px solid #957400;
-    height: 39px;
-    font-size: 15px;
-    color: #4c4c4c;
-    width: 295px;
-} */
+.log-in-form .demo-log-in-button {
+    background-color: #eb9f56;
+    border: .1rem solid #957400;
+    color: var(--drk-grey);
+}
 
-.log-in-form-container .log-in-form .demo-log-in-button {
-    background-color: rgb(245, 208, 106);
-    border: 1px solid #956600;
-    height: 39px;
-    font-size: 15px;
-    color: #4c4c4c;
-    width: 295px;
+.log-in-form .demo-log-in-button:hover {
+    background-color: #b96d25;
+    color: black;
 }
 
 .log-in-form-container .button-container {
@@ -311,30 +123,15 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     text-align: center;
 }
 
-/* .log-in-form-container .errors {
-    list-style: none;
-    color: rgb(204, 2, 2);
-    font-size: 13px;
-    height: 15px;
-} */
-
 .register-Link-container{
     display: flex;
     text-align: center;
     flex-direction: column;
     align-items: center;
-    width: 295px;
+    width: 100%;
     padding: 1em;
 }
-/* .log-in-form-container .register-Link-container{
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    height: 100px;
-    width: 295px;
-    margin-bottom: 20px;
-    padding-top: 14px;
-} */
+
 .log-in-form-container .register-Link-container .link{
     width: 100%;
     height: 26px;
@@ -345,17 +142,6 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     color: #0a00c5;
     padding: 0px 8px    
 }
-/* .log-in-form-container .register-Link-container .link{
-    width: 100%;
-    height: 26px;
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    color: #615f52;
-    align-items: flex-end;
-    padding: 0px 8px;
-    color: #0066c0;
-} */
 
 .log-in-form-container .register-Link-container .home{
     align-items: flex-start;
@@ -372,28 +158,18 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     padding-bottom: .5em;
 }
 
-.log-in-form-container .demo-log-in-button:hover{
-    background-color: rgb(240, 188, 45);
-}
+/* .log-in-form-container .demo-log-in-button:hover{
+    background-color: ;
+} */
 
 .log-in-form-container .log-in-button:hover{
     background-color: var(--yellow-hov);
     color: black;
 }
-/* .log-in-form-container .log-in-button:hover{
-    background-color: rgb(230, 155, 70);;
-} */
-/* .signup-form-container .login-Link-container nav{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-} */
+
 .log-in-form-container .register-Link-container nav{
     display: flex;
     flex-direction: row;
     width: 100%;
     color: black;
 }
-/* .log-in-form-container .register-Link-container .home{
-    align-items: flex-start;
-} */

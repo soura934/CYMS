@@ -40,7 +40,6 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
 .signup-form-container h1{
     font-family: var(--heading-font);
     font-weight: var(--heading-font-weight);
-    /* color: var(--charcoal); */
     color: var(--yellow);
     font-size: var(--heading-font-size);
     padding-bottom: .5em;
