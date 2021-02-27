@@ -8,6 +8,7 @@ class Cart extends React.Component{
         super(props)
 
         this.deleteItem = this.deleteItem.bind(this);
+        this.checkout = this.checkout.bind(this);
     }
 
     componentDidMount() {
@@ -16,6 +17,10 @@ class Cart extends React.Component{
 
     deleteItem(productId){
         return e => this.props.removeProduct(productId).then(() => this.props.fetchCartItems(this.props.user))
+    }
+
+    checkout() {
+        alert('your order is placed!');
     }
 
     render() {
@@ -46,6 +51,9 @@ class Cart extends React.Component{
                         productId={product.cartItem}
                         />   
                         <button onClick={this.deleteItem(product._id)}>Delete</button>
+                        <button onClick=
+                            {this.checkout}
+                            >Check Out</button>
                     </ul>
                 )
             })  
@@ -62,7 +70,9 @@ class Cart extends React.Component{
                         <p>{totalnumber} in cart</p>
 
                         <div>
-                            <button>Check Out</button>
+                            {/* <button onClick=
+                            {this.checkout, this.deleteItem(product._id)}
+                            >Check Out</button> */}
                         </div>
                     </div>
                     <footer id='footer'>
