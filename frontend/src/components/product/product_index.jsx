@@ -31,9 +31,11 @@ class ProductIndex extends React.Component {
         let products = this.props.products.map((product) => {
             return (
                     <Link className='product-item' key={product._id}  to={`/product/${product.id}/${product._id}`}>
-                        <li>{product.title}</li>
-                        <li><img src={product.image} alt=""/></li>
-                        <li>${product.price}</li>
+                        <img src={product.image} alt="product image"/>
+                        <div>
+                            <li className='pro-title'>{product.title}</li>
+                            <li className='pro-price'>${product.price}</li>
+                        </div>
                     </Link>
             )
         })
@@ -50,13 +52,9 @@ class ProductIndex extends React.Component {
                     </div>
                 </div>
 
-                    {/* <div className='test'> */}
-                        <div className='product-index'>
-                            {products}
-                        </div>
-
-                    {/* </div> */}
-                        {/* <div className='gradient'></div> */}
+                <div className='product-index'>
+                    {products}
+                </div>
 
             </div>
         );

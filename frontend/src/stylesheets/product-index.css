@@ -49,21 +49,7 @@ time, mark, audio, video input{
 }
 
 .banner {
-   /* position: relative; */
-   /* width: 100%;
-   height: 70vh; */
-   /* margin-top: 1em; */
-   /* background-color: red; */
-   /* background-image: url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80);
-   background-repeat: no-repeat; */
-   /* background-color: yellow; */
    min-width: 100vw;
-   /* min-height: 100vh; */
-   /* background-size: 100%; */
-   /* position: absolute; */
-   /* background-position: center; */
-   /* width: 100%; */
-   /* position: relative; */
    position: relative;
    display: flex;
    flex-direction: column;
@@ -76,7 +62,6 @@ time, mark, audio, video input{
    /* min-width: 100vw; */
    /* max-height: 100vh; */
    /* position: absolute; */
-   
 }
 
 .overlay {
@@ -108,52 +93,52 @@ time, mark, audio, video input{
 /* product grid */
 
 .product-index {
-    box-sizing: border-box;
-    display: flex;
-    /* background-color: var(--lt-grey); */
+   justify-content: center;
+   box-sizing: border-box;
+   display: flex;
+   flex-wrap: wrap;
    background-color: transparent;
-    /* position: absolute; */
-    flex-wrap: wrap;
-    padding-bottom: 53px;
-    padding: 47em 90px 90px 90px;
-    /* padding-top: 50em; */
-    /* padding-left: 16px;
-    padding-right: 16px; */
-    position: relative;
-    z-index: 0;
+   padding: 47em 90px 90px 90px;
+   position: relative;
+   z-index: 0;
 }
 
 .product-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     box-sizing: border-box;
-    justify-content: space-around;
+    justify-content: space-between;
+    box-sizing: border-box;
+
     background-color: rgb(255, 255, 255);
     list-style: none;
-    max-height: 300px;
-    flex-grow: 1;
-    width: 275px;
-    margin: 10px 5px;
+    /* flex: 20%; */
+    max-width: 20%;
+    min-width: 15em;
+    margin: .5em .5em;
     border: 2px solid rgb(225, 225, 225);
-    /* border-radius: 12px; */
-    font-family: Arial, Helvetica, sans-serif;
     color: rgb(80, 80, 80);
-    font-size: 18px;
-    font-weight: 550;
-    padding: 12px;
+    font-size: 1.7rem;
+    padding: 1.4em;
+    transition: .5s;
+    /* border-radius: 2.5%; */
 }
 
 .product-index .product-item img {
-   max-height: 139px;
+   max-width: 100%;
+   max-height: 8.5em;
+   align-self: center;
+   padding: .5em;
+}
+
+.pro-price {
+   font-weight: 900;
 }
 
 .product-index .product-item:hover {
    color: rgb(0, 0, 0);
-}
-
-.product-index .product-item li:first-child {
-   min-height: 60px;
+   box-shadow: 2px 7px 15px rgb(185, 185, 185);
 }
 
 
