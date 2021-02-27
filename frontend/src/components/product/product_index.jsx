@@ -44,11 +44,9 @@ class ProductIndex extends React.Component {
 
                 <div className='banner-container'>
                     <div className='banner'>
-                        <h1>asdfasdf</h1>
+                        <h1>Browse Our Premium Tech Products</h1>
                         <div className='overlay'></div>
                         <img className='banner-img' src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80" alt=""/>
-                        {/* <p>asdfawdf</p>
-                        <p>asdfasdfawf</p> */}
                     </div>
                 </div>
 
