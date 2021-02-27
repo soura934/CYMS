@@ -113,23 +113,26 @@ time, mark, audio, video input{
 
     background-color: rgb(255, 255, 255);
     list-style: none;
-    /* flex: 20%; */
     max-width: 20%;
     min-width: 15em;
+    height: 15em;
     margin: .5em .5em;
     border: 2px solid rgb(225, 225, 225);
     color: rgb(80, 80, 80);
     font-size: 1.7rem;
-    padding: 1.4em;
+    padding: 1.2em;
     transition: .5s;
-    /* border-radius: 2.5%; */
 }
 
 .product-index .product-item img {
    max-width: 100%;
    max-height: 8.5em;
    align-self: center;
-   padding: .5em;
+   padding: .6em .6em 1em .6em;
+}
+
+.product-item div > li {
+   padding-bottom: .3em;
 }
 
 .pro-price {
