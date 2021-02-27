@@ -31,19 +31,31 @@ class ProductIndex extends React.Component {
         let products = this.props.products.map((product) => {
             return (
                     <Link className='product-item' key={product._id}  to={`/product/${product.id}/${product._id}`}>
-                        <li>{product.title}</li>
-                        <li><img src={product.image} alt=""/></li>
-                        <li>${product.price}</li>
+                        <img src={product.image} alt="product image"/>
+                        <div>
+                            <li className='pro-title'>{product.title}</li>
+                            <li className='pro-price'>${product.price}</li>
+                        </div>
                     </Link>
             )
         })
         
         return (
             <div className='index-container'>
-                {this.getGreeting()}
+                {/* {this.getGreeting()} */}
+
+                <div className='banner-container'>
+                    <div className='banner'>
+                        <h1>Browse Our Premium Tech Products</h1>
+                        <div className='overlay'></div>
+                        <img className='banner-img' src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80" alt=""/>
+                    </div>
+                </div>
+
                 <div className='product-index'>
                     {products}
                 </div>
+
             </div>
         );
     }

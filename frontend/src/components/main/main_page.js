@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Redirect } from "react-router-dom"
-import '../../stylesheets/splash-page.css';
+
 import SearchBarContainer from '../search/search_bar_container';
+
+import '../../stylesheets/splash-page.css';
+import cart from '../../assets/cart.png';
 
 
 class MainPage extends React.Component {
@@ -21,11 +24,10 @@ class MainPage extends React.Component {
       if (this.props.loggedIn) {
         return (
             <div className='nav-bar'>
-                {/* <Link className='profile-link' to={'/profile'}>Profile</Link> */}
+                  <Link className='cart-link' to={'/cart'}>
+                    <img src={cart} alt='cart'/>
+                  </Link>
                 <button id='logout' onClick={this.logoutUser}>Logout</button>
-                {/* <div className='cart-button-container'> */}
-                  <Link className='cart-link' to={'/cart'}>Cart</Link>
-                {/* </div> */}
             </div>
         );
       } else {

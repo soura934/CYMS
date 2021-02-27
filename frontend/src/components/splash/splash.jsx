@@ -1,9 +1,10 @@
 import React from 'react';
 import MainPageContainer from '../main/main_page_container';
 import  Footer from '../footer/footer';
-import '../../stylesheets/splash-page.css'
 import ProductIndexContainer from '../product/product_index_container'
+import '../../stylesheets/splash-page.css'
 import '../../stylesheets/app.css';
+import '../../stylesheets/footer.css'
 
 class Splash extends React.Component {
     render () {
