@@ -4,6 +4,7 @@ import  Footer from '../footer/footer';
 import ProductIndexContainer from '../product/product_index_container'
 import '../../stylesheets/splash-page.css'
 import '../../stylesheets/app.css';
+import '../../stylesheets/footer.css'
 
 class Splash extends React.Component {
     render () {
@@ -12,9 +13,9 @@ class Splash extends React.Component {
                 <MainPageContainer /> 
                 <ProductIndexContainer />
                 
-                {/* <footer id='footer'>
+                <footer id='footer'>
                     <Footer />
-                </footer> */}
+                </footer>
             </div>          
         )
     }

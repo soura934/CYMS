@@ -99,12 +99,14 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     background-color: var(--yellow);
     border: .1rem solid #957400;
     color: var(--drk-grey);
+    cursor: pointer;
 }
 
 .log-in-form .demo-log-in-button {
     background-color: #eb9f56;
     border: .1rem solid #957400;
     color: var(--drk-grey);
+    cursor: pointer;
 }
 
 .log-in-form .demo-log-in-button:hover {

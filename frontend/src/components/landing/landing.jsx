@@ -8,6 +8,7 @@ import  Footer from '../footer/footer';
 import '../../stylesheets/landing.css'; 
 import github from '../../assets/github-pages-logo-repository-fork-github-86eddab19cbc3ae293ada0fe0fb9e27d.png'
 
+
 class Landing extends React.Component {
 
     render() {
