@@ -65,6 +65,9 @@ time, mark, audio, video input{
    /* width: 100%; */
    /* position: relative; */
    position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 .banner-img {
@@ -92,7 +95,7 @@ time, mark, audio, video input{
    color: var(--yellow);
    position: absolute;
    text-align: center;
-   width: 100%;
+   width: 50%;
    padding-top: 3em;
 }
 
@@ -112,7 +115,7 @@ time, mark, audio, video input{
     /* position: absolute; */
     flex-wrap: wrap;
     padding-bottom: 53px;
-    padding: 45em 90px 90px 90px;
+    padding: 47em 90px 90px 90px;
     /* padding-top: 50em; */
     /* padding-left: 16px;
     padding-right: 16px; */
