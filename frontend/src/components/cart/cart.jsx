@@ -74,9 +74,6 @@ class Cart extends React.Component{
                         <div className="cart-info">
                             {/* <p> <span className="cart-number">{totalnumber}</span> in cart</p> */}
                             <p>Total price({totalnumber} in cart): $<span className="cart-number">{totalprice}</span></p>
-                        </div>
-
-                        <div className="checkout">
                             <button className="checkout-button" onClick={this.checkout}>Check Out</button>
                         </div>
                         {/* <div>
@@ -87,9 +84,9 @@ class Cart extends React.Component{
                     </div>
                     
 
-                    {/* <footer id='footer'>
-                        <Footer />
-                    </footer> */}
+                    {/* <footer id='footer'> */}
+                        <Footer className='cart-footer'/>
+                    {/* </footer> */}
                 </div>          
             )  
         } 

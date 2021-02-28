@@ -12,7 +12,7 @@
 .cart-main {
     background-color: white;
     margin: 5em;
-       box-shadow: 2px 7px 15px rgb(219, 219, 219);
+    box-shadow: 2px 7px 15px rgb(219, 219, 219);
 }
 
 .cart-header {
@@ -25,12 +25,15 @@
     /* padding: 1em 5em; */
     text-align: end;
     border-bottom: .2rem solid rgb(224, 224, 224);
-    margin: 0 5rem;
+    margin: 3em 5em;
     /* display: flex; */
     /* justify-content: space-between; */
     /* margin: 0 60px; */
 }
 
+.cart-info button {
+    margin: 1.3em 0;
+}
 
 .cart-info p {
  font-size: 24px;
@@ -142,4 +145,9 @@
     font-size: 22px;
     font-weight: bold;
     /* color: rgb(245, 208, 106); */
+}
+
+
+.cart-footer {
+    bottom: 0;
 }
