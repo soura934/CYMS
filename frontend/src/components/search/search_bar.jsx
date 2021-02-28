@@ -43,6 +43,7 @@ class SearchBar extends React.Component {
                         onChange={this.update('keyword')}
                         placeholder="Search products by keyword"
                     />
+                    <button className='search-button'>S</button>
                 </form>    
             </div>
         )

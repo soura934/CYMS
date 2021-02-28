@@ -73,9 +73,9 @@ html {
     max-width: 3.6rem;
 }
 
-.cart-link img:hover {
+/* .cart-link img:hover {
     max-width: 3.8rem;
-}
+} */
 
 .nav-bar {
     display: flex;
@@ -108,11 +108,11 @@ html {
     padding: 0.7em 1.2em;
 }
 
+
+
 .search-bar {
     width: 50%;
     text-align: center;
-    flex-grow: 1;
-    flex-shrink: 1;
 }
 
 .search-bar input {
@@ -126,4 +126,25 @@ html {
     border: .3rem solid var(--yellow);
     border-radius: none;
     /* background-color: var(--yellow); */
+}
+
+.search-button {
+    border: none;
+    background-color: var(--yellow);
+    height: 100%;
+}
+
+#logout {
+    background-color: var(--grey);
+    color: var(--yellow);
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: var(--button-font);
+    font-weight: 550;
+    padding: var(--button-pad);
+    transition: .3s;
+}
+
+#logout:hover {
+    background-color: var(--charcoal);
 }
