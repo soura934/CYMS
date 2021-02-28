@@ -89,6 +89,7 @@ html {
 .login {
     color: var(--charcoal);
     background-color: var(--yellow);
+    transition: .3s;
 }
 
 .signup:hover {
@@ -102,6 +103,8 @@ html {
 .signup {
     color: var(--white);
     background-color: var(--charcoal);
+    transition: .3s;
+
 }
 
 .login, .signup {
@@ -118,12 +121,12 @@ html {
 .search-bar input {
     padding: 1em;
     width: 80%;
-    text-align: center;
+    /* text-align: center; */
     border: none;
 }
 
 .search-bar input:focus {
-    border: .3rem solid var(--yellow);
+    /* border: .3rem solid var(--yellow); */
     border-radius: none;
     /* background-color: var(--yellow); */
 }
