@@ -59,7 +59,7 @@
     color:  #4c4c4c;
     text-align: center;
     margin: 10px 100px;
-    border: 3px solid tan;
+    border: 2px solid #d6a601;
 }
 .checkout-button:hover {
     cursor: pointer;
