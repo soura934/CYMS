@@ -67,7 +67,7 @@ class CommentItem extends React.Component {
                 <div>
 
                       
-                        <li>"{comment.content}"</li>
+                        <li id='comment-content'>"{comment.content}"</li>
                                 {names}
                         <li>Review left on: {date}</li>
                             {deleteEditButtons}

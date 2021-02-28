@@ -68,7 +68,7 @@ renderHeader(){
       return  (
         <div className="Reviews"> 
             <h1 className='comment-title'>Top Customer Reviews</h1>
-      </div>
+        </div>
       )
     } else {
     
@@ -109,7 +109,7 @@ renderHeader(){
                                     placeholder="Comment here">
                                 </textarea>
                                 <br/>
-                            <button>Submit</button>
+                            <button className='comment-submit'>Submit</button>
                         </form>
                 
                         {this.renderHeader()}
