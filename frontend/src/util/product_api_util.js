@@ -21,7 +21,7 @@ export const deleteProduct = (productId) => {
 };
 
 export const fetchSearchProducts = (keyword) => {
-  debugger
+  
   return axios.get(`/api/products/find/${keyword}`)
 }
 

@@ -5,7 +5,7 @@ import { editComment,fetchProductComments, deleteComment } from '../../actions/c
 
 
 const msp = (state, ownProps) => {
-    debugger
+    
     return {
        comment: ownProps.comment,
        user: state.session.user,
