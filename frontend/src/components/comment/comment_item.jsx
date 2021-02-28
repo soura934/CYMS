@@ -54,7 +54,7 @@ class CommentItem extends React.Component {
             firstName = firstName[0].toUpperCase() + firstName.slice(1)
             lastName = lastName[0].toUpperCase() + lastName.slice(1)
             names = <li>Posted by: {firstName} {lastName}</li>
-            debugger
+            
             if (this.props.loggedIn){
             commentCreater = (this.props.comment.user._id === this.props.user.id)
             }
