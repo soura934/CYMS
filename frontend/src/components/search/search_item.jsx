@@ -41,12 +41,13 @@ class SearchItem extends React.Component {
             return(
             <div className="splash">
                     <MainPageContainer /> 
-                        <div className='product-index'>
-                        {products}
+                        <div className='product-index product-search'>
+                            <h1>Search Results</h1>
+                            {products}
                         </div>
-                    <footer id='footer'>
-                        <Footer />
-                    </footer>
+                    {/* <footer id='footer'> */}
+                        <Footer id='search-footer'/>
+                    {/* </footer> */}
                 </div>   
             )
         } else {

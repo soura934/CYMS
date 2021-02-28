@@ -172,3 +172,7 @@ time, mark, audio, video input{
 .browse:hover{
    background-color: var(--yellow-hov);
 }
+
+#search-footer {
+   bottom: 0;
+}
