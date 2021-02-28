@@ -141,6 +141,8 @@ html {
     padding: 1em;
     width: 80%;
     border: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
 }
 
 /* .search-bar form:focus {

@@ -60,7 +60,7 @@ time, mark, audio, video input{
 }
 
 .overlay {
-   background: linear-gradient(rgba(255, 255, 255, 0), var(--lt-grey));
+   background: linear-gradient(rgba(255, 255, 255, 0) 50%, var(--lt-grey));
    position: absolute;
    top: 0;
    bottom: 0;
@@ -96,6 +96,26 @@ time, mark, audio, video input{
    padding: 47em 5em 13em 5em ;
    position: relative;
    z-index: 0;
+}
+
+.product-search {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   box-sizing: border-box;
+   background-color: transparent;
+   padding: 0em 5em 13em 5em;
+   position: relative;
+   z-index: 0;
+}
+
+.search-header {
+   color: var(--grey);
+   font-size: var(--heading-font-size);
+   font-family: var(--heading-font);
+   font-weight: 600;
+   text-align: center;
+   padding: 1.5em;
 }
 
 .product-item {
