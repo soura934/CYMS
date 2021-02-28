@@ -86,6 +86,10 @@ html {
     /* justify-content: space-between; */
 }
 
+.nav-bar button:hover {
+  cursor: pointer;
+}
+
 .login {
     color: var(--charcoal);
     background-color: var(--yellow);
