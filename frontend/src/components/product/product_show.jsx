@@ -31,7 +31,6 @@ class ProductShow extends React.Component{
         }
         
         this.props.createCart(this.state)
-        alert ("Added items to your Cart!")
         window.location = '#/cart';
     } else {
         

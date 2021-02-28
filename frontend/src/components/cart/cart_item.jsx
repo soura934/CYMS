@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
+import '../../stylesheets/cart.css'
+
 class CartItem extends React.Component {
     constructor(props) {
         super(props)
@@ -17,12 +19,17 @@ class CartItem extends React.Component {
             return null
         } else {
             return (
-                <div>
+                <div className="cart-item">
                     <Link to={`/product/${this.props.product.id}/${this.props.product._id}`}>
-                        <li>{this.props.product.title}</li>
-                        <img width="200" height="200" src={this.props.product.image} alt=""/>
+                        <img className="cart-img" src={this.props.product.image} alt=""/>
                     </Link>
-                        <li>${this.props.product.price}</li>
+
+                    <div className="cart-detail">
+                        <Link to={`/product/${this.props.product.id}/${this.props.product._id}`}>
+                            <p className="cart-title">{this.props.product.title}</p>
+                        </Link>
+                            <p className="cart-price">  ${this.props.product.price}</p>
+                    </div>
                 </div>
             )
         }

@@ -16,13 +16,13 @@ class SearchBar extends React.Component {
 
     // componentDidMount(){
     //     this.props.fetchProducts()
-    //     debugger
+    //     
     // }
 
     handleSubmit(e) {
         e.preventDefault();
         // const products = this.props.products
-        // debugger
+        // 
         this.props.fetchSearchProducts(this.state.keyword)
         .then((this.props.history.push(`/search/${this.state.keyword}`)))   
         .then(this.setState({keyword: ''}))    
@@ -33,7 +33,7 @@ class SearchBar extends React.Component {
     }
 
     render() {
-        debugger
+        
         return (
             <div className='search-bar'>
                 <form onSubmit={this.handleSubmit}>
