@@ -73,7 +73,6 @@
     justify-content: space-between;
     background-color: var(--drk-grey);
     color: var(--white);
-    /* position: absolute; */
     bottom: 0;
 }
 
@@ -93,8 +92,7 @@
     justify-content: center;
     flex-grow: 1;
     flex-shrink: 1;
-        font-family: var(--heading-font);
-
+    font-family: var(--heading-font);
 }
 
 .new-footer .git {

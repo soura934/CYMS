@@ -33,12 +33,9 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img textarea form{
   height: 100%;
   width: 9000px;
   flex-grow: 1;
-  /* padding: 46px 165px; */
-  /* padding: 20px 0px; */
   background-color: white; 
   height: 600px;
   margin: 13px;
-  border-radius: 12px;
 
 }
 
@@ -55,11 +52,7 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img textarea form{
   margin: 13px;
   background-color: white;
   height: 600px;
-  border-radius: 12px;
 }
-
-
-
 
 .product-show .product-text-container h1{
   font-size: 24px;
@@ -87,10 +80,8 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img textarea form{
   width: 2800px;
   padding: 23px;
   margin: 13px;
-  border-radius: 12px;
   background-color: white;
   height: 600px;
-  border-radius: 12px;
 }
 
 .product-show .price-container .inner {
@@ -112,20 +103,24 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img textarea form{
 .product-show .price-container h1{
   color: #ce0000;
   font-size: 18px;
+  font-weight: 550;
 }
 
 .product-show .price-container .a{
-      color: #717171;
-    font-size: 14px;
+  color: #717171;
+  font-size: 14px;
 }
+
 .product-show .price-container .b{
     font-size: 13px;
     font-weight: 550;
 }
+
 .product-show .price-container .c{
     font-size: 18px;
     color: green;
 }
+
 .product-show .price-container .d{
     font-size: 14px;
 }
@@ -136,16 +131,17 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img textarea form{
 }
 
 .product-show .price-container button{
-  background-color: rgb(245, 208, 106);
+  background-color: var(--yellow);
   border: 1px solid #d6a601;
-  height: 25px;
-  font-size: 13px;
-  color: #4c4c4c;
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--charcoal);
+  padding: var(--button-pad);
   font-weight: 600;
-  border-radius: 4px;
   margin-top: 7px;
 }
-.product-show .price-container button:hover{
-    background-color: rgb(240, 188, 45);
 
+.product-show .price-container button:hover{
+    background-color: var(--yellow-hov);
+    color: black;
 }

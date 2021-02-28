@@ -89,11 +89,11 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
 }
 
 
-.log-in-form-container .log-in-form .input:focus{
+/* .log-in-form-container .log-in-form .input:focus{
     border: 2px solid #ffd30e;  
     background-color: rgb(240, 244, 255);
     border-radius: none;
-}
+} */
  
 .log-in-form .log-in-button {
     background-color: var(--yellow);
@@ -174,4 +174,10 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     flex-direction: row;
     width: 100%;
     color: black;
+}
+
+.log-in-form .input:focus {
+    background-color: rgb(242, 251, 255);
+    border: 2px solid var(--yellow-hov);
+    border-radius: none;
 }

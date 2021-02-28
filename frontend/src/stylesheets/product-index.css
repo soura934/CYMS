@@ -43,9 +43,7 @@ time, mark, audio, video input{
 }
    
 .index-container {
-   /* width: 100%; */
    background-color: var(--lt-grey);
-   /* min-height: 100vh; */
 }
 
 .banner {
@@ -59,9 +57,6 @@ time, mark, audio, video input{
 .banner-img {
    width: 100%;
    height: auto;
-   /* min-width: 100vw; */
-   /* max-height: 100vh; */
-   /* position: absolute; */
 }
 
 .overlay {
@@ -113,11 +108,9 @@ time, mark, audio, video input{
 
     background-color: rgb(255, 255, 255);
     list-style: none;
-    /* max-width: 20%; */
     width: 23%;
     min-width: 20vw;
     min-height: 23vw;
-    /* height: 20vw; */
     margin: .5em .5em;
     border: 2px solid rgb(225, 225, 225);
     color: rgb(80, 80, 80);
@@ -128,7 +121,6 @@ time, mark, audio, video input{
 
 .product-index .product-item img {
    max-width: 90%;
-   /* max-height: em; */
    max-height: 20rem;
    align-self: center;
    padding: 2em 0 .5em 0;

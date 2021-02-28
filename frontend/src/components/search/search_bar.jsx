@@ -39,7 +39,7 @@ class SearchBar extends React.Component {
         
         return (
             <div className='search-bar'>
-                <form onSubmit={this.handleSubmit}>
+                <form className='search-form 'onSubmit={this.handleSubmit}>
                     <input 
                         type="text"
                         value={this.state.keyword}

@@ -1,4 +1,4 @@
-html, body, section, article, header, main, footer,
+/* html, body, section, article, header, main, footer,
 h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
   margin: 0;
   border: 0;
@@ -36,5 +36,4 @@ body {
 
 .full-page-container footer {
   position: absolute;
-  /* order: 3;   */
-}
+} */

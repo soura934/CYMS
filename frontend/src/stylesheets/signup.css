@@ -81,17 +81,17 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
     font-family: var(--font);
 }
 
+.signup-form .input input:focus {
+    background-color: rgb(242, 251, 255);
+    border: 2px solid var(--yellow-hov);
+    border-radius: none;
+}
+
 .signup-form-container .errors{
     list-style: none;
     color: rgb(233, 0, 0);
     font-size: 1.2rem;
     text-align: center;
-}
-
-.signup-form-container .signup-form .input input:focus{
-    border: 2px solid #ffd30e;  
-    background-color: rgb(240, 244, 255);
-    border-radius: none;
 }
  
 .signup-form-container .signup-form .signup-button {
@@ -104,6 +104,10 @@ h1, h2, p, strong, em, a, div, span, ul, li, nav, img {
 .signup-form-container .signup-button:hover{
     background-color: var(--yellow-hov);
     color: black;
+}
+
+.signup-form-container .signup-button:active{
+    border: none;
 }
 
 .signup-form-container .login-Link-container{

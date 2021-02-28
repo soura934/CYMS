@@ -71,7 +71,7 @@ renderHeader(){
       </div>
       )
     } else {
-        
+    
       return  null
       
     }
@@ -89,7 +89,7 @@ renderHeader(){
            
             return (
                 <ul className='user-comments' key={comment._id}>
-                    
+                    <h1>Review {i + 1}</h1>
                     <CommentItem comment={comment} />                       
                 </ul>
             )

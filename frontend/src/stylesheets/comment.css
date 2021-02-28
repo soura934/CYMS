@@ -23,6 +23,7 @@
 .comment form{
 width: 100%;
 }
+
 .comment textarea{
   width: 100%;
   padding: 10px;
@@ -31,14 +32,16 @@ width: 100%;
   border: 1px solid #d7d7d7;
   font-size: 14px;
 }
+
 .comment h1{
-font-size: 24px;
+  font-size: 24px;
   font-weight: 500;
   padding-bottom: 14px;
   padding-left: 10px;
 }
+
 .comment button{
-background-color: rgb(245, 208, 106);
+  background-color: var(--yellow);
   border: 1px solid #d6a601;
   height: 25px;
   font-size: 14px;
@@ -49,14 +52,11 @@ background-color: rgb(245, 208, 106);
   width: 150px;
   height: 30px;
   margin-left: 15px;
-  
 }
 
 .comment button:hover{
-    background-color: rgb(240, 188, 45);
+  background-color: var(--yellow-hov);
 }
-
-
 
 .comment .user-comments{
     list-style: none;
