@@ -61,13 +61,19 @@ class Cart extends React.Component{
                 <div className="splash">
                     <MainPageContainer /> 
                     <div className="cart-main">
+                        <div className="cart-info cart-header">
+                            <h1>Shopping Cart</h1>
+                            <div >
+                                <button className="checkout-button" onClick={this.checkout}>Check Out</button>
+                                <p>Total price({totalnumber} in cart): <span className="cart-number">${totalprice}</span></p>
+                            </div>
+                        </div>
 
-                        <h1>Shopping Cart</h1>
                             {cartProducts}
 
                         <div className="cart-info">
-                            <p>Total price: $ <span className="cart-number">{totalprice}</span></p>
-                            <p> <span className="cart-number">{totalnumber}</span> in cart</p>
+                            {/* <p> <span className="cart-number">{totalnumber}</span> in cart</p> */}
+                            <p>Total price({totalnumber} in cart): $<span className="cart-number">{totalprice}</span></p>
                         </div>
 
                         <div className="checkout">
@@ -79,6 +85,7 @@ class Cart extends React.Component{
                             >Check Out</button>
                         </div> */}
                     </div>
+                    
 
                     {/* <footer id='footer'>
                         <Footer />
