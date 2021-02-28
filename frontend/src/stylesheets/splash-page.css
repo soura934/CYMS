@@ -49,8 +49,6 @@ html {
     width: 25%;
     flex-grow: 1;
     flex-shrink: 1;
-    /* text-align: center; */
-    /* padding-left: 3em */
 }
 
 .auth {
@@ -66,7 +64,7 @@ html {
 }
 
 .cart-link {
-    /* padding: 0 3em 0 3em; */
+    align-self: flex-end;
 }
 
 .cart-link img {
@@ -74,16 +72,13 @@ html {
 }
 
 .cart-link img:hover {
-    max-width: 3.8rem;
+    max-width: 4rem;
 }
 
 .nav-bar {
     display: flex;
-    justify-content: space-evenly;
-
+    justify-content: flex-end;
     width: 25%;
-    /* text-align: end; */
-    /* justify-content: space-between; */
 }
 
 .nav-bar button:hover {
@@ -93,6 +88,7 @@ html {
 .login {
     color: var(--charcoal);
     background-color: var(--yellow);
+    transition: .3s;
 }
 
 .signup:hover {
@@ -106,28 +102,72 @@ html {
 .signup {
     color: var(--white);
     background-color: var(--charcoal);
+    transition: .3s;
 }
 
 .login, .signup {
     padding: 0.7em 1.2em;
 }
 
+#logout {
+    background-color: var(--charcoal);
+    color: var(--white);
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: var(--button-font);
+    font-weight: 550;
+    padding: var(--button-pad);
+    transition: .3s;
+    margin-left: 3em;
+}
+
+#logout:hover {
+    background-color: var(--grey);
+}
+
+#logout:active {
+    border: none;
+}
+
+
+/* search-bar */
+
 .search-bar {
     width: 50%;
     text-align: center;
-    flex-grow: 1;
-    flex-shrink: 1;
 }
 
 .search-bar input {
     padding: 1em;
     width: 80%;
-    text-align: center;
     border: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
 }
 
-.search-bar input:focus {
-    border: .3rem solid var(--yellow);
-    border-radius: none;
-    /* background-color: var(--yellow); */
+/* .search-bar form:focus {
+    border: 2px solid red;
+} */
+
+.search-button {
+    border: none;
+    background-color: var(--yellow);
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: var(--yellow-hov);
+}
+
+.search-button img {
+    width: 60%;
+}
+
+.search-bar form {
+    display: flex;
+    justify-content: center;
 }

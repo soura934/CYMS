@@ -61,25 +61,32 @@ class Cart extends React.Component{
                 <div className="splash">
                     <MainPageContainer /> 
                     <div className="cart-main">
-                        <h1>Your Cart</h1>
+                        <div className="cart-info cart-header">
+                            <h1>Shopping Cart</h1>
+                            <div >
+                                <button className="checkout-button" onClick={this.checkout}>Check Out</button>
+                                <p>Total price({totalnumber} in cart): <span className="cart-number">${totalprice}</span></p>
+                            </div>
+                        </div>
 
                             {cartProducts}
+
                         <div className="cart-info">
-                            <p>Total price: $ <span className="cart-number">{totalprice}</span></p>
-                            <p> <span className="cart-number">{totalnumber}</span> in cart</p>
-                        </div>
-                        <div className="checkout">
+                            {/* <p> <span className="cart-number">{totalnumber}</span> in cart</p> */}
+                            <p>Total price({totalnumber} in cart): $<span className="cart-number">{totalprice}</span></p>
                             <button className="checkout-button" onClick={this.checkout}>Check Out</button>
                         </div>
-                        <div>
-                            {/* <button onClick=
+                        {/* <div>
+                            <button onClick=
                             {this.checkout, this.deleteItem(product._id)}
-                            >Check Out</button> */}
-                        </div>
+                            >Check Out</button>
+                        </div> */}
                     </div>
-                    <footer id='footer'>
-                        <Footer />
-                    </footer>
+                    
+
+                    {/* <footer id='footer'> */}
+                        <Footer className='cart-footer'/>
+                    {/* </footer> */}
                 </div>          
             )  
         } 

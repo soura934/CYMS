@@ -12,7 +12,6 @@ class ProductShow extends React.Component{
     constructor(props){
         super(props)
         
-    
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
@@ -42,12 +41,9 @@ class ProductShow extends React.Component{
 
     }
     render() {
-        
-        // 
         if (!this.props.product){
             return null;
         } 
-        
         
         return (
             <div>

@@ -1,5 +1,8 @@
 import React from 'react';
 
+import search from '../../assets/search.png';
+
+
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);
@@ -36,13 +39,14 @@ class SearchBar extends React.Component {
         
         return (
             <div className='search-bar'>
-                <form onSubmit={this.handleSubmit}>
+                <form className='search-form 'onSubmit={this.handleSubmit}>
                     <input 
                         type="text"
                         value={this.state.keyword}
                         onChange={this.update('keyword')}
                         placeholder="Search products by keyword"
                     />
+                    <button className='search-button'><img src={search} alt="search"/></button>
                 </form>    
             </div>
         )

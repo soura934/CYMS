@@ -15,7 +15,7 @@
   box-sizing: border-box;
   background-color: white;
   padding: 22px;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   justify-content: center;
 
 }
@@ -23,47 +23,55 @@
 .comment form{
 width: 100%;
 }
+
 .comment textarea{
   width: 100%;
   padding: 10px;
   margin-left: 15px;
-  font-family: Arial, Helvetica, sans-serif;
   border: 1px solid #d7d7d7;
   font-size: 14px;
 }
+
 .comment h1{
-font-size: 24px;
+  font-size: 24px;
   font-weight: 500;
   padding-bottom: 14px;
   padding-left: 10px;
 }
-.comment button{
-background-color: rgb(245, 208, 106);
+
+.comment button {
+  background-color: var(--yellow);
   border: 1px solid #d6a601;
-  height: 25px;
-  font-size: 14px;
-  color: #4c4c4c;
-  font-weight: 600;
-  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0.5em 1em;
+}
+
+.comment-submit{
+  font-size: 1.5rem;
+  padding: var(--button-pad);
+  font-weight: 550;
+  color: var(--charcoal);
   margin-top: 7px;
-  width: 150px;
-  height: 30px;
   margin-left: 15px;
-  
 }
 
 .comment button:hover{
-    background-color: rgb(240, 188, 45);
+  background-color: var(--yellow-hov);
+  color: black;
 }
 
-
+.comment li {
+  list-style: none;
+  padding: .8rem;
+  font-size: 1.3rem;
+}
 
 .comment .user-comments{
     list-style: none;
-    padding: 10px;
+    padding: 2em 1em;
     color: grey;
-    margin-left: 8px;
 }
+
 .comment .user-comments h2{
     font-weight: 500;
     color: black;
@@ -72,4 +80,9 @@ background-color: rgb(245, 208, 106);
 
 .comment-title{
     padding-top: 50px;
+}
+
+#comment-content {
+  font-size: 1.5rem;
+  font-weight: 550;
 }

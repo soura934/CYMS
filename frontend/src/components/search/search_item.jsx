@@ -30,9 +30,9 @@ class SearchItem extends React.Component {
         //  
             return (
                     <Link className='product-item' key={product._id}  to={`/product/${product.id}/${product._id}`}>
-                        <li>{product.title}</li>
                         <li><img src={product.image} alt=""/></li>
-                        <li>${product.price}</li>
+                        <li className='pro-title'>{product.title}</li>
+                        <li className='pro-price'>${product.price}</li>
                      
                     </Link>
             )
@@ -41,12 +41,13 @@ class SearchItem extends React.Component {
             return(
             <div className="splash">
                     <MainPageContainer /> 
-                        <div className='product-index'>
-                        {products}
+                        <h1 className='search-header'>Search Results</h1>
+                        <div className='product-index product-search'>
+                            {products}
                         </div>
-                    <footer id='footer'>
-                        <Footer />
-                    </footer>
+                    {/* <footer id='footer'> */}
+                        <Footer id='search-footer'/>
+                    {/* </footer> */}
                 </div>   
             )
         } else {

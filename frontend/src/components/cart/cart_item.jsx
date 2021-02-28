@@ -20,16 +20,16 @@ class CartItem extends React.Component {
         } else {
             return (
                 <div className="cart-item">
-                    <Link to={`/product/${this.props.product.id}/${this.props.product._id}`}>
+                    <Link className='cart-img-link' to={`/product/${this.props.product.id}/${this.props.product._id}`}>
                         <img className="cart-img" src={this.props.product.image} alt=""/>
                     </Link>
 
-                    <div className="cart-detail">
+                    {/* <div className="cart-detail"> */}
                         <Link to={`/product/${this.props.product.id}/${this.props.product._id}`}>
                             <p className="cart-title">{this.props.product.title}</p>
                         </Link>
                             <p className="cart-price">  ${this.props.product.price}</p>
-                    </div>
+                    {/* </div> */}
                 </div>
             )
         }

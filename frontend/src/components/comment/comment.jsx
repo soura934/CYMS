@@ -68,10 +68,10 @@ renderHeader(){
       return  (
         <div className="Reviews"> 
             <h1 className='comment-title'>Top Customer Reviews</h1>
-      </div>
+        </div>
       )
     } else {
-        
+    
       return  null
       
     }
@@ -89,7 +89,7 @@ renderHeader(){
            
             return (
                 <ul className='user-comments' key={comment._id}>
-                    
+                    <h1>Review {i + 1}</h1>
                     <CommentItem comment={comment} />                       
                 </ul>
             )
@@ -109,7 +109,7 @@ renderHeader(){
                                     placeholder="Comment here">
                                 </textarea>
                                 <br/>
-                            <button>Submit</button>
+                            <button className='comment-submit'>Submit</button>
                         </form>
                 
                         {this.renderHeader()}
