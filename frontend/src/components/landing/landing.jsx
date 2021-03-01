@@ -74,28 +74,28 @@ class Landing extends React.Component {
                     <div className='names'>
                         <ul>
                             <h2 className='name'>Christopher Thorne</h2>
-                            <h2><a href="https://github.com/cfthorne83">LinkedIn</a></h2>
-                            <h2><a href="https://github.com/cfthorne83"></a> Github</h2>
+                            <h2><a href="https://github.com/cfthorne83" target="_blank">LinkedIn</a></h2>
+                            <h2><a href="https://github.com/cfthorne83" target="_blank"></a> Github</h2>
                             <h2><a href="mailto:cfthorne83@gmail.com">Email</a></h2>
 
                         </ul>
                         <ul>
                             <h2 className='name'>Yehudah Rosenberg</h2>
-                            <h2><a href="https://www.linkedin.com/in/yehudah-rosenberg/">LinkedIn</a></h2>
-                            <h2><a href="https://github.com/yrosenberg1/"> Github</a></h2>
+                            <h2><a href="https://www.linkedin.com/in/yehudah-rosenberg/" target="_blank">LinkedIn</a></h2>
+                            <h2><a href="https://github.com/yrosenberg1/" target="_blank"> Github</a></h2>
                             <h2><a href="mailto:jros987@gmail.com"> Email</a></h2>
                         </ul>
                         <ul>
                             <h2 className='name'>Mansour Dione</h2>
-                            <h2><a href="https://www.linkedin.com/in/mansour-dione/">LinkedIn</a></h2>
-                            <h2><a href="https://github.com/soura934/"> Github</a></h2>
-                            <h2><a href="soura934@gmail.com"> Email</a></h2>
+                            <h2><a href="https://www.linkedin.com/in/mansour-dione/" target="_blank">LinkedIn</a></h2>
+                            <h2><a href="https://github.com/soura934/" target="_blank"> Github</a></h2>
+                            <h2><a href="mailto:soura934@gmail.com"> Email</a></h2>
                         </ul>
                         <ul>
-                            <h2 className='name'>Soobin Kim</h2>
-                            <h2><a href="https://www.linkedin.com/in/soobin-lim-2a47a2206/">LinkedIn</a></h2>
-                            <h2><a href="https://github.com/nhsb00">Github</a></h2>
-                            <h2><a href="nhsb00@hotmail.com">Email</a></h2>
+                            <h2 className='name'>Soobin Lim</h2>
+                            <h2><a href="https://www.linkedin.com/in/soobin-lim-2a47a2206/" target="_blank">LinkedIn</a></h2>
+                            <h2><a href="https://github.com/nhsb00" target="_blank">Github</a></h2>
+                            <h2><a href="mailto:nhsb00@hotmail.com">Email</a></h2>
                         </ul>
                     </div>
                 </section>
