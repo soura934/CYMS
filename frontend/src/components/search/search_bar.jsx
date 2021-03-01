@@ -26,6 +26,11 @@ class SearchBar extends React.Component {
         e.preventDefault();
         // const products = this.props.products
         // 
+        if (!this.state.keyword){
+             
+            return;
+   
+         }
         this.props.fetchSearchProducts(this.state.keyword)
         .then((this.props.history.push(`/search/${this.state.keyword}`)))   
         .then(this.setState({keyword: ''}))    
