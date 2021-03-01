@@ -22,6 +22,7 @@ class Cart extends React.Component{
     }
 
     checkout() {
+        this.props.cart.map(product => {this.props.removeProduct(product._id)})
         alert('your order is placed!');
     }
 
@@ -33,7 +34,7 @@ class Cart extends React.Component{
            return null
        }
 
-       if (this.props.cart.length === 0){
+       else if (this.props.cart.length === 0){
            return (
                 <div className="splash">
                     <MainPageContainer /> 
