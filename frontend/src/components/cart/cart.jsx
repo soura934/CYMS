@@ -42,7 +42,7 @@ class Cart extends React.Component{
            return (
                 <div className="splash">
                     <MainPageContainer /> 
-                     <div>No Items are Currently in Cart.</div>
+                    <div className='empty-cart'>No items are currently in your cart.</div>
                     <footer id='footer'>
                         <Footer />
                     </footer>
@@ -78,7 +78,7 @@ class Cart extends React.Component{
 
                         <div className="cart-info">
                             {/* <p> <span className="cart-number">{totalnumber}</span> in cart</p> */}
-                            <p>Total price({totalnumber} in cart): $<span className="cart-number">{totalprice}</span></p>
+                            <p>Total price({totalnumber} in cart): <span className="cart-number">${totalprice}</span></p>
                             <button className="checkout-button" onClick={() => this.checkout()}>Check Out</button>
                         </div>
                         {/* <div>
