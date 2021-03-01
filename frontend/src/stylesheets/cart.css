@@ -151,3 +151,12 @@
 .cart-footer {
     bottom: 0;
 }
+
+.empty-cart {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: var(--heading-font-size);
+    font-weight: 600;
+    color: var(--grey);
+    padding: 3em;
+}
