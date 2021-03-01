@@ -61,7 +61,7 @@ html {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 900;
     font-size: 3.6rem;
-    color: #2e2528;
+    color: var(--drk-grey);
 }
 
 .landing h2 {
@@ -79,7 +79,7 @@ html {
 
 .landing .heading .text-container h1 {
     font-family: 'Source Sans Pro', sans-serif;
-    color: #2e2528;
+    color: var(--grey);
     font-size: 4rem;
     padding-bottom: .4em;
 }
@@ -178,12 +178,12 @@ html {
 }
 
 .story .text h1{
-    color: #545661;
+    color: var(--grey);
     padding-bottom: .5em;
 }
 
 .story .text h2{
-    color: var(--grey);
+    color: var(--drk-grey);
 }
 
 .landing .story .us {
