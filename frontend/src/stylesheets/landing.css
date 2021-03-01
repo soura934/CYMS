@@ -31,6 +31,7 @@ html {
 }
 
 :root {
+    overflow-x: hidden;
     --charcoal: #2c2526;
     --drk-grey: #53555f;
     --grey: #818792;
@@ -48,6 +49,7 @@ html {
 
 .landing {
     width: 100vw;
+    
 }
 
 
