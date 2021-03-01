@@ -42,7 +42,7 @@ class Cart extends React.Component{
            return (
                 <div className="splash">
                     <MainPageContainer /> 
-                     <div>No Items are Currently in Cart.</div>
+                    <div className='empty-cart'>No items are currently in your cart.</div>
                     <footer id='footer'>
                         <Footer />
                     </footer>
