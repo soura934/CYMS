@@ -17,13 +17,17 @@ class Cart extends React.Component{
         this.props.fetchCartItems(this.props.user)
     }
 
+    componentDidUpdate(){
+            this.props.fetchCartItems(this.props.user)
+    }
+
     deleteItem(productId){
         return e => this.props.removeProduct(productId).then(() => this.props.fetchCartItems(this.props.user))
     }
 
     checkout() {
         this.props.cart.map(product => {this.props.removeProduct(product._id)})
-        alert('your order is placed!');
+        alert('Your order is placed!');
     }
 
     render() {
@@ -34,7 +38,7 @@ class Cart extends React.Component{
            return null
        }
 
-       else if (this.props.cart.length === 0){
+       if (this.props.cart.length === 0){
            return (
                 <div className="splash">
                     <MainPageContainer /> 
@@ -65,7 +69,7 @@ class Cart extends React.Component{
                         <div className="cart-info cart-header">
                             <h1>Shopping Cart</h1>
                             <div >
-                                <button className="checkout-button" onClick={this.checkout}>Check Out</button>
+                                <button className="checkout-button" onClick={() => this.checkout()}>Check Out</button>
                                 <p>Total price({totalnumber} in cart): <span className="cart-number">${totalprice}</span></p>
                             </div>
                         </div>
@@ -75,7 +79,7 @@ class Cart extends React.Component{
                         <div className="cart-info">
                             {/* <p> <span className="cart-number">{totalnumber}</span> in cart</p> */}
                             <p>Total price({totalnumber} in cart): $<span className="cart-number">{totalprice}</span></p>
-                            <button className="checkout-button" onClick={this.checkout}>Check Out</button>
+                            <button className="checkout-button" onClick={() => this.checkout()}>Check Out</button>
                         </div>
                         {/* <div>
                             <button onClick=
