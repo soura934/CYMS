@@ -4,6 +4,10 @@ import { Redirect } from 'react-router-dom';
 
 import MainPageContainer from '../main/main_page_container';
 import  Footer from '../footer/footer'; 
+import chris from './chris.jpeg';
+import yehuda from "../../assets/yehuda.jpeg";
+import mansour from "../../assets/mansour.jpeg";
+import soobin from "../../assets/soobin.png";
 
 import '../../stylesheets/landing.css'; 
 import github from '../../assets/github-pages-logo-repository-fork-github-86eddab19cbc3ae293ada0fe0fb9e27d.png'
@@ -59,10 +63,10 @@ class Landing extends React.Component {
                     </div>
 
                     <div className='us'>
-                        <img src="../../assets/chris.jpeg" alt="Chris"/>
-                        <img src="../../assets/yehuda.jpeg" alt="Yehuda"/>
-                        <img src="../../assets/mansour.jpeg" alt="Mansour"/>
-                        <img src="https://ca.slack-edge.com/T03GU501J-U01DE1L5CKE-g26b91ddcb6d-512" alt="Soobin"/>
+                        <img src={chris} alt="Chris"/>
+                        <img src={yehuda} alt="Yehuda"/>
+                        <img src={mansour} alt="Yehuda"/>
+                        <img src={soobin} alt="Yehuda"/>
                     </div>   
                 </section>
 
