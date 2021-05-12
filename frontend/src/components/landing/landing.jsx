@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 
 import MainPageContainer from '../main/main_page_container';
 import  Footer from '../footer/footer'; 
-import chris from './chris.jpeg';
+import chris from '../../assets/chris.jpeg';
 import yehuda from "../../assets/yehuda.jpeg";
 import mansour from "../../assets/mansour.jpeg";
 import soobin from "../../assets/soobin.png";
