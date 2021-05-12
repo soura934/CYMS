@@ -61,7 +61,7 @@ class Landing extends React.Component {
                     <div className='us'>
                         <img src="../../assets/chris.jpeg" alt="Chris"/>
                         <img src="../../assets/yehuda.jpeg" alt="Yehuda"/>
-                        <img src="../../src/assets/mansour.jpeg" alt="Mansour"/>
+                        <img src="../../assets/mansour.jpeg" alt="Mansour"/>
                         <img src="https://ca.slack-edge.com/T03GU501J-U01DE1L5CKE-g26b91ddcb6d-512" alt="Soobin"/>
                     </div>   
                 </section>
